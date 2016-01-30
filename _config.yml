@@ -2,8 +2,8 @@
 title: Ramon Barros
 description: 'Desenvolvedor'
 url: 'http://ramon-barros.com'
-baseurl: '/rbarros.github.io/'
-# google_analytics: 'UA-XXXXXX-X'
+baseurl: '/'
+google_analytics: 'UA-32626396-1'
 
 author:
   name: 'Ramon Barros'

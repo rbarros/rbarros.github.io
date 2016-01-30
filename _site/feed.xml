@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ramon Barros</title>
-    <description>Ramon Barros - Desenvolvedor</description>
-    <link>http://ramon-barros.com/rbarros.github.io//</link>
-    <atom:link href="http://ramon-barros.com/rbarros.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 30 Jan 2016 16:38:28 -0200</pubDate>
-    <lastBuildDate>Sat, 30 Jan 2016 16:38:28 -0200</lastBuildDate>
+    <description>Desenvolvedor</description>
+    <link>http://ramon-barros.com//</link>
+    <atom:link href="http://ramon-barros.com//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 30 Jan 2016 20:27:14 -0200</pubDate>
+    <lastBuildDate>Sat, 30 Jan 2016 20:27:14 -0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -27,8 +27,8 @@
 
 </description>
         <pubDate>Fri, 08 Jan 2016 13:04:23 -0200</pubDate>
-        <link>http://ramon-barros.com/rbarros.github.io//2016/bem-vindo-ao-meu-blog/</link>
-        <guid isPermaLink="true">http://ramon-barros.com/rbarros.github.io//2016/bem-vindo-ao-meu-blog/</guid>
+        <link>http://ramon-barros.com//2016/bem-vindo-ao-meu-blog/</link>
+        <guid isPermaLink="true">http://ramon-barros.com//2016/bem-vindo-ao-meu-blog/</guid>
         
         <category>jekyll</category>
         
@@ -40,6 +40,17 @@
         <category>jekyll</category>
         
         <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Arduino</title>
+        <description>
+</description>
+        <pubDate>Thu, 31 Jan 2013 00:00:00 -0200</pubDate>
+        <link>http://ramon-barros.com//2013/arduino/</link>
+        <guid isPermaLink="true">http://ramon-barros.com//2013/arduino/</guid>
+        
         
       </item>
     

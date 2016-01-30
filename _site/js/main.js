@@ -15,7 +15,7 @@ $(document).ready(function () {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
 
-  if (window.location.pathname !== '/rbarros.github.io/' && window.location.pathname !== '/rbarros.github.io/index.html') {
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
     $('.panel-cover').addClass('panel-cover--collapsed')
   }
 

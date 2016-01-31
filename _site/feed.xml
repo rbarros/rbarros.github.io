@@ -8,7 +8,7 @@
     <pubDate>Sun, 31 Jan 2016 20:27:42 -0200</pubDate>
     <lastBuildDate>Sun, 31 Jan 2016 20:27:42 -0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
-    
+
       <item>
         <title>Bem Vindo!</title>
         <description>&lt;p&gt;Sou Ramon Barros, faço Analise e Desenvolvimento de Sistemas na Ftec, atualmente trabalho na empresa &lt;a href=&quot;http://sagasistemas.com.br&quot;&gt;Saga Sistemas&lt;/a&gt;, como desenvolvedor. Apaixonado por tecnologia e desenhos Manga, adoro Linux e amo o que faço, sempre procurando novas ideias e desafios.
@@ -30,20 +30,20 @@ Tenho conhecimentos em Lógica de programação, Linguagem C/C++, Delphi 7 ( Pas
         <pubDate>Fri, 08 Jan 2016 13:04:23 -0200</pubDate>
         <link>http://ramon-barros.com//2016/bem-vindo-ao-meu-blog/</link>
         <guid isPermaLink="true">http://ramon-barros.com//2016/bem-vindo-ao-meu-blog/</guid>
-        
+
         <category>jekyll</category>
-        
+
         <category>blog</category>
-        
+
         <category>github</category>
-        
-        
+
+
         <category>jekyll</category>
-        
+
         <category>update</category>
-        
+
       </item>
-    
+
       <item>
         <title>Arduino</title>
         <description>&lt;p&gt;Pra quem não conhece o &lt;a href=&quot;http://arduino.cc&quot;&gt;Arduino&lt;/a&gt; é uma plataforma de prototipagem eletrônica open-source.
@@ -72,16 +72,16 @@ programas necessários para compilar os códigos e enviar para o Arduino.&lt;/p&
         <pubDate>Thu, 31 Jan 2013 20:01:00 -0200</pubDate>
         <link>http://ramon-barros.com//2013/arduino/</link>
         <guid isPermaLink="true">http://ramon-barros.com//2013/arduino/</guid>
-        
+
         <category>arduino</category>
-        
-        
+
+
         <category>jekyll</category>
-        
+
         <category>update</category>
-        
+
       </item>
-    
+
       <item>
         <title>Comandos uteis para Linux</title>
         <description>&lt;p&gt;Alguns comandos do linux que costumo utilizar.&lt;/p&gt;
@@ -97,19 +97,19 @@ programas necessários para compilar os códigos e enviar para o Arduino.&lt;/p&
         <pubDate>Thu, 13 Sep 2012 07:09:00 -0300</pubDate>
         <link>http://ramon-barros.com//2012/comandos-uteis-para-linux/</link>
         <guid isPermaLink="true">http://ramon-barros.com//2012/comandos-uteis-para-linux/</guid>
-        
+
         <category>linux</category>
-        
+
         <category>comandos</category>
-        
+
         <category>shell</category>
-        
-        
+
+
         <category>jekyll</category>
-        
+
         <category>update</category>
-        
+
       </item>
-    
+
   </channel>
 </rss>

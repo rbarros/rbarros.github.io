@@ -2,7 +2,7 @@
 layout: post
 title:  "Comandos uteis para Linux"
 date:   2012-09-13 10:09:00
-categories: jekyll update
+categories: linux
 tags: [linux,comandos, shell]
 ---
 Alguns comandos do linux que costumo utilizar.

@@ -2,7 +2,7 @@
 layout: post
 title:  "Bem Vindo!"
 date:   2016-01-08 15:04:23
-categories: jekyll update
+categories: blog
 tags: [jekyll,blog,github]
 ---
 Sou Ramon Barros, faço Analise e Desenvolvimento de Sistemas na Ftec, atualmente trabalho na empresa [Saga Sistemas], como desenvolvedor. Apaixonado por tecnologia e desenhos Manga, adoro Linux e amo o que faço, sempre procurando novas ideias e desafios.

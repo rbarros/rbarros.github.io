@@ -5,25 +5,26 @@
     <description>Desenvolvedor</description>
     <link>http://ramon-barros.com//</link>
     <atom:link href="http://ramon-barros.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 30 Jan 2016 20:27:14 -0200</pubDate>
-    <lastBuildDate>Sat, 30 Jan 2016 20:27:14 -0200</lastBuildDate>
+    <pubDate>Sun, 31 Jan 2016 20:27:42 -0200</pubDate>
+    <lastBuildDate>Sun, 31 Jan 2016 20:27:42 -0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Bem Vindo!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <description>&lt;p&gt;Sou Ramon Barros, faço Analise e Desenvolvimento de Sistemas na Ftec, atualmente trabalho na empresa &lt;a href=&quot;http://sagasistemas.com.br&quot;&gt;Saga Sistemas&lt;/a&gt;, como desenvolvedor. Apaixonado por tecnologia e desenhos Manga, adoro Linux e amo o que faço, sempre procurando novas ideias e desafios.
+Tenho conhecimentos em Lógica de programação, Linguagem C/C++, Delphi 7 ( Pascal ) , PHP, TDD, AWS, Node.js, Javascript, HTML e CSS.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Utilizo alguns Frameworks como:&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;CodeIgniter&lt;/li&gt;
+  &lt;li&gt;Laravel&lt;/li&gt;
+  &lt;li&gt;Cakephp&lt;/li&gt;
+  &lt;li&gt;Ionize CMS&lt;/li&gt;
+  &lt;li&gt;JCore&lt;/li&gt;
+  &lt;li&gt;Ext JS 4&lt;/li&gt;
+  &lt;li&gt;Backbone.js&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Fri, 08 Jan 2016 13:04:23 -0200</pubDate>
@@ -45,12 +46,68 @@
     
       <item>
         <title>Arduino</title>
-        <description>
+        <description>&lt;p&gt;Pra quem não conhece o &lt;a href=&quot;http://arduino.cc&quot;&gt;Arduino&lt;/a&gt; é uma plataforma de prototipagem eletrônica open-source.
+Mas o que isso significa ?
+É uma placa com circuito eletrônico, com os componentes basicos para montagem de protótipos, podendo ser ligada ao computador.
+O projeto do hardware esta em código-aberto, podendo ser modificado a suas necessidades.
+Mais sobre a história do Arduino clique a &lt;a href=&quot;http://pt.wikipedia.org/wiki/Arduino&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Recentemente adiquiri um kit do Arduino para iniciantes da &lt;a href=&quot;https://www.robocore.net/&quot;&gt;RoboCore&lt;/a&gt;.
+Muito bom, vem com caixa transparente para guardar os componentes, vem um CD com o tutorial em PDF e os
+programas necessários para compilar os códigos e enviar para o Arduino.&lt;/p&gt;
+
+&lt;p&gt;Veja os projetos que podem ser montados com este kit:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Projeto Alarme&lt;/li&gt;
+  &lt;li&gt;Projeto Dimer&lt;/li&gt;
+  &lt;li&gt;Projeto Piano&lt;/li&gt;
+  &lt;li&gt;Projeto Termometro&lt;/li&gt;
+  &lt;li&gt;Projeto Iluminação Automatizada&lt;/li&gt;
+  &lt;li&gt;Projeto Alarme Multipropósito&lt;/li&gt;
+  &lt;li&gt;Projeto Frequencímetro&lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
-        <pubDate>Thu, 31 Jan 2013 00:00:00 -0200</pubDate>
+        <pubDate>Thu, 31 Jan 2013 20:01:00 -0200</pubDate>
         <link>http://ramon-barros.com//2013/arduino/</link>
         <guid isPermaLink="true">http://ramon-barros.com//2013/arduino/</guid>
         
+        <category>arduino</category>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Comandos uteis para Linux</title>
+        <description>&lt;p&gt;Alguns comandos do linux que costumo utilizar.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;)&lt;/p&gt;
+</description>
+        <pubDate>Thu, 13 Sep 2012 07:09:00 -0300</pubDate>
+        <link>http://ramon-barros.com//2012/comandos-uteis-para-linux/</link>
+        <guid isPermaLink="true">http://ramon-barros.com//2012/comandos-uteis-para-linux/</guid>
+        
+        <category>linux</category>
+        
+        <category>comandos</category>
+        
+        <category>shell</category>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
         
       </item>
     

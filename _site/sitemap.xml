@@ -20,7 +20,22 @@
     <url>
       <loc>http://ramon-barros.com/2013/arduino/</loc>
       
-        <lastmod>2013-01-31T00:00:00-02:00</lastmod>
+        <lastmod>2013-01-31T20:01:00-02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://ramon-barros.com/2012/comandos-uteis-para-linux/</loc>
+      
+        <lastmod>2012-09-13T07:09:00-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -36,7 +51,7 @@
     <url>
       <loc>http://ramon-barros.com/about/</loc>
       
-        <lastmod>2016-01-30T20:27:14-02:00</lastmod>
+        <lastmod>2016-01-31T20:27:42-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -51,7 +66,7 @@
     <url>
       <loc>http://ramon-barros.com/feed.xml</loc>
       
-        <lastmod>2016-01-30T20:27:14-02:00</lastmod>
+        <lastmod>2016-01-31T20:27:42-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -66,7 +81,7 @@
     <url>
       <loc>http://ramon-barros.com/</loc>
       
-        <lastmod>2016-01-30T20:27:14-02:00</lastmod>
+        <lastmod>2016-01-31T20:27:42-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -81,7 +96,7 @@
     <url>
       <loc>http://ramon-barros.com/js/main.js</loc>
       
-        <lastmod>2016-01-30T20:27:14-02:00</lastmod>
+        <lastmod>2016-01-31T20:27:42-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -96,7 +111,7 @@
     <url>
       <loc>http://ramon-barros.com/css/main.css</loc>
       
-        <lastmod>2016-01-30T20:27:14-02:00</lastmod>
+        <lastmod>2016-01-31T20:27:42-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -113,7 +128,7 @@
     <url>
       <loc>http://ramon-barros.com/tags/</loc>
       
-        <lastmod>2016-01-30T20:27:14-02:00</lastmod>
+        <lastmod>2016-01-31T20:27:42-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Arduino"
+date:   2013-01-31 22:01:00
+categories: jekyll update
+tags: [arduino]
+---
+Pra quem não conhece o [Arduino][arduino] é uma plataforma de prototipagem eletrônica open-source.
+Mas o que isso significa ?
+É uma placa com circuito eletrônico, com os componentes basicos para montagem de protótipos, podendo ser ligada ao computador.
+O projeto do hardware esta em código-aberto, podendo ser modificado a suas necessidades.
+Mais sobre a história do Arduino clique a [aqui][wiki].
+
+Recentemente adiquiri um kit do Arduino para iniciantes da [RoboCore][robocore].
+Muito bom, vem com caixa transparente para guardar os componentes, vem um CD com o tutorial em PDF e os
+programas necessários para compilar os códigos e enviar para o Arduino.
+
+Veja os projetos que podem ser montados com este kit:
+
+- Projeto Alarme
+- Projeto Dimer
+- Projeto Piano
+- Projeto Termometro
+- Projeto Iluminação Automatizada
+- Projeto Alarme Multipropósito
+- Projeto Frequencímetro
+
+[arduino]: http://arduino.cc
+[wiki]: http://pt.wikipedia.org/wiki/Arduino
+[robocore]: https://www.robocore.net/

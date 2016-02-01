@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Ramon Barros</title>
+  <title>Formatar preço com JavaScript de forma simples</title>
   <meta name="description" content="Desenvolvedor">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://ramon-barros.com//">
+  <link rel="canonical" href="http://ramon-barros.com//2016/formatar-preco-em-javascript/">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
 </head>
 
@@ -141,76 +141,26 @@
 
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
-        <div class="main-post-list">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="31 Jan 2016" class="post-meta__date date">31 Jan 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#javascript">javascript</a> <a href="/tags/#price">price</a> <a href="/tags/#value">value</a> </span>
+    </div>
+    <h1 class="post-title">Formatar preço com JavaScript de forma simples</h1>
+  </header>
 
-  <ol class="post-list">
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/formatar-preco-em-javascript/" title="Formatar preço com JavaScript de forma simples">Formatar preço com JavaScript de forma simples</a></h2>
-        <p class="excerpt">Uma forma simples de formatar preços em javascript.
+  <section class="post">
+    <p>Uma forma simples de formatar preços em javascript.</p>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="31 Jan 2016" class="post-list__meta--date date">31 Jan 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#javascript">javascript</a> <a href="/tags/#price">price</a> <a href="/tags/#value">value</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/vagrant-start-windows/" title="Iniciar Vagrant no Windows com bat">Iniciar Vagrant no Windows com bat</a></h2>
-        <p class="excerpt">Iniciar a VM do vagrant através de um arquivo <code>.bat</code>.
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">prive</span> <span class="o">=</span> <span class="mi">170090</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">money</span> <span class="o">=</span> <span class="s1">&#39;R$&#39;</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">price</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[\D]+/g</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+          <span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
+          <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([0-9]{2})$/g</span><span class="p">,</span> <span class="s1">&#39;,$1&#39;</span><span class="p">)</span>
+          <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([0-9]{3}),([0-9]{2}$)/g</span><span class="p">,</span> <span class="s1">&#39;.$1,$2&#39;</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">money</span><span class="p">);</span> <span class="c1">// &#39;R$ 1.700,90&#39;</span></code></pre></div>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="31 Jan 2016" class="post-list__meta--date date">31 Jan 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#vagrant">vagrant</a> <a href="/tags/#windows">windows</a> <a href="/tags/#bat">bat</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/bem-vindo-ao-meu-blog/" title="Bem Vindo!">Bem Vindo!</a></h2>
-        <p class="excerpt">Sou Ramon Barros, faço Analise e Desenvolvimento de Sistemas na Ftec, atualmente trabalho na empresa <a href="http://sagasistemas.com.br">Saga Sistemas</a>, como desenvolvedor. Apaixonado por tecnologia e desenhos Manga, adoro Linux e amo o que faço, sempre procurando novas ideias e desafios.
-Tenho conhecimentos em Lógica de programação, Linguagem C/C++, Delphi 7 ( Pascal ) , PHP, TDD, AWS, Node.js, Javascript, HTML e CSS.
-
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="8 Jan 2016" class="post-list__meta--date date">8 Jan 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#jekyll">jekyll</a> <a href="/tags/#blog">blog</a> <a href="/tags/#github">github</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2013/classe-mysql/" title="Classe MySQL">Classe MySQL</a></h2>
-        <p class="excerpt">Criei esta <a href="https://gist.github.com/rbarros/3078427/download">classe</a> para facilitar o meu trabalho com a manipulação das informações do bando de dados mysql como no framework CodeIgniter. Segue abaixo como utiliza-la:
-
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="23 Mar 2013" class="post-list__meta--date date">23 Mar 2013</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#mysql">mysql</a> <a href="/tags/#codeigniter">codeigniter</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2013/arduino/" title="Arduino">Arduino</a></h2>
-        <p class="excerpt">Pra quem não conhece o <a href="http://arduino.cc">Arduino</a> é uma plataforma de prototipagem eletrônica open-source.
-Mas o que isso significa ?
-É uma placa com circuito eletrônico, com os componentes basicos para montagem de protótipos, podendo ser ligada ao computador.
-O projeto do hardware esta em código-aberto, podendo ser modificado a suas necessidades.
-Mais sobre a história do Arduino clique a <a href="http://pt.wikipedia.org/wiki/Arduino">aqui</a>.
-
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="31 Jan 2013" class="post-list__meta--date date">31 Jan 2013</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#arduino">arduino</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2012/comandos-uteis-para-linux/" title="Comandos uteis para Linux">Comandos uteis para Linux</a></h2>
-        <p class="excerpt">Alguns comandos do linux que costumo utilizar.
-
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="13 Sep 2012" class="post-list__meta--date date">13 Sep 2012</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#linux">linux</a> <a href="/tags/#comandos">comandos</a> <a href="/tags/#shell">shell</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-  </ol>
-
-  <hr class="post-list__divider ">
-
-  
-
-</div>
+  </section>
+</article>
       </div>
 
       <footer class="footer">

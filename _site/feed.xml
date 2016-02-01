@@ -5,9 +5,78 @@
     <description>Desenvolvedor</description>
     <link>http://ramon-barros.com//</link>
     <atom:link href="http://ramon-barros.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 31 Jan 2016 21:42:25 -0200</pubDate>
-    <lastBuildDate>Sun, 31 Jan 2016 21:42:25 -0200</lastBuildDate>
+    <pubDate>Sun, 31 Jan 2016 22:24:38 -0200</pubDate>
+    <lastBuildDate>Sun, 31 Jan 2016 22:24:38 -0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Formatar preço com JavaScript de forma simples</title>
+        <description>&lt;p&gt;Uma forma simples de formatar preços em javascript.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;170090&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;money&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;R$&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/[\D]+/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/([0-9]{2})$/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;,$1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/([0-9]{3}),([0-9]{2}$)/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;.$1,$2&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &amp;#39;R$ 1.700,90&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sun, 31 Jan 2016 20:12:00 -0200</pubDate>
+        <link>http://ramon-barros.com//2016/formatar-preco-em-javascript/</link>
+        <guid isPermaLink="true">http://ramon-barros.com//2016/formatar-preco-em-javascript/</guid>
+        
+        <category>javascript</category>
+        
+        <category>price</category>
+        
+        <category>value</category>
+        
+        
+        <category>javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>Iniciar Vagrant no Windows com bat</title>
+        <description>&lt;p&gt;Iniciar a VM do vagrant através de um arquivo &lt;code&gt;.bat&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bat&quot; data-lang=&quot;bat&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;off&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/d&lt;/span&gt; \path\dir\vagrant
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/f&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;tokens=2 delims= &amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%%a&lt;/span&gt; in (&lt;span class=&quot;s1&quot;&gt;&amp;#39;vagrant status ^| find /i &amp;quot;default&amp;quot;&amp;#39;&lt;/span&gt;) &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; (
+  &lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;STATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;%%a&lt;/span&gt;
+)
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%STATE%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;equ&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;running&amp;quot;&lt;/span&gt; (
+&lt;span class=&quot;p&quot;&gt;  @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; Vagrant VM is running...
+) &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; (
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%STATE%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;equ&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;saved&amp;quot;&lt;/span&gt; (
+&lt;span class=&quot;p&quot;&gt;    @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; Starting Vagrant VM from powered down state...
+    vagrant up
+  ) &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; (
+&lt;span class=&quot;p&quot;&gt;    @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; Resuming Vagrant VM from saved state...
+    vagrant resume
+  )
+)
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;errorlevel&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; (
+&lt;span class=&quot;p&quot;&gt;  @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; FAILURE! Vagrant VM unresponsive...
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sun, 31 Jan 2016 19:57:00 -0200</pubDate>
+        <link>http://ramon-barros.com//2016/vagrant-start-windows/</link>
+        <guid isPermaLink="true">http://ramon-barros.com//2016/vagrant-start-windows/</guid>
+        
+        <category>vagrant</category>
+        
+        <category>windows</category>
+        
+        <category>bat</category>
+        
+        
+        <category>windows</category>
+        
+      </item>
     
       <item>
         <title>Bem Vindo!</title>

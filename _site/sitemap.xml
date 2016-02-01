@@ -3,6 +3,36 @@
   
     
     <url>
+      <loc>http://ramon-barros.com/2016/formatar-preco-em-javascript/</loc>
+      
+        <lastmod>2016-01-31T20:12:00-02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://ramon-barros.com/2016/vagrant-start-windows/</loc>
+      
+        <lastmod>2016-01-31T19:57:00-02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>http://ramon-barros.com/2016/bem-vindo-ao-meu-blog/</loc>
       
         <lastmod>2016-01-08T13:04:23-02:00</lastmod>
@@ -66,7 +96,7 @@
     <url>
       <loc>http://ramon-barros.com/about/</loc>
       
-        <lastmod>2016-01-31T21:42:25-02:00</lastmod>
+        <lastmod>2016-01-31T22:24:38-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -81,7 +111,7 @@
     <url>
       <loc>http://ramon-barros.com/feed.xml</loc>
       
-        <lastmod>2016-01-31T21:42:25-02:00</lastmod>
+        <lastmod>2016-01-31T22:24:38-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -96,7 +126,7 @@
     <url>
       <loc>http://ramon-barros.com/</loc>
       
-        <lastmod>2016-01-31T21:42:25-02:00</lastmod>
+        <lastmod>2016-01-31T22:24:38-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -111,7 +141,7 @@
     <url>
       <loc>http://ramon-barros.com/js/main.js</loc>
       
-        <lastmod>2016-01-31T21:42:25-02:00</lastmod>
+        <lastmod>2016-01-31T22:24:38-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -126,7 +156,7 @@
     <url>
       <loc>http://ramon-barros.com/css/main.css</loc>
       
-        <lastmod>2016-01-31T21:42:25-02:00</lastmod>
+        <lastmod>2016-01-31T22:24:38-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -143,7 +173,7 @@
     <url>
       <loc>http://ramon-barros.com/tags/</loc>
       
-        <lastmod>2016-01-31T21:42:25-02:00</lastmod>
+        <lastmod>2016-01-31T22:24:38-02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

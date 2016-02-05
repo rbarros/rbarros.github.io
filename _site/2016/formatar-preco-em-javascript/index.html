@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>Formatar preço com JavaScript de forma simples</title>
-  <meta name="description" content="Desenvolvedor">
+  <meta name="description" content="Full Stack Developer">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -16,11 +16,11 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ramon Barros">
-  <meta name="twitter:description" content="Desenvolvedor">
+  <meta name="twitter:description" content="Full Stack Developer">
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Ramon Barros">
-  <meta property="og:description" content="Desenvolvedor">
+  <meta property="og:description" content="Full Stack Developer">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
@@ -64,7 +64,7 @@
           <h1 class="panel-cover__title panel-title">Ramon Barros</h1>
         </a>
         <hr class="panel-cover__divider">
-        <p class="panel-cover__description">Desenvolvedor</p>
+        <p class="panel-cover__description">Full Stack Developer</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary">
 
         <div class="navigation-wrapper">
@@ -152,12 +152,12 @@
   <section class="post">
     <p>Uma forma simples de formatar preços em javascript.</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">prive</span> <span class="o">=</span> <span class="mi">170090</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">prive</span> <span class="o">=</span> <span class="mi">170090</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">money</span> <span class="o">=</span> <span class="s1">&#39;R$&#39;</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">price</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[\D]+/g</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
           <span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
           <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([0-9]{2})$/g</span><span class="p">,</span> <span class="s1">&#39;,$1&#39;</span><span class="p">)</span>
           <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([0-9]{3}),([0-9]{2}$)/g</span><span class="p">,</span> <span class="s1">&#39;.$1,$2&#39;</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">money</span><span class="p">);</span> <span class="c1">// &#39;R$ 1.700,90&#39;</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">money</span><span class="p">);</span> <span class="c1">// &#39;R$ 1.700,90&#39;</span></code></pre></figure>
 
   </section>
 </article>

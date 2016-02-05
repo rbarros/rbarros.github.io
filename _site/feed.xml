@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ramon Barros</title>
-    <description>Desenvolvedor</description>
+    <description>Full Stack Developer</description>
     <link>http://ramon-barros.com//</link>
     <atom:link href="http://ramon-barros.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 31 Jan 2016 22:24:38 -0200</pubDate>
-    <lastBuildDate>Sun, 31 Jan 2016 22:24:38 -0200</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <pubDate>Thu, 04 Feb 2016 22:54:01 -0200</pubDate>
+    <lastBuildDate>Thu, 04 Feb 2016 22:54:01 -0200</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
     
       <item>
         <title>Formatar preço com JavaScript de forma simples</title>
         <description>&lt;p&gt;Uma forma simples de formatar preços em javascript.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;170090&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;prive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;170090&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;money&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;R$&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/[\D]+/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
           &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
           &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/([0-9]{2})$/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;,$1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
           &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/([0-9]{3}),([0-9]{2}$)/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;.$1,$2&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &amp;#39;R$ 1.700,90&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;money&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// &amp;#39;R$ 1.700,90&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 </description>
         <pubDate>Sun, 31 Jan 2016 20:12:00 -0200</pubDate>
         <link>http://ramon-barros.com//2016/formatar-preco-em-javascript/</link>
@@ -39,29 +39,35 @@
         <title>Iniciar Vagrant no Windows com bat</title>
         <description>&lt;p&gt;Iniciar a VM do vagrant através de um arquivo &lt;code&gt;.bat&lt;/code&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bat&quot; data-lang=&quot;bat&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;off&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bat&quot; data-lang=&quot;bat&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;off&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/d&lt;/span&gt; \path\dir\vagrant
+&lt;span class=&quot;k&quot;&gt;CD&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/d&lt;/span&gt; \path\dir\vagrant
 
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/f&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;tokens=2 delims= &amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%%a&lt;/span&gt; in (&lt;span class=&quot;s1&quot;&gt;&amp;#39;vagrant status ^| find /i &amp;quot;default&amp;quot;&amp;#39;&lt;/span&gt;) &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; (
-  &lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;STATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;%%a&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;FOR&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/f&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;tokens=2 delims= &amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%%a&lt;/span&gt; in (&lt;span class=&quot;s1&quot;&gt;&amp;#39;vagrant status ^| find /i &amp;quot;default&amp;quot;&amp;#39;&lt;/span&gt;) &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; (
+    &lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;STATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;%%a&lt;/span&gt;
 )
 
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%STATE%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;equ&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;running&amp;quot;&lt;/span&gt; (
-&lt;span class=&quot;p&quot;&gt;  @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; Vagrant VM is running...
-) &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; (
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%STATE%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;equ&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;saved&amp;quot;&lt;/span&gt; (
-&lt;span class=&quot;p&quot;&gt;    @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; Starting Vagrant VM from powered down state...
-    vagrant up
-  ) &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; (
-&lt;span class=&quot;p&quot;&gt;    @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; Resuming Vagrant VM from saved state...
-    vagrant resume
-  )
+&lt;span class=&quot;k&quot;&gt;IF&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%STATE%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;equ&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;running&amp;quot;&lt;/span&gt; (
+&lt;span class=&quot;p&quot;&gt;    @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; Vagrant VM is running...
+) &lt;span class=&quot;k&quot;&gt;ELSE&lt;/span&gt; (
+    &lt;span class=&quot;k&quot;&gt;IF&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%STATE%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;equ&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;saved&amp;quot;&lt;/span&gt; (
+&lt;span class=&quot;p&quot;&gt;        @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; Starting Vagrant VM from powered down state...
+        vagrant up
+    ) &lt;span class=&quot;k&quot;&gt;ELSE&lt;/span&gt; (
+        &lt;span class=&quot;k&quot;&gt;IF&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;%STATE%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;equ&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;poweroff&amp;quot;&lt;/span&gt; (
+&lt;span class=&quot;p&quot;&gt;            @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; Starting Vagrant VM from powered down state...
+            vagrant up
+        ) &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; (
+&lt;span class=&quot;p&quot;&gt;            @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; Resuming Vagrant VM from saved state...
+            vagrant resume
+        )
+    )
 )
 
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;errorlevel&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; (
+&lt;span class=&quot;k&quot;&gt;IF&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;errorlevel&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; (
 &lt;span class=&quot;p&quot;&gt;  @&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; FAILURE! Vagrant VM unresponsive...
-)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 </description>
         <pubDate>Sun, 31 Jan 2016 19:57:00 -0200</pubDate>
         <link>http://ramon-barros.com//2016/vagrant-start-windows/</link>
@@ -115,7 +121,7 @@ Tenho conhecimentos em Lógica de programação, Linguagem C/C++, Delphi 7 ( Pas
         <title>Classe MySQL</title>
         <description>&lt;p&gt;Criei esta &lt;a href=&quot;https://gist.github.com/rbarros/3078427/download&quot;&gt;classe&lt;/a&gt; para facilitar o meu trabalho com a manipulação das informações do bando de dados mysql como no framework CodeIgniter. Segue abaixo como utiliza-la:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
 
   &lt;span class=&quot;sd&quot;&gt;/**&lt;/span&gt;
 &lt;span class=&quot;sd&quot;&gt;   * Carregar a classe&lt;/span&gt;
@@ -214,7 +220,7 @@ Tenho conhecimentos em Lógica de programação, Linguagem C/C++, Delphi 7 ( Pas
   &lt;span class=&quot;nv&quot;&gt;$table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;nv&quot;&gt;$set&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Title&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;description&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Descrição&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;nv&quot;&gt;$affected_rows&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// Retorna: INSERT INTO test ( `id`,`title`,`description` ) VALUES ( &amp;#39;1&amp;#39;,&amp;#39;Title&amp;#39;,&amp;#39;Descrição&amp;#39; )&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Retorna: INSERT INTO test ( `id`,`title`,`description` ) VALUES ( &amp;#39;1&amp;#39;,&amp;#39;Title&amp;#39;,&amp;#39;Descrição&amp;#39; )&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Sat, 23 Mar 2013 14:03:00 -0300</pubDate>
@@ -270,13 +276,151 @@ programas necessários para compilar os códigos e enviar para o Arduino.&lt;/p&
         <title>Comandos uteis para Linux</title>
         <description>&lt;p&gt;Alguns comandos do linux que costumo utilizar.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Apache2&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#Editar arquivo php.ini Ubuntu 12.04&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo gedit /etc/php5/apache2/php.ini
 
-&lt;p&gt;)&lt;/p&gt;
+&lt;span class=&quot;c&quot;&gt;# Reiniciar Apache&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo /etc/init.d/apache2 restart
+&lt;span class=&quot;c&quot;&gt;# ou&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo service apache2 restart
+
+&lt;span class=&quot;c&quot;&gt;# Ativar mod_rewrite&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo a2enmod rewrite
+
+&lt;span class=&quot;c&quot;&gt;# clearfiles&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Encontra determinado arquivo e exclui &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Utilizo para limpar alguns projetos. &lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;.DS_Store&amp;quot;&lt;/span&gt; -exec rm -v &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;Thumbs.db&amp;quot;&lt;/span&gt; -exec rm -v &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;*.esproj&amp;quot;&lt;/span&gt; -exec rm -v &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;.cache&amp;quot;&lt;/span&gt; -type d -exec rm -rv &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;.project&amp;quot;&lt;/span&gt; -type d -exec rm -rv &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;.settings&amp;quot;&lt;/span&gt; -type d -exec rm -rv &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;.tmproj&amp;quot;&lt;/span&gt; -type d -exec rm -rv &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;.svn&amp;quot;&lt;/span&gt; -type d -exec rm -rv &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;_notes&amp;quot;&lt;/span&gt; -type d -exec rm -rv &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt; 
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;*bak*&amp;quot;&lt;/span&gt; -type f -exec rm -v &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt; 
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;*bkp*&amp;quot;&lt;/span&gt; -type f -exec rm -v &lt;span class=&quot;s1&quot;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Compactar arquivo tar&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;tar -cvf arquivo.tar /diretorio/*
+
+&lt;span class=&quot;c&quot;&gt;# Compactar arquivo tar respeitando a estrutura do diretórios&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;tar -cvf arquivo.tar ./diretorio/*
+
+&lt;span class=&quot;c&quot;&gt;# Compactar opção z&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;tar -czvf arquivo.tar.gz /diretorio/*
+
+&lt;span class=&quot;c&quot;&gt;# Descompactar arquivo zip:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gunzip arquivo.zip
+
+&lt;span class=&quot;c&quot;&gt;# Descompactar arquivo rar:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;unrar x arquivo.rar
+
+&lt;span class=&quot;c&quot;&gt;# Descompactar arquivo tar:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;tar -xvf arquivo.tar
+
+&lt;span class=&quot;c&quot;&gt;# Descompactar arquivo tar.gz:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;tar -xzvf arquivo.tar.gz
+
+&lt;span class=&quot;c&quot;&gt;# Descompactar arquivo bz2:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bunzip  arquivo.bz2
+
+&lt;span class=&quot;c&quot;&gt;# Descompactar arquivo tar.bz2:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;tar -jxvf arquivo.tar.bz2
+
+&lt;span class=&quot;c&quot;&gt;# Compoartilhar pasta&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#Ubuntu&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo mount -t smbfs -o &lt;span class=&quot;nv&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;usuario,password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;senha //server/diretorio /mnt/server/diretorio
+&lt;span class=&quot;c&quot;&gt;#Xubuntu&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo mount -t cifs -o &lt;span class=&quot;nv&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;usuario,password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;senha //server/diretorio /mnt/server/diretorio
+
+&lt;span class=&quot;c&quot;&gt;# Acessar url com curl&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl &lt;span class=&quot;s1&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;option&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -O &lt;span class=&quot;s1&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -L -O &lt;span class=&quot;s1&quot;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Download&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -o output.file.name.here &lt;span class=&quot;s1&quot;&gt;&amp;#39;url-here&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -o foo.pdf &lt;span class=&quot;s1&quot;&gt;&amp;#39;http://example.com/foo.pdf&amp;#39;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# dpkg&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# apt-get autoclean&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# apt-get clean&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# apt-get update&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# apt-get upgrade&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# apt-get --reinstall install&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; i in &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;dpkg -l&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;/^ii/ {print $2}&amp;#39;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    apt-get --reinstall -y install &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Mostra o tamanho de cada subdiretorio &lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;du -h --max-depth&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; 
+
+&lt;span class=&quot;c&quot;&gt;# Mostra o tamanho total do diretório &lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;du -sh /diretorio/ 
+
+&lt;span class=&quot;c&quot;&gt;# Mostra o tamanho total dos subdiretório &lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;du -sh /diretorio/*
+
+&lt;span class=&quot;c&quot;&gt;# mysqlExport&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mysqldump -u user -p database &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; gzip &amp;gt; database.sql.gz
+
+&lt;span class=&quot;c&quot;&gt;# mysqlImport&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;find -name &lt;span class=&quot;s2&quot;&gt;&amp;quot;*.sql&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{ print &amp;quot;source&amp;quot;,$0 }&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; mysql -u root db
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gunzip &amp;lt; database.sql.gz &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; mysql -u user -p database
+
+&lt;span class=&quot;c&quot;&gt;# Atualização do nodejs&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm cache clean -f
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install -g n
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo n stable
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo ln -sf /usr/local/n/versions/node/&amp;lt;VERSION&amp;gt;/bin/node /usr/bin/node
+
+&lt;span class=&quot;c&quot;&gt;# Partições&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat /etc/fstab
+&lt;span class=&quot;c&quot;&gt;# ou&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;df
+
+&lt;span class=&quot;c&quot;&gt;## Criar pendrive bootavel pelo terminal&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Instalar pv para mostrar o processo de gravação&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get update
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get install pv
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo fdisk -l &lt;span class=&quot;c&quot;&gt;# Identificar o pendrive&lt;/span&gt;
+Dispositivo Inicializar Start      Fim  Setores  Size Id Tipo
+/dev/sdb1   *            &lt;span class=&quot;m&quot;&gt;2048&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15630335&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15628288&lt;/span&gt;  7,5G  c W95 FAT32 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;LBA&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo mkfs.vfat /dev/sdb1 &lt;span class=&quot;c&quot;&gt;# Formatar o pendrive&lt;/span&gt;
+mkfs.fat 3.0.28 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2015-05-16&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;dd &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/ramon/Downloads/xubuntu-15.04-desktop-amd64.iso &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;pv&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;dd &lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/dev/sdb1 &lt;span class=&quot;nv&quot;&gt;bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1M
+1972224+0 registros de &lt;span class=&quot;nv&quot;&gt;entrada&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;gt;                                               &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+1972224+0 registros de saída
+ 963MiB 0:01:39 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;9,63MiB/s&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&amp;lt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;gt;                                               &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;1009778688&lt;/span&gt; bytes &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1,0 GB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; copiados, 99,9754 s, 10,1 MB/s
+5+9474 registros de entrada
+5+9474 registros de saída
+&lt;span class=&quot;m&quot;&gt;1009778688&lt;/span&gt; bytes &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1,0 GB&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; copiados, 103,303 s, 9,8 MB/s
+
+&lt;span class=&quot;c&quot;&gt;# Release&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat /etc/issue
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat ls /etc/*release /etc/*version
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;lsb_release -a
+&lt;span class=&quot;c&quot;&gt;# Arquiterura&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;file /bin/bash &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; cut -d&lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt; -f3
+32-bit
+&lt;span class=&quot;c&quot;&gt;# or&lt;/span&gt;
+64-bit
+
+&lt;span class=&quot;c&quot;&gt;# smb&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat /etc/samba/smb.conf
+
+&lt;span class=&quot;c&quot;&gt;# User&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo chown user:group -hR path&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 </description>
         <pubDate>Thu, 13 Sep 2012 07:09:00 -0300</pubDate>
         <link>http://ramon-barros.com//2012/comandos-uteis-para-linux/</link>

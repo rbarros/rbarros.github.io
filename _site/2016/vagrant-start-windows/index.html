@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>Iniciar Vagrant no Windows com bat</title>
-  <meta name="description" content="Desenvolvedor">
+  <meta name="description" content="Full Stack Developer">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -16,11 +16,11 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ramon Barros">
-  <meta name="twitter:description" content="Desenvolvedor">
+  <meta name="twitter:description" content="Full Stack Developer">
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Ramon Barros">
-  <meta property="og:description" content="Desenvolvedor">
+  <meta property="og:description" content="Full Stack Developer">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
@@ -64,7 +64,7 @@
           <h1 class="panel-cover__title panel-title">Ramon Barros</h1>
         </a>
         <hr class="panel-cover__divider">
-        <p class="panel-cover__description">Desenvolvedor</p>
+        <p class="panel-cover__description">Full Stack Developer</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary">
 
         <div class="navigation-wrapper">
@@ -152,29 +152,35 @@
   <section class="post">
     <p>Iniciar a VM do vagrant através de um arquivo <code>.bat</code>.</p>
 
-<div class="highlight"><pre><code class="language-bat" data-lang="bat"><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
+<figure class="highlight"><pre><code class="language-bat" data-lang="bat"><span class="p">@</span><span class="k">echo</span> <span class="k">off</span>
 
-<span class="k">cd</span> <span class="n">/d</span> \path\dir\vagrant
+<span class="k">CD</span> <span class="n">/d</span> \path\dir\vagrant
 
-<span class="k">for</span> <span class="n">/f</span> <span class="s2">&quot;tokens=2 delims= &quot;</span> <span class="nv">%%a</span> in (<span class="s1">&#39;vagrant status ^| find /i &quot;default&quot;&#39;</span>) <span class="k">do</span> (
-  <span class="k">SET</span> <span class="nv">STATE</span><span class="o">=</span><span class="nv">%%a</span>
+<span class="k">FOR</span> <span class="n">/f</span> <span class="s2">&quot;tokens=2 delims= &quot;</span> <span class="nv">%%a</span> in (<span class="s1">&#39;vagrant status ^| find /i &quot;default&quot;&#39;</span>) <span class="k">do</span> (
+    <span class="k">SET</span> <span class="nv">STATE</span><span class="o">=</span><span class="nv">%%a</span>
 )
 
-<span class="k">if</span> <span class="nv">%STATE%</span> <span class="o">equ</span> <span class="s2">&quot;running&quot;</span> (
-<span class="p">  @</span><span class="k">echo</span> Vagrant VM is running...
-) <span class="k">else</span> (
-  <span class="k">if</span> <span class="nv">%STATE%</span> <span class="o">equ</span> <span class="s2">&quot;saved&quot;</span> (
-<span class="p">    @</span><span class="k">echo</span> Starting Vagrant VM from powered down state...
-    vagrant up
-  ) <span class="k">else</span> (
-<span class="p">    @</span><span class="k">echo</span> Resuming Vagrant VM from saved state...
-    vagrant resume
-  )
+<span class="k">IF</span> <span class="nv">%STATE%</span> <span class="o">equ</span> <span class="s2">&quot;running&quot;</span> (
+<span class="p">    @</span><span class="k">echo</span> Vagrant VM is running...
+) <span class="k">ELSE</span> (
+    <span class="k">IF</span> <span class="nv">%STATE%</span> <span class="o">equ</span> <span class="s2">&quot;saved&quot;</span> (
+<span class="p">        @</span><span class="k">echo</span> Starting Vagrant VM from powered down state...
+        vagrant up
+    ) <span class="k">ELSE</span> (
+        <span class="k">IF</span> <span class="nv">%STATE%</span> <span class="o">equ</span> <span class="s2">&quot;poweroff&quot;</span> (
+<span class="p">            @</span><span class="k">echo</span> Starting Vagrant VM from powered down state...
+            vagrant up
+        ) <span class="k">else</span> (
+<span class="p">            @</span><span class="k">echo</span> Resuming Vagrant VM from saved state...
+            vagrant resume
+        )
+    )
 )
 
-<span class="k">if</span> <span class="k">errorlevel</span> <span class="m">1</span> (
+<span class="k">IF</span> <span class="k">errorlevel</span> <span class="m">1</span> (
 <span class="p">  @</span><span class="k">echo</span> FAILURE! Vagrant VM unresponsive...
-)</code></pre></div>
+)</code></pre></figure>
+
 
   </section>
 </article>

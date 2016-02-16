@@ -17,5 +17,6 @@ Utilizo alguns Frameworks como:
 - JCore
 - Ext JS 4
 - Backbone.js
+- AngularJs
 
 [Saga Sistemas]: http://sagasistemas.com.br

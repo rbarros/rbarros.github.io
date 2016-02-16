@@ -152,12 +152,12 @@
   <section class="post">
     <p>Uma forma simples de formatar preços em javascript.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">prive</span> <span class="o">=</span> <span class="mi">170090</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">prive</span> <span class="o">=</span> <span class="mi">170090</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">money</span> <span class="o">=</span> <span class="s1">&#39;R$&#39;</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">price</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[\D]+/g</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
           <span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
           <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([0-9]{2})$/g</span><span class="p">,</span> <span class="s1">&#39;,$1&#39;</span><span class="p">)</span>
           <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([0-9]{3}),([0-9]{2}$)/g</span><span class="p">,</span> <span class="s1">&#39;.$1,$2&#39;</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">money</span><span class="p">);</span> <span class="c1">// &#39;R$ 1.700,90&#39;</span></code></pre></figure>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">money</span><span class="p">);</span> <span class="c1">// &#39;R$ 1.700,90&#39;</span></code></pre></div>
 
   </section>
 </article>

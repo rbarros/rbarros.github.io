@@ -150,7 +150,7 @@ print(add10(2)); // 12
 {% endhighlight %}
 
 Utilização prática do closure,
-{% highlight javascript %}
+{% highlight html %}
 <html>
     <head>
         <style type="text/css">
@@ -292,13 +292,12 @@ Pode-se notar que mesmo não declarando as varíáveis ou função no topo antes
 
 ## Referências
 
-https://www.hugobessa.com.br/posts/entendendo-escopo-e-hoisting-no-javascript/
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Closures
-https://www.youtube.com/watch?v=JGpekHQ_9kY
-http://javascriptbrasil.com/2013/10/12/entenda-closures-no-javascript-com-facilidade/
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/var
-http://loopinfinito.com.br/2014/10/29/hoisting-e-escopo-em-javascript/
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Closures
-https://msdn.microsoft.com/pt-br/library/bzt2dkta(v=vs.94).aspx
-https://brunosouza.org/functions-no-javascript.html
-http://tutsmais.com.br/blog/javascript-2/o-que-e-iife-no-javascript/
+[Hugo, Entendendo escopo e hoisting no JavaScript](https://www.hugobessa.com.br/posts/entendendo-escopo-e-hoisting-no-javascript/)
+[Closures, Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Closures)
+[Aulas de Programação, Dicas Javascript - Ep01: Hoisting](https://www.youtube.com/watch?v=JGpekHQ_9kY)
+[Javascript Brasil, Entenda Closures no Javascript com facilidade](http://javascriptbrasil.com/2013/10/12/entenda-closures-no-javascript-com-facilidade/)
+[Statements Var, Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/var)
+[Loop Infinito, Hoisting e escopo em javascript](http://loopinfinito.com.br/2014/10/29/hoisting-e-escopo-em-javascript/)
+[Microsoft, Escopo variável (JavaScript)](https://msdn.microsoft.com/pt-br/library/bzt2dkta(v=vs.94).aspx)
+[Bruno Souza, Functions no javascript](https://brunosouza.org/functions-no-javascript.html)
+[Tuts Mais, O que e iife no javascript](http://tutsmais.com.br/blog/javascript-2/o-que-e-iife-no-javascript/)

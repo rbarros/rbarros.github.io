@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bem Vindo!"
-date:   2016-01-08 15:04:23
+date:   2011-08-19 20:00:00
 categories: blog
 tags: [jekyll,blog,github]
 ---
@@ -13,8 +13,6 @@ Utilizo alguns Frameworks como:
 - CodeIgniter
 - Laravel
 - Cakephp
-- Ionize CMS
-- JCore
 - Ext JS 4
 - Backbone.js
 - AngularJs

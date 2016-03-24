@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Bem Vindo!</title>
+  <title>MongoDB - Aula 01 - Exercício</title>
   <meta name="description" content="Full Stack Developer">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://ramon-barros.com//2016/bem-vindo-ao-meu-blog/">
+  <link rel="canonical" href="http://ramon-barros.com//2015/mongodb-aula-01-exercicio/">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
 </head>
 
@@ -144,27 +144,23 @@
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="8 Jan 2016" class="post-meta__date date">8 Jan 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#jekyll">jekyll</a> <a href="/tags/#blog">blog</a> <a href="/tags/#github">github</a> </span>
+      <time datetime="16 Nov 2015" class="post-meta__date date">16 Nov 2015</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#bemean">bemean</a> <a href="/tags/#mongodb">mongodb</a> <a href="/tags/#mongoimport">mongoimport</a> </span>
     </div>
-    <h1 class="post-title">Bem Vindo!</h1>
+    <h1 class="post-title">MongoDB - Aula 01 - Exercício</h1>
   </header>
 
   <section class="post">
-    <p>Sou Ramon Barros, faço Analise e Desenvolvimento de Sistemas na Ftec, atualmente trabalho na empresa <a href="http://sagasistemas.com.br">Saga Sistemas</a>, como desenvolvedor. Apaixonado por tecnologia e desenhos Manga, adoro Linux e amo o que faço, sempre procurando novas ideias e desafios.
-Tenho conhecimentos em Lógica de programação, Linguagem C/C++, Delphi 7 ( Pascal ) , PHP, TDD, AWS, Node.js, Javascript, HTML e CSS.</p>
+    <p>Importando os restaurantes</p>
 
-<p>Utilizo alguns Frameworks como:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rbarros:~/workspace <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>mongoimport --db be-mean --collection restaurantes --drop --file restaurantes.json
+connected to: 127.0.0.1
+2015-11-10T03:34:32.589+0000 dropping: be-mean.restaurantes
+2015-11-10T03:34:33.484+0000 check <span class="m">9</span> 25359
+2015-11-10T03:34:33.485+0000 imported <span class="m">25359</span> objects
+Contando os restaurantes
 
-<ul>
-  <li>CodeIgniter</li>
-  <li>Laravel</li>
-  <li>Cakephp</li>
-  <li>Ionize CMS</li>
-  <li>JCore</li>
-  <li>Ext JS 4</li>
-  <li>Backbone.js</li>
-  <li>AngularJs</li>
-</ul>
+&gt; db.restaurantes.find<span class="o">({})</span>.count<span class="o">()</span>
+25359</code></pre></div>
 
 
   </section>

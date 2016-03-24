@@ -282,27 +282,27 @@
 
 <p>Utilização prática do closure,</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">style</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/css&quot;</span><span class="o">&gt;</span>
-            <span class="nx">body</span> <span class="p">{</span>
-              <span class="nx">font</span><span class="o">-</span><span class="nx">family</span><span class="o">:</span> <span class="nx">Helvetica</span><span class="p">,</span> <span class="nx">Arial</span><span class="p">,</span> <span class="nx">sans</span><span class="o">-</span><span class="nx">serif</span><span class="p">;</span>
-              <span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="o">:</span> <span class="mi">12</span><span class="nx">px</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">body</span> <span class="p">{</span>
+              <span class="k">font-family</span><span class="o">:</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+              <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
             <span class="p">}</span>
 
-            <span class="nx">h1</span> <span class="p">{</span>
-              <span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="o">:</span> <span class="mf">1.5</span><span class="nx">em</span><span class="p">;</span>
+            <span class="nt">h1</span> <span class="p">{</span>
+              <span class="k">font-size</span><span class="o">:</span> <span class="m">1.5em</span><span class="p">;</span>
             <span class="p">}</span>
-            <span class="nx">h2</span> <span class="p">{</span>
-              <span class="nx">font</span><span class="o">-</span><span class="nx">size</span><span class="o">:</span> <span class="mf">1.2</span><span class="nx">em</span><span class="p">;</span>
+            <span class="nt">h2</span> <span class="p">{</span>
+              <span class="k">font-size</span><span class="o">:</span> <span class="m">1.2em</span><span class="p">;</span>
             <span class="p">}</span>
-        <span class="o">&lt;</span><span class="err">/style&gt;</span>
-    <span class="o">&lt;</span><span class="err">/head&gt;</span>
-    <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;#&quot;</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;size-12&quot;</span><span class="o">&gt;</span><span class="mi">12</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
-        <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;#&quot;</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;size-14&quot;</span><span class="o">&gt;</span><span class="mi">14</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
-        <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;#&quot;</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;size-16&quot;</span><span class="o">&gt;</span><span class="mi">16</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
-        <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+        <span class="nt">&lt;/style&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">id=</span><span class="s">&quot;size-12&quot;</span><span class="nt">&gt;</span>12<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">id=</span><span class="s">&quot;size-14&quot;</span><span class="nt">&gt;</span>14<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">id=</span><span class="s">&quot;size-16&quot;</span><span class="nt">&gt;</span>16<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
             <span class="kd">function</span> <span class="nx">makeSizer</span><span class="p">(</span><span class="nx">size</span><span class="p">)</span> <span class="p">{</span>
                 <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
                     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fontSize</span> <span class="o">=</span> <span class="nx">size</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
@@ -315,9 +315,9 @@
             <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;size-12&#39;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">size12</span><span class="p">;</span>
             <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;size-14&#39;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">size14</span><span class="p">;</span>
             <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;size-16&#39;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">size16</span><span class="p">;</span>
-        <span class="o">&lt;</span><span class="err">/script&gt;</span>
-    <span class="o">&lt;</span><span class="err">/body&gt;</span>
-<span class="o">&lt;</span><span class="err">/html&gt;</span></code></pre></div>
+        <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
 
 <p>Exemplo utilizando o jQuery.</p>
 
@@ -410,16 +410,17 @@
 
 <h2 id="referncias">Referências</h2>
 
-<p>https://www.hugobessa.com.br/posts/entendendo-escopo-e-hoisting-no-javascript/
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Closures
-https://www.youtube.com/watch?v=JGpekHQ_9kY
-http://javascriptbrasil.com/2013/10/12/entenda-closures-no-javascript-com-facilidade/
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/var
-http://loopinfinito.com.br/2014/10/29/hoisting-e-escopo-em-javascript/
-https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Closures
-https://msdn.microsoft.com/pt-br/library/bzt2dkta(v=vs.94).aspx
-https://brunosouza.org/functions-no-javascript.html
-http://tutsmais.com.br/blog/javascript-2/o-que-e-iife-no-javascript/</p>
+<ul>
+  <li><a href="https://www.hugobessa.com.br/posts/entendendo-escopo-e-hoisting-no-javascript/">Hugo, Entendendo escopo e hoisting no JavaScript</a></li>
+  <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Closures">Closures, Mozilla</a></li>
+  <li><a href="https://www.youtube.com/watch?v=JGpekHQ_9kY">Aulas de Programação, Dicas Javascript - Ep01: Hoisting</a></li>
+  <li><a href="http://javascriptbrasil.com/2013/10/12/entenda-closures-no-javascript-com-facilidade/">Javascript Brasil, Entenda Closures no Javascript com facilidade</a></li>
+  <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/var">Statements Var, Mozilla</a></li>
+  <li><a href="http://loopinfinito.com.br/2014/10/29/hoisting-e-escopo-em-javascript/">Loop Infinito, Hoisting e escopo em javascript</a></li>
+  <li><a href="https://msdn.microsoft.com/pt-br/library/bzt2dkta(v=vs.94).aspx">Microsoft, Escopo variável (JavaScript)</a></li>
+  <li><a href="https://brunosouza.org/functions-no-javascript.html">Bruno Souza, Functions no javascript</a></li>
+  <li><a href="http://tutsmais.com.br/blog/javascript-2/o-que-e-iife-no-javascript/">Tuts Mais, O que e iife no javascript</a></li>
+</ul>
 
   </section>
 </article>

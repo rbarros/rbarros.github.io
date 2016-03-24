@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>MongoDB - Aula 05 - Exercício</title>
+  <meta name="description" content="Full Stack Developer">
+  <meta name="author" content="Ramon Barros">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ramon Barros">
+  <meta name="twitter:description" content="Full Stack Developer">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Ramon Barros">
+  <meta property="og:description" content="Full Stack Developer">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://ramon-barros.com//2015/mongodb-aula-05-exercicio/">
+  <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+  
+<header class="panel-cover" style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="/" title="link to home of Ramon Barros">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">Ramon Barros</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Full Stack Developer</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to Ramon Barros blog" class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+          
+            
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/ramonbarros_" title="@ramonbarros_ on Twitter" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/ramonbarros" title="ramonbarros on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/rbarros" title="rbarros on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:contato@ramon-barros.com" title="Email contato@ramon-barros.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            
+
+            <!-- RSS -->
+            <li class="navigation__item">
+              <a href="/feed.xml" title="Subscribe" target="_blank">
+                <i class="icon icon-rss"></i>
+                <span class="label">RSS</span>
+              </a>
+            </li>
+          
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="23 Nov 2015" class="post-meta__date date">23 Nov 2015</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#bemean">bemean</a> <a href="/tags/#mongodb">mongodb</a> <a href="/tags/#find">find</a> </span>
+    </div>
+    <h1 class="post-title">MongoDB - Aula 05 - Exercício</h1>
+  </header>
+
+  <section class="post">
+    <ol>
+  <li>Importar as collections restaurantes e pokemons</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">rbarros</span><span class="o">:~</span><span class="err">/workspace (master) $ mongoimport --host 127.0.0.1 --db be-mean --collection restaurantes --drop --file db/restaurantes.json</span>
+<span class="nx">connected</span> <span class="nx">to</span><span class="o">:</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+<span class="mi">2015</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">23</span><span class="nx">T15</span><span class="o">:</span><span class="mi">02</span><span class="o">:</span><span class="mf">48.260</span><span class="o">+</span><span class="mi">0000</span> <span class="nx">dropping</span><span class="o">:</span> <span class="nx">be</span><span class="o">-</span><span class="nx">mean</span><span class="p">.</span><span class="nx">restaurantes</span>
+<span class="mi">2015</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">23</span><span class="nx">T15</span><span class="o">:</span><span class="mi">02</span><span class="o">:</span><span class="mf">49.253</span><span class="o">+</span><span class="mi">0000</span> <span class="nx">check</span> <span class="mi">9</span> <span class="mi">25359</span>
+<span class="mi">2015</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">23</span><span class="nx">T15</span><span class="o">:</span><span class="mi">02</span><span class="o">:</span><span class="mf">49.262</span><span class="o">+</span><span class="mi">0000</span> <span class="nx">imported</span> <span class="mi">25359</span> <span class="nx">objects</span>
+
+<span class="nx">rbarros</span><span class="o">:~</span><span class="err">/workspace (master) $ mongoimport --host 127.0.0.1 --db be-mean --collection pokemons --drop --file db/pokemons.json</span>
+<span class="nx">connected</span> <span class="nx">to</span><span class="o">:</span> <span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span>
+<span class="mi">2015</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">23</span><span class="nx">T15</span><span class="o">:</span><span class="mi">03</span><span class="o">:</span><span class="mf">13.194</span><span class="o">+</span><span class="mi">0000</span> <span class="nx">dropping</span><span class="o">:</span> <span class="nx">be</span><span class="o">-</span><span class="nx">mean</span><span class="p">.</span><span class="nx">pokemons</span>
+<span class="mi">2015</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">23</span><span class="nx">T15</span><span class="o">:</span><span class="mi">03</span><span class="o">:</span><span class="mf">13.211</span><span class="o">+</span><span class="mi">0000</span> <span class="nx">check</span> <span class="mi">9</span> <span class="mi">610</span>
+<span class="mi">2015</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">23</span><span class="nx">T15</span><span class="o">:</span><span class="mi">03</span><span class="o">:</span><span class="mf">13.211</span><span class="o">+</span><span class="mi">0000</span> <span class="nx">imported</span> <span class="mi">610</span> <span class="nx">objects</span></code></pre></div>
+
+<ol>
+  <li>Distinct por <code>cuisine</code> na restaurantes</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">db</span><span class="p">.</span><span class="nx">restaurantes</span><span class="p">.</span><span class="nx">distinct</span><span class="p">(</span><span class="s1">&#39;cuisine&#39;</span><span class="p">)</span>
+<span class="p">[</span>
+        <span class="s2">&quot;Bakery&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Hamburgers&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Irish&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;American &quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Jewish/Kosher&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Delicatessen&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Ice Cream, Gelato, Yogurt, Ices&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Chinese&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Other&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Chicken&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Turkish&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Caribbean&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Donuts&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Sandwiches/Salads/Mixed Buffet&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Bagels/Pretzels&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Continental&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Pizza&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Italian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Steak&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Polish&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Latin (Cuban, Dominican, Puerto Rican, South &amp; Central American)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;German&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;French&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Pizza/Italian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Mexican&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Spanish&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Café/Coffee/Tea&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Tex-Mex&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Pancakes/Waffles&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Soul Food&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Seafood&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Hotdogs&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Greek&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Not Listed/Not Applicable&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;African&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Japanese&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Indian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Armenian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Thai&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Chinese/Cuban&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Mediterranean&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Korean&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Bottled beverages, including water, sodas, juices, etc.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Russian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Eastern European&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Middle Eastern&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Asian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Ethiopian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Vegetarian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Barbecue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Egyptian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;English&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Sandwiches&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Portuguese&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Indonesian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Chinese/Japanese&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Filipino&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Juice, Smoothies, Fruit Salads&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Brazilian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Afghan&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Vietnamese/Cambodian/Malaysia&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;CafÃ©/Coffee/Tea&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Soups &amp; Sandwiches&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Tapas&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Moroccan&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Pakistani&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Peruvian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Bangladeshi&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Czech&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Salads&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Creole&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Fruits/Vegetables&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Iranian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Cajun&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Scandinavian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Polynesian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Soups&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Australian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Hotdogs/Pretzels&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Southwestern&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Nuts/Confectionary&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Hawaiian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Creole/Cajun&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Californian&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Chilean&quot;</span>
+<span class="p">]</span></code></pre></div>
+
+<ol>
+  <li>Distinct por <code>types</code> na pokemons</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">db</span><span class="p">.</span><span class="nx">pokemons</span><span class="p">.</span><span class="nx">distinct</span><span class="p">(</span><span class="s1">&#39;types&#39;</span><span class="p">)</span>
+<span class="p">[</span>
+        <span class="s2">&quot;normal&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fire&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;water&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;bug&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flying&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;poison&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;electric&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;steel&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ice&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ghost&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fighting&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;psychic&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;grass&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ground&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;fairy&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rock&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dark&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;dragon&quot;</span>
+<span class="p">]</span></code></pre></div>
+
+<ol>
+  <li>As primeiras 3 páginas com .limit() e .skip() de pokemons (5 em 5)</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="p">{};</span>
+
+<span class="nx">db</span><span class="p">.</span><span class="nx">pokemons</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">query</span><span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">skip</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dad25337263280d0479&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">56</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.305777&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">35</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Rattata&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">72</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;normal&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dad25337263280d047a&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">52</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.271082&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">43</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">39</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Charmander&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">65</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;fire&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dad25337263280d047b&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">64</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.273462&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">58</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">58</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Charmeleon&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;fire&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dad25337263280d047c&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">63</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.280718&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">80</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">59</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Wartortle&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">58</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;water&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dad25337263280d047d&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">83</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.282985&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;16&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">79</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Blastoise&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">78</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;water&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="nx">db</span><span class="p">.</span><span class="nx">pokemons</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">query</span><span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">skip</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dad25337263280d047e&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.285736&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">35</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Caterpie&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;bug&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dad25337263280d047f&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">20</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.288107&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">55</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Metapod&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;bug&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dad25337263280d0480&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.290411&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Butterfree&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;flying&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;bug&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dad25337263280d0481&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.310402&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Spearow&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;normal&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;flying&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dad25337263280d0482&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.294947&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Kakuna&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">35</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;poison&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;bug&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="nx">db</span><span class="p">.</span><span class="nx">pokemons</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">query</span><span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">skip</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dae25337263280d0483&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">65</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.439497&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">55</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">52</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Farfetchd&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;normal&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;flying&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dae25337263280d0484&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">35</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.435237&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Magnemite&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;steel&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;electric&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dae25337263280d0485&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.437483&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">95</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Magneton&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">70</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;steel&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;electric&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dae25337263280d0486&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">85</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.441502&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;14&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">35</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Doduo&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">75</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;normal&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;flying&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span>
+<span class="p">{</span>
+        <span class="s2">&quot;_id&quot;</span> <span class="o">:</span> <span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;564b1dae25337263280d0487&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;attack&quot;</span> <span class="o">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;created&quot;</span> <span class="o">:</span> <span class="s2">&quot;2013-11-03T15:05:41.445749&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;defense&quot;</span> <span class="o">:</span> <span class="mi">55</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span> <span class="o">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hp&quot;</span> <span class="o">:</span> <span class="mi">65</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span> <span class="o">:</span> <span class="s2">&quot;Seel&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;speed&quot;</span> <span class="o">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;types&quot;</span> <span class="o">:</span> <span class="p">[</span>
+                <span class="s2">&quot;water&quot;</span>
+        <span class="p">]</span>
+<span class="p">}</span></code></pre></div>
+
+<p>5 . Group ou Aggregate contando a quantidade de pokemons de cada tipo</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">db</span><span class="p">.</span><span class="nx">pokemons</span><span class="p">.</span><span class="nx">group</span><span class="p">({</span>
+    <span class="nx">initial</span><span class="o">:</span> <span class="p">{</span> <span class="nx">total</span><span class="o">:</span> <span class="mi">0</span> <span class="p">},</span>
+    <span class="nx">reduce</span><span class="o">:</span>  <span class="kd">function</span><span class="p">(</span><span class="nx">cur</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">cur</span><span class="p">.</span><span class="nx">types</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">result</span><span class="p">[</span><span class="nx">type</span><span class="p">])</span> <span class="p">{</span>
+                <span class="nx">result</span><span class="p">[</span><span class="nx">type</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">result</span><span class="p">[</span><span class="nx">type</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="nx">result</span><span class="p">.</span><span class="nx">total</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;total&quot;</span> <span class="o">:</span> <span class="mi">915</span><span class="p">,</span>
+        <span class="s2">&quot;normal&quot;</span> <span class="o">:</span> <span class="mi">78</span><span class="p">,</span>
+        <span class="s2">&quot;fire&quot;</span> <span class="o">:</span> <span class="mi">47</span><span class="p">,</span>
+        <span class="s2">&quot;water&quot;</span> <span class="o">:</span> <span class="mi">105</span><span class="p">,</span>
+        <span class="s2">&quot;bug&quot;</span> <span class="o">:</span> <span class="mi">61</span><span class="p">,</span>
+        <span class="s2">&quot;flying&quot;</span> <span class="o">:</span> <span class="mi">77</span><span class="p">,</span>
+        <span class="s2">&quot;poison&quot;</span> <span class="o">:</span> <span class="mi">54</span><span class="p">,</span>
+        <span class="s2">&quot;steel&quot;</span> <span class="o">:</span> <span class="mi">37</span><span class="p">,</span>
+        <span class="s2">&quot;electric&quot;</span> <span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+        <span class="s2">&quot;ice&quot;</span> <span class="o">:</span> <span class="mi">24</span><span class="p">,</span>
+        <span class="s2">&quot;ghost&quot;</span> <span class="o">:</span> <span class="mi">34</span><span class="p">,</span>
+        <span class="s2">&quot;fighting&quot;</span> <span class="o">:</span> <span class="mi">38</span><span class="p">,</span>
+        <span class="s2">&quot;psychic&quot;</span> <span class="o">:</span> <span class="mi">62</span><span class="p">,</span>
+        <span class="s2">&quot;grass&quot;</span> <span class="o">:</span> <span class="mi">75</span><span class="p">,</span>
+        <span class="s2">&quot;ground&quot;</span> <span class="o">:</span> <span class="mi">51</span><span class="p">,</span>
+        <span class="s2">&quot;fairy&quot;</span> <span class="o">:</span> <span class="mi">28</span><span class="p">,</span>
+        <span class="s2">&quot;rock&quot;</span> <span class="o">:</span> <span class="mi">46</span><span class="p">,</span>
+        <span class="s2">&quot;dark&quot;</span> <span class="o">:</span> <span class="mi">38</span><span class="p">,</span>
+        <span class="s2">&quot;dragon&quot;</span> <span class="o">:</span> <span class="mi">20</span>
+    <span class="p">}</span>
+<span class="p">]</span></code></pre></div>
+
+<ol>
+  <li>Realizar 3 counts na pokemons.</li>
+</ol>
+
+<p>-&gt; .count – todos</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">pokemons</span><span class="p">.</span><span class="nx">count</span><span class="p">(</span><span class="nx">query</span><span class="p">)</span>
+<span class="mi">610</span></code></pre></div>
+
+<p>-&gt; .count – só tipo fogo</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="p">{</span><span class="nx">types</span><span class="o">:</span><span class="s1">&#39;fire&#39;</span><span class="p">};</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">pokemons</span><span class="p">.</span><span class="nx">count</span><span class="p">(</span><span class="nx">query</span><span class="p">)</span>
+<span class="mi">47</span></code></pre></div>
+
+<p>-&gt; .count – só de quantos tem a defesa maior que 70</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="p">{</span><span class="nx">defense</span><span class="o">:</span> <span class="p">{</span><span class="nx">$gt</span><span class="o">:</span> <span class="mi">70</span><span class="p">}}</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">pokemons</span><span class="p">.</span><span class="nx">count</span><span class="p">(</span><span class="nx">query</span><span class="p">)</span>
+<span class="mi">250</span></code></pre></div>
+
+
+  </section>
+</article>
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2016 Ramon Barros. All rights reserved.</span>
+</footer> 
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32626396-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    </div>
+  </body>
+</html>

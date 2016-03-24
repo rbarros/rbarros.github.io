@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "PHP com OCI e PDO"
+date:   2016-01-21 16:20:00
+categories: arduino
+tags: [arduino]
+---
+
+$ sudo apt-get install php-pear
+$ apt-get install php5-dev
+$ sudo pecl install oci8 #2.1.0 PHP >= 7
+$ sudo pecl install oci8-2.0.10 # PHP >= 5.2
+$ cd oci8-2.1.0
+$ cd oci8-2.1.0
+$ ./configure -with-oci8=shared,instantclient,$ORACLE_HOME
+$ ./configure -with-oci8=shared,instantclient,$ORACLE_HOME
+$ ./configure --with-oci8=instantclient,/usr/lib/oracle/12.1/client64/lib
+$ ./configure --with-oci8=instantclient,/usr/lib/oracle/11.2/client64/lib
+$ ./configure --with-oci8=instantclient,/usr/lib/oracle/11.2/client64/lib
+$ cd oci8
+$ ./configure --with-oci8=instantclient,/usr/lib/oracle/11.2/client64/lib
+$ php -i | grep oci8
+$ cp 05-opcache.ini 05-oci8.ini
+$ sudo cp 05-opcache.ini 05-oci8.ini
+$ vim 05-oci8.ini
+$ rm 05-oci8.ini
+$ sudo rm 05-oci8.ini
+$ vim 05-oci8.ini
+$ sudo vim 05-oci8.ini
+$ sudo vim ../../mods-available/oci8.ini
+$ cat 05-oci8.ini
+$ sudo vim ../../mods-available/oci8.ini
+
+$ wget http://olex.openlogic.com/package_versions/19270/download?package_version_id=88335&path=https%3A%2F%2Folex-secure.openlogic.com%2Fcontent%2Fprivate%2F5e6a6f0815e830bba705e79e4a0470fbee8a5880%2Fphp%2F5.5.9%2Fphp-5.5.9.tar.gz
+$ export ORACLE_HOME=/usr/lib/oracle/11.2/client64/
+$ sudo apt-get install build-essential
+$ sudo apt-get build-dep php5
+$ tar -xzvf php-5.5.9.tar.gz
+$ cd php-5.5.9
+$ cd ext
+$ cd pdo_oci
+$ ln -s /usr/include/php5 /usr/include/php
+$ phpize
+$ ./configure --with-pdo-oci=instantclient,/usr,11.2
+$ make
+$ make test
+$ sudo make install
+$ sudo ln -sf /etc/php5/mods-available/pdo_oci.ini /etc/php5/apache2/conf.d/20-pdo_oci.ini
+
+/usr/lib/php5/20121212/pdo_oci.so
+
+$ sudo unzip openlogic-php-5.3.10-all-src-1.zip -d php-5.3.10

@@ -3,6 +3,21 @@
   
     
     <url>
+      <loc>http://ramon-barros.com/2016/configurando-dump-do-twig-com-slimframework/</loc>
+      
+        <lastmod>2016-03-31T07:51:00-03:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>http://ramon-barros.com/2016/problema-acentuacao-php-oracle/</loc>
       
         <lastmod>2016-02-12T09:20:00-02:00</lastmod>
@@ -216,7 +231,7 @@
     <url>
       <loc>http://ramon-barros.com/about/</loc>
       
-        <lastmod>2016-03-24T17:30:12-03:00</lastmod>
+        <lastmod>2016-03-31T11:25:37-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -231,7 +246,7 @@
     <url>
       <loc>http://ramon-barros.com/feed.xml</loc>
       
-        <lastmod>2016-03-24T17:30:12-03:00</lastmod>
+        <lastmod>2016-03-31T11:25:37-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -246,7 +261,7 @@
     <url>
       <loc>http://ramon-barros.com/</loc>
       
-        <lastmod>2016-03-24T17:30:12-03:00</lastmod>
+        <lastmod>2016-03-31T11:25:37-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -261,7 +276,7 @@
     <url>
       <loc>http://ramon-barros.com/js/main.js</loc>
       
-        <lastmod>2016-03-24T17:30:12-03:00</lastmod>
+        <lastmod>2016-03-31T11:25:37-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -276,7 +291,7 @@
     <url>
       <loc>http://ramon-barros.com/css/main.css</loc>
       
-        <lastmod>2016-03-24T17:30:12-03:00</lastmod>
+        <lastmod>2016-03-31T11:25:37-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -293,7 +308,7 @@
     <url>
       <loc>http://ramon-barros.com/tags/</loc>
       
-        <lastmod>2016-03-24T17:30:12-03:00</lastmod>
+        <lastmod>2016-03-31T11:25:37-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -308,7 +323,7 @@
     <url>
       <loc>http://ramon-barros.com/page2/</loc>
       
-        <lastmod>2016-03-24T17:30:12-03:00</lastmod>
+        <lastmod>2016-03-31T11:25:37-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

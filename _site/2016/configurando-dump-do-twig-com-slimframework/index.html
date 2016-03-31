@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Ramon Barros</title>
+  <title>Configurando o dump() do twig no slim framework 2.6.1</title>
   <meta name="description" content="Full Stack Developer">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://ramon-barros.com//page2/">
+  <link rel="canonical" href="http://ramon-barros.com//2016/configurando-dump-do-twig-com-slimframework/">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
 </head>
 
@@ -141,79 +141,70 @@
 
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
-        <div class="main-post-list">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="31 Mar 2016" class="post-meta__date date">31 Mar 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#php">php</a> <a href="/tags/#slim">slim</a> <a href="/tags/#twig">twig</a> <a href="/tags/#dump">dump</a> <a href="/tags/#debug">debug</a> </span>
+    </div>
+    <h1 class="post-title">Configurando o dump() do twig no slim framework 2.6.1</h1>
+  </header>
 
-  <ol class="post-list">
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2015/mongodb-aula-01-exercicio/" title="MongoDB - Aula 01 - Exercício">MongoDB - Aula 01 - Exercício</a></h2>
-        <p class="excerpt">Importando os restaurantes
+  <section class="post">
+    <p>Procurei na internet como configurar a função <code>dump()</code> na view do slim utilizando o twig, no entanto nada ajudou. Na <a href="http://twig.sensiolabs.org/doc/functions/dump.html">documentação</a>
+informa para adicionar a extensão debug e setar true para o ambiente de desenvolvimento.</p>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="16 Nov 2015" class="post-list__meta--date date">16 Nov 2015</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#bemean">bemean</a> <a href="/tags/#mongodb">mongodb</a> <a href="/tags/#mongoimport">mongoimport</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2013/classe-mysql/" title="Classe MySQL">Classe MySQL</a></h2>
-        <p class="excerpt">Criei esta <a href="https://gist.github.com/rbarros/3078427/download">classe</a> para facilitar o meu trabalho com a manipulação das informações do bando de dados mysql como no framework CodeIgniter. Segue abaixo como utiliza-la:
+<p>No entanto minha estrutura é essa:</p>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="23 Mar 2013" class="post-list__meta--date date">23 Mar 2013</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#mysql">mysql</a> <a href="/tags/#codeigniter">codeigniter</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2013/arduino/" title="Arduino">Arduino</a></h2>
-        <p class="excerpt">Pra quem não conhece o <a href="http://arduino.cc">Arduino</a> é uma plataforma de prototipagem eletrônica open-source.
-Mas o que isso significa ?
-É uma placa com circuito eletrônico, com os componentes basicos para montagem de protótipos, podendo ser ligada ao computador.
-O projeto do hardware esta em código-aberto, podendo ser modificado a suas necessidades.
-Mais sobre a história do Arduino clique a <a href="http://pt.wikipedia.org/wiki/Arduino">aqui</a>.
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">#</span> <span class="err">Arquivo</span> <span class="err">composer.json</span>
+<span class="p">{</span>
+    <span class="nt">&quot;require&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;php&quot;</span><span class="p">:</span><span class="s2">&quot;&gt;=5.3.0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;slim/slim&quot;</span><span class="p">:</span><span class="s2">&quot;2.*&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;slim/views&quot;</span><span class="p">:</span><span class="s2">&quot;0.1.*&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;twig/twig&quot;</span><span class="p">:</span><span class="s2">&quot;1.*&quot;</span>
+    <span class="p">},</span>
+<span class="p">}</span></code></pre></div>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="31 Jan 2013" class="post-list__meta--date date">31 Jan 2013</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#arduino">arduino</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2012/comandos-uteis-para-linux/" title="Comandos uteis para Linux">Comandos uteis para Linux</a></h2>
-        <p class="excerpt">Alguns comandos do linux que costumo utilizar.
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="c1">// index.php</span>
+<span class="o">...</span>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="13 Sep 2012" class="post-list__meta--date date">13 Sep 2012</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#linux">linux</a> <a href="/tags/#comandos">comandos</a> <a href="/tags/#shell">shell</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2011/bem-vindo-ao-meu-blog/" title="Bem Vindo!">Bem Vindo!</a></h2>
-        <p class="excerpt">Sou Ramon Barros, faço Analise e Desenvolvimento de Sistemas na Ftec, atualmente trabalho na empresa <a href="http://sagasistemas.com.br">Saga Sistemas</a>, como desenvolvedor. Apaixonado por tecnologia e desenhos Manga, adoro Linux e amo o que faço, sempre procurando novas ideias e desafios.
-Tenho conhecimentos em Lógica de programação, Linguagem C/C++, Delphi 7 ( Pascal ) , PHP, TDD, AWS, Node.js, Javascript, HTML e CSS.
+<span class="nv">$twigView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\Views\Twig</span><span class="p">();</span>
+<span class="nv">$app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\Slim</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;debug&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+    <span class="s1">&#39;view&#39;</span> <span class="o">=&gt;</span> <span class="nv">$twigView</span><span class="p">,</span>
+    <span class="s1">&#39;templates.path&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;../views/&#39;</span>
+<span class="p">));</span>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="19 Aug 2011" class="post-list__meta--date date">19 Aug 2011</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#jekyll">jekyll</a> <a href="/tags/#blog">blog</a> <a href="/tags/#github">github</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-  </ol>
+<span class="o">...</span></code></pre></div>
 
-  <hr class="post-list__divider ">
+<p>Como fazer essa bagaça funcionar ? Se você olhar a documentação do <a href="https://github.com/slimphp/Slim-Views">Slim-View</a>
+verá que é possível passar as configurações para a propriedade <code>parserOptions</code> e carregar as extensões na propriedade <code>parserExtensions</code>
+desta forma.</p>
 
-  
-      <nav class="pagination" role="navigation">
-  
-    
-      <a rel="prev" class="posts newer btn small" href="/#blog" title="Previous Page">← Newer Posts</a>
-    
-  
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
 
-  <span class="pagination__page-number">Page 2 of 2</span>
+<span class="o">...</span>
 
-  
-</nav>
-  
+<span class="nv">$twigView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\Views\Twig</span><span class="p">();</span>
+<span class="nv">$twigView</span><span class="o">-&gt;</span><span class="na">parserOptions</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;debug&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span>
+<span class="p">);</span>
+<span class="nv">$twigView</span><span class="o">-&gt;</span><span class="na">parserExtensions</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nx">\Twig_Extension_Debug</span><span class="p">(),</span>
+<span class="p">);</span>
+<span class="nv">$app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Slim\Slim</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;debug&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+    <span class="s1">&#39;view&#39;</span> <span class="o">=&gt;</span> <span class="nv">$twigView</span><span class="p">,</span>
+    <span class="s1">&#39;templates.path&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;../views/&#39;</span>
+<span class="p">));</span>
 
-</div>
+<span class="o">...</span></code></pre></div>
+
+<p>Pronto! Agora é possível utilizar o dump na view do twig.</p>
+
+  </section>
+</article>
       </div>
 
       <footer class="footer">

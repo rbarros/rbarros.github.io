@@ -45,6 +45,14 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://ramon-barros.com//2015/artigo-instanciacao-no-javascript/">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
+  <script type="text/javascript">
+      window.smartlook||(function(d) {
+      var o=smartlook=function(){ o.api.push(arguments)},s=d.getElementsByTagName('script')[0];
+      var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+      c.charset='utf-8';c.src='//rec.getsmartlook.com/bundle.js';s.parentNode.insertBefore(c,s);
+      })(document);
+      smartlook('init', '2df9094f8d91a76b8e963e635d68fd10abace184');
+  </script>
 </head>
 
 
@@ -153,22 +161,22 @@
     <h2 id="hoisting">Hoisting</h2>
 <p>As declarações de variáveis são processadas antes de qualquer código ser executado. Isso significa que a declaração da variável é movida para o inicio da função ou do cógido global, isso é conhecido como hoisting. É sempre recomendado declara as variáveis e função no topo antes da inicialização.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 1</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 1</span>
 <span class="nx">bla</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// Atribui um valor a variável bla</span>
 <span class="kd">var</span> <span class="nx">bla</span><span class="p">;</span> <span class="c1">// Declaração da variável bla</span>
 <span class="c1">// Seria o mesmo que fazer</span>
 <span class="kd">var</span> <span class="nx">bla</span><span class="p">;</span>
-<span class="nx">bla</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span></code></pre></div>
+<span class="nx">bla</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span></code></pre></figure>
 
 <p>Se executarmos o código abaixo no console do navegador irá retornar ò erro <code>ReferenceError</code> pois a variável ainda não foi declarada.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 2</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 2</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bar</span><span class="p">);</span>
-<span class="nx">ReferenceError</span><span class="o">:</span> <span class="nx">bar</span> <span class="nx">is</span> <span class="nx">not</span> <span class="nx">defined</span></code></pre></div>
+<span class="nx">ReferenceError</span><span class="o">:</span> <span class="nx">bar</span> <span class="nx">is</span> <span class="nx">not</span> <span class="nx">defined</span></code></pre></figure>
 
 <p>No entanto o código abaixo quando executado irá retornar <code>undefined</code>, pois a declaração (sem a atribuição do valor) é movido para o topo.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 3</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 3</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bla</span><span class="p">);</span> <span class="c1">// Retorna undefined pois não foi atribuido nenhum valor</span>
                   <span class="c1">// mas sua declaração foi movida para o topo.</span>
 <span class="kd">var</span> <span class="nx">bla</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// Declaração da variável e atribuição de um valor</span>
@@ -176,19 +184,19 @@
 <span class="c1">// equivalente a fazer</span>
 <span class="kd">var</span> <span class="nx">bla</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span> <span class="c1">// move a declaração para o topo</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">bla</span><span class="p">);</span> <span class="c1">// retorna undefined</span>
-<span class="nx">bla</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// somente atribui o valor a variável</span></code></pre></div>
+<span class="nx">bla</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// somente atribui o valor a variável</span></code></pre></figure>
 
 <p>No caso de funções é um pouco diferente, neste caso abaixo a função e seu conteúdo são movidos para o topo:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 4</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 4</span>
 <span class="nx">bar</span><span class="p">();</span> <span class="c1">//Chama a função bar</span>
 <span class="kd">function</span> <span class="nx">bar</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Declaração da função bar</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>No exemplo 5 o valor retornado é 2 conforme explicação no exemplo 6.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 5</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 5</span>
 <span class="kd">function</span> <span class="nx">getValor</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">function</span> <span class="nx">retornarValor</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Declaração</span>
      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
@@ -200,11 +208,11 @@
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">getValor</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span> <span class="c1">// 2</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span> <span class="c1">// 2</span></code></pre></figure>
 
 <p>Representação do que acontece com o código do Exemplo 5.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 6</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 6</span>
 <span class="kd">function</span> <span class="nx">getValor</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">function</span> <span class="nx">retornarValor</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Declaração</span>
      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
@@ -215,11 +223,11 @@
     <span class="k">return</span> <span class="nx">retornarValor</span><span class="p">();</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">getValor</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span> <span class="c1">// 2</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span> <span class="c1">// 2</span></code></pre></figure>
 
 <p>No Exemplo 7 o resultado é outro devido a função ser atribuida a uma variável e o “hoisting” ocorre somente com a declaração não atribuição/inicialização de valor.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 7</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 7</span>
 <span class="kd">function</span> <span class="nx">getValor</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">retornarValor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Declaração e atribuição</span>
         <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
@@ -230,11 +238,11 @@
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">getValor</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span></code></pre></figure>
 
 <p>Representação do que acontece com o código do Exemplo 7.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 8</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Exemplo 8</span>
 <span class="kd">function</span> <span class="nx">getValor</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">retornarValor</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span> <span class="c1">// Declaração</span>
     <span class="kd">var</span> <span class="nx">retornarValor</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span> <span class="err">/ Declaração</span>
@@ -248,13 +256,13 @@
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">getValor</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span> <span class="c1">// 1</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span> <span class="c1">// 1</span></code></pre></figure>
 
 <h2 id="closure">Closure</h2>
 
 <p>Um closure é uma função interior que tem acesso a variáveis de uma função exterior - cadeias de escopo. O closure tem três cadeias de escopo: ele tem acesso ao seu próprio escopo (variáveis definidas entre suas chaves), tem acesso as variáveis da função exterior e tem acesso as variáveis globais. São usados frequentemente no JavaScript.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">showName</span> <span class="p">(</span><span class="nx">firstName</span><span class="p">,</span> <span class="nx">lastName</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">showName</span> <span class="p">(</span><span class="nx">firstName</span><span class="p">,</span> <span class="nx">lastName</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">nameIntro</span> <span class="o">=</span> <span class="s2">&quot;Your name is &quot;</span><span class="p">;</span>
 
     <span class="c1">//esta função interior tem acesso as variáveis da função exterior, incluindo os parâmetros</span>
@@ -264,11 +272,11 @@
 
     <span class="k">return</span> <span class="nx">makeFullName</span> <span class="p">();</span>
 <span class="p">}</span>
-<span class="nx">showName</span> <span class="p">(</span><span class="s2">&quot;Michael&quot;</span><span class="p">,</span> <span class="s2">&quot;Jackson&quot;</span><span class="p">);</span> <span class="c1">//Your name is Michael Jackson</span></code></pre></div>
+<span class="nx">showName</span> <span class="p">(</span><span class="s2">&quot;Michael&quot;</span><span class="p">,</span> <span class="s2">&quot;Jackson&quot;</span><span class="p">);</span> <span class="c1">//Your name is Michael Jackson</span></code></pre></figure>
 
 <p>Aqui temos outro exemplo interessante, pois a função <code>makeAdder</code> irá construir outras funções que podem adicionar um determinado valor especifico a seu argumento.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">makeAdder</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">makeAdder</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
   <span class="p">};</span>
@@ -278,11 +286,11 @@
 <span class="kd">var</span> <span class="nx">add10</span> <span class="o">=</span> <span class="nx">makeAdder</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 
 <span class="nx">print</span><span class="p">(</span><span class="nx">add5</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>  <span class="c1">// 7</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">add10</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="c1">// 12</span></code></pre></div>
+<span class="nx">print</span><span class="p">(</span><span class="nx">add10</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="c1">// 12</span></code></pre></figure>
 
 <p>Utilização prática do closure,</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
     <span class="nt">&lt;head&gt;</span>
         <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">&quot;text/css&quot;</span><span class="nt">&gt;</span>
             <span class="nt">body</span> <span class="p">{</span>
@@ -317,35 +325,35 @@
             <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;size-16&#39;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">size16</span><span class="p">;</span>
         <span class="nt">&lt;/script&gt;</span>
     <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></div>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
 
 <p>Exemplo utilizando o jQuery.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">selections</span> <span class="o">=</span> <span class="p">[];</span>
     <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.niners&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">//este closure tem acesso as variáveis de selections</span>
         <span class="nx">selections</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prop</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">));</span> <span class="c1">//atualiza a variável selection no escopo da função exterior</span>
     <span class="p">});</span>
-<span class="p">});</span></code></pre></div>
+<span class="p">});</span></code></pre></figure>
 
 <h2 id="varivel-global">Variável Global</h2>
 
 <p>A linguagem JavaScript possui dois escopos: global e local. Uma variável declarada fora de uma definição de função é uma variável global, e seu valor será acessível e modificável em todo o seu programa. Todas as variáveis declaradas fora de uma função estão no escopo global. No navegador o contexto global ou escopo é o objeto window (ou o documento HTML inteiro), conforme exemplo abaixo:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="c1">// Variável global dentro de uma função</span>
 <span class="kd">function</span> <span class="nx">showAge</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">age</span> <span class="o">=</span> <span class="mi">90</span><span class="p">;</span> <span class="c1">// age é uma variável global pois não foi declarada como a palavra chave &#39;var&#39;</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span> <span class="c1">// a variável age pode ser acessáda fora da função pois foi declarada como global.</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span> <span class="c1">// a variável age pode ser acessáda fora da função pois foi declarada como global.</span></code></pre></figure>
 
 <h2 id="varivel-por-parmetro">Variável por parâmetro</h2>
 
 <p>Toda função possui dois parâmetros implícitos <code>this</code>, representando o contexto da função, e <code>arguments</code>, representando os argumentos passados para a função.Quando passamos um parametro para uma função, são atribuídos a eles variáveis de mesmo nome dentro da função, o mesmo ocorre quando passamos variáveis globais por parâmetro. Ao invés de serem inicializados com <code>undefined</code>, são inicializados diretamente pelo <code>arguments</code>.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// variável global</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// variável global</span>
 <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// variável local</span>
     <span class="c1">// Passando variáveis por parâmetro</span>
@@ -359,25 +367,25 @@
     <span class="p">}</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">soma</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">))</span> <span class="c1">// 3</span>
 <span class="p">}</span>
-<span class="nx">init</span><span class="p">();</span></code></pre></div>
+<span class="nx">init</span><span class="p">();</span></code></pre></figure>
 
 <h2 id="instanciao-usando-uma-iife">Instanciação usando uma IIFE</h2>
 
 <p>Ben Alman publicou um artigo chamado Immediately-Invoked Function Expression (IIFE). Onde o código abaixo representa um IIFE, uma função definida e auto-executável.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Olá&#39;</span><span class="p">);</span>
-<span class="p">}())</span> <span class="c1">// Os parênteses &quot;()&quot; define a auto-execução</span></code></pre></div>
+<span class="p">}())</span> <span class="c1">// Os parênteses &quot;()&quot; define a auto-execução</span></code></pre></figure>
 
 <p>A utilização mais comum é quando queremos cria um escopo no JavaScript para que as variáveis definidas dentro da função não poluam o escopo global (definidas no window).</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">fn</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;oi&#39;</span> <span class="p">}();</span> <span class="c1">// Funciona</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">fn</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;oi&#39;</span> <span class="p">}();</span> <span class="c1">// Funciona</span>
 <span class="kd">var</span> <span class="nx">fn</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;oi&#39;</span> <span class="p">}())</span> <span class="c1">// Funciona e é validado pelo JSLint</span>
-<span class="kd">var</span> <span class="nx">fn</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;oi&#39;</span> <span class="p">})()</span> <span class="c1">// Também funciona, mas não é validado pelo JSLint</span></code></pre></div>
+<span class="kd">var</span> <span class="nx">fn</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s1">&#39;oi&#39;</span> <span class="p">})()</span> <span class="c1">// Também funciona, mas não é validado pelo JSLint</span></code></pre></figure>
 
 <p>Representação de como passar uma variável por parâmetro para a IIFE.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;Olá&#39;</span><span class="p">;</span> <span class="c1">// x é uma variável global</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;Olá&#39;</span><span class="p">;</span> <span class="c1">// x é uma variável global</span>
 <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
 <span class="p">}(</span><span class="nx">x</span><span class="p">))</span> <span class="c1">// atribuimos o x a variável a, assim é possível acessar o valor de x dentro da IIFE.</span>
@@ -385,11 +393,11 @@
 <span class="c1">// É possível passar qualquer parâmetro como se fosse qualquer outra função.</span>
 <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span>
-<span class="p">}(</span><span class="s1">&#39;oi&#39;</span><span class="p">))</span></code></pre></div>
+<span class="p">}(</span><span class="s1">&#39;oi&#39;</span><span class="p">))</span></code></pre></figure>
 
 <p>Para retornarmos um valor de uma IIFE podemos utilizar o <code>return</code>.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">c</span><span class="p">;</span>
 <span class="p">}(</span><span class="nx">a</span><span class="p">))</span>
@@ -402,7 +410,7 @@
 <span class="p">}(</span><span class="nx">a</span><span class="p">))</span>
 <span class="c1">// retorna 2 pois a variável a foi passada por</span>
 <span class="c1">// parâmetro e depois foi atribuido um valor na variável c;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span></code></pre></div>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span></code></pre></figure>
 
 <h2 id="consideraes">Considerações</h2>
 

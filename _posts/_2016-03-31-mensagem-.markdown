@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3"
+description: "Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3"
+date:   2016-03-31 10:51:00
+categories: php
+tags: [xubuntu,ubuntu,brcmsmac, brcms, broadcom]
+---
+
+A descompactar bcmwl-kernel-source (6.30.223.141+bdcom-0ubuntu2) sobre (6.30.223.141+bdcom-0ubuntu2) ...
+Configurando bcmwl-kernel-source (6.30.223.141+bdcom-0ubuntu2) ...
+Loading new bcmwl-6.30.223.141+bdcom DKMS files...
+Building for 4.2.0-25-generic and 4.4.0-24-generic
+Building for architecture x86_64
+Building initial module for 4.2.0-25-generic
+ERROR (dkms apport): kernel package linux-headers-4.2.0-25-generic is not supported
+Error! Bad return status for module build on kernel: 4.2.0-25-generic (x86_64)
+Consult /var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/make.log for more information.
+modprobe: FATAL: Module wl not found in directory /lib/modules/4.2.0-25-generic
+update-initramfs: deferring update (trigger activated)
+A processar 'triggers' para initramfs-tools (0.122ubuntu8) ...
+update-initramfs: Generating /boot/initrd.img-4.4.0-24-generic
+
+
+DKMS make.log for bcmwl-6.30.223.141+bdcom for kernel 4.2.0-25-generic (x86_64)
+Sex Jun 24 20:41:43 BRT 2016
+make: Entering directory '/usr/src/linux-headers-4.2.0-25-generic'
+CFG80211 API is prefered for this kernel version
+Using CFG80211 API
+  LD      /var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/built-in.o
+  CC [M]  /var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/shared/linux_osl.o
+  CC [M]  /var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/wl/sys/wl_linux.o
+/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/wl/sys/wl_linux.c: In function ‘wl_alloc_linux_if’:
+/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/wl/sys/wl_linux.c:1354:64: error: macro "alloc_netdev" requires 4 arguments, but only 3 given
+  dev = alloc_netdev(sizeof(priv_link_t), intf_name, ether_setup);
+                                                                ^
+/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/wl/sys/wl_linux.c:1354:8: error: ‘alloc_netdev’ undeclared (first use in this function)
+  dev = alloc_netdev(sizeof(priv_link_t), intf_name, ether_setup);
+        ^
+/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/wl/sys/wl_linux.c:1354:8: note: each undeclared identifier is reported only once for each function it appears in
+/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/wl/sys/wl_linux.c: In function ‘wl_dump_ver’:
+/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/wl/sys/wl_linux.c:2047:3: error: macro "__DATE__" might prevent reproducible builds [-Werror=date-time]
+   __DATE__, __TIME__, EPI_VERSION_STR);
+   ^
+/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/wl/sys/wl_linux.c:2047:13: error: macro "__TIME__" might prevent reproducible builds [-Werror=date-time]
+   __DATE__, __TIME__, EPI_VERSION_STR);
+             ^
+cc1: some warnings being treated as errors
+scripts/Makefile.build:258: recipe for target '/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/wl/sys/wl_linux.o' failed
+make[1]: *** [/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/src/wl/sys/wl_linux.o] Error 1
+Makefile:1398: recipe for target '_module_/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build' failed
+make: *** [_module_/var/lib/dkms/bcmwl/6.30.223.141+bdcom/build] Error 2
+make: Leaving directory '/usr/src/linux-headers-4.2.0-25-generic'

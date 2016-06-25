@@ -7,7 +7,7 @@ categories: php
 tags: [php,slim,twig,dump,debug]
 ---
 
-Procurei na internet como configurar a função `dump()` na view do slim utilizando o twig, no entanto nada ajudou. Na [documentação](http://twig.sensiolabs.org/doc/functions/dump.html)
+Procurei na internet como configurar a função `dump()` na view do slim utilizando o twig e a [documentação](http://twig.sensiolabs.org/doc/functions/dump.html)
 informa para adicionar a extensão debug e setar true para o ambiente de desenvolvimento.
 
 No entanto minha estrutura é essa:

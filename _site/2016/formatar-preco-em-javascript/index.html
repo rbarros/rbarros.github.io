@@ -46,12 +46,12 @@
   <link rel="canonical" href="http://ramon-barros.com//2016/formatar-preco-em-javascript/">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
   <script type="text/javascript">
-      window.smartlook||(function(d) {
-      var o=smartlook=function(){ o.api.push(arguments)},s=d.getElementsByTagName('script')[0];
-      var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-      c.charset='utf-8';c.src='//rec.getsmartlook.com/bundle.js';s.parentNode.insertBefore(c,s);
-      })(document);
-      smartlook('init', '2df9094f8d91a76b8e963e635d68fd10abace184');
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},s=d.getElementsByTagName('script')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.getsmartlook.com/recorder.js';s.parentNode.insertBefore(c,s);
+    })(document);
+    smartlook('init', '2df9094f8d91a76b8e963e635d68fd10abace184');
   </script>
 </head>
 
@@ -160,12 +160,12 @@
   <section class="post">
     <p>Uma forma simples de formatar preços em javascript.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">prive</span> <span class="o">=</span> <span class="mi">170090</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">prive</span> <span class="o">=</span> <span class="mi">170090</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">money</span> <span class="o">=</span> <span class="s1">&#39;R$&#39;</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">price</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[\D]+/g</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
           <span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
           <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([0-9]{2})$/g</span><span class="p">,</span> <span class="s1">&#39;,$1&#39;</span><span class="p">)</span>
           <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([0-9]{3}),([0-9]{2}$)/g</span><span class="p">,</span> <span class="s1">&#39;.$1,$2&#39;</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">money</span><span class="p">);</span> <span class="c1">// &#39;R$ 1.700,90&#39;</span></code></pre></figure>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">money</span><span class="p">);</span> <span class="c1">// &#39;R$ 1.700,90&#39;</span></code></pre></div>
 
   </section>
 </article>

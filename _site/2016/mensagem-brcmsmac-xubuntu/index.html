@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Resolver problemas com acentuação e caracteres especiais no php com oracle</title>
+  <title>Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3</title>
   <meta name="description" content="Full Stack Developer">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://ramon-barros.com//2016/problema-acentuacao-php-oracle/">
+  <link rel="canonical" href="http://ramon-barros.com//2016/mensagem-brcmsmac-xubuntu/">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
   <script type="text/javascript">
     window.smartlook||(function(d) {
@@ -152,22 +152,54 @@
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="12 Feb 2016" class="post-meta__date date">12 Feb 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#php">php</a> <a href="/tags/#oracle">oracle</a> <a href="/tags/#oci">oci</a> <a href="/tags/#utf8">utf8</a> </span>
+      <time datetime="31 Mar 2016" class="post-meta__date date">31 Mar 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#xubuntu">xubuntu</a> <a href="/tags/#ubuntu">ubuntu</a> <a href="/tags/#brcmsmac">brcmsmac</a> <a href="/tags/#brcms">brcms</a> <a href="/tags/#broadcom">broadcom</a> </span>
     </div>
-    <h1 class="post-title">Resolver problemas com acentuação e caracteres especiais no php com oracle</h1>
+    <h1 class="post-title">Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3</h1>
   </header>
 
   <section class="post">
-    <p>Se ao retornar os resultados de uma consulta no banco de dados Oracle e os caractéres especiais forem subtituidos por um “?”. Adicione o charset na conexão com o banco.</p>
+    <p>Tenho um notebook HP G42 e após a atualização do Xubuntu 14.04 para o 16.04 começou aparecer a mensagem abaixo e apresentar problemas na conexão wifi:</p>
 
-<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
-<span class="c1">// Retornando o texto - ABCDEFGHU JLMNOP DIN 206B  ? 5/8 &quot;</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">brcmsmac bcma0:1: brcms_ops_bss_info_changed: qos enabled: <span class="nb">false</span> <span class="o">(</span>implement<span class="o">)</span>
+brcmsmac bcma0:1: brcms_ops_config: change power-save mode: <span class="nb">false</span> <span class="o">(</span>implement<span class="o">)</span></code></pre></div>
 
-<span class="nv">$character_set</span> <span class="o">=</span> <span class="s1">&#39;UTF8&#39;</span><span class="p">;</span>
-<span class="nv">$conn</span> <span class="o">=</span> <span class="nb">oci_connect</span><span class="p">(</span><span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$connection_string</span><span class="p">,</span> <span class="nv">$character_set</span><span class="p">);</span>
+<p>Digitei o comando <code>lspci</code> no terminal para verificar o modelo da placa wifi.</p>
 
-<span class="c1">// Retorna o texto corretamente - ABCDEFGHU JLMNOP DIN 206B  Ø 5/8 &quot;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">Network controller: Broadcom Corporation BCM4313 802.11bgn Wireless Network Adapter <span class="o">(</span>rev 01<span class="o">)</span></code></pre></div>
 
+<p>Pesquisei no forum do <a href="http://ubuntuforums.org/showthread.php?t=2148444&amp;page=2">ubuntu</a> e informaram que resolveria instalando o bcmwl-kernel-source, seguindo as dicas tentei instalar pelo synaptic, no entanto não funcionou mostrando outro problema:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">A descompactar bcmwl-kernel-source <span class="o">(</span>6.30.223.141+bdcom-0ubuntu2<span class="o">)</span>
+...
+ERROR <span class="o">(</span>dkms apport<span class="o">)</span>: kernel package linux-headers-4.2.0-25-generic is not supported
+Error! Bad <span class="k">return</span> status <span class="k">for</span> module build on kernel: 4.2.0-25-generic <span class="o">(</span>x86_64<span class="o">)</span>
+Consult /var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/make.log <span class="k">for</span> more information.
+modprobe: FATAL: Module wl not found in directory /lib/modules/4.2.0-25-generic
+...</code></pre></div>
+
+<p>Tentei baixar o bcmwl-kernel-source e instalar pelo <code>dpkg</code> apresentando o mesmo problema:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">DKMS make.log <span class="k">for</span> bcmwl-6.30.223.141+bdcom <span class="k">for</span> kernel 4.2.0-25-generic <span class="o">(</span>x86_64<span class="o">)</span>
+Sex Jun <span class="m">24</span> 20:41:43 BRT 2016
+make: Entering directory <span class="s1">&#39;/usr/src/linux-headers-4.2.0-25-generic&#39;</span>
+CFG80211 API is prefered <span class="k">for</span> this kernel version
+...</code></pre></div>
+
+<p>Resolvi atualizar o kernel de 4.2.0 para 4.6.0 baixando as imagens em <a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.6-yakkety/">kernel</a></p>
+
+<ul>
+  <li>linux-headers-4.6.0-040600_4.6.0-040600.201606100558_all.deb</li>
+  <li>linux-headers-4.6.0-040600-generic_4.6.0-040600.201606100558_amd64.deb</li>
+  <li>linux-image-4.6.0-040600-generic_4.6.0-040600.201606100558_amd64.deb</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo dpkg -i linux-*.deb</code></pre></div>
+
+<p>E depois baixei um versão mais recente do <a href="https://launchpad.net/ubuntu/xenial/amd64/bcmwl-kernel-source/6.30.223.248+bdcom-0ubuntu8">bcmwl</a> e instalei:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo dpkg -i bcmwl-kernel-source_6.30.223.248+bdcom-0ubuntu8_amd64.deb</code></pre></div>
+
+<p>Foi instalado corretamente o kernel e o driver bcmwl e a wifi voltou a funcionar.</p>
 
   </section>
 </article>

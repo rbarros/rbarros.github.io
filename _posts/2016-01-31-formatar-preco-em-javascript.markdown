@@ -8,10 +8,9 @@ tags: [javascript,price,value]
 Uma forma simples de formatar preços em javascript.
 
 {% highlight js %}
-var prive = 170090;
-var money = 'R$' + parseInt(price.toString().replace(/[\D]+/g,''))
-          .toString()
-          .replace(/([0-9]{2})$/g, ',$1')
-          .replace(/([0-9]{3}),([0-9]{2}$)/g, '.$1,$2')
-console.log(money); // 'R$ 1.700,90'
+var price = 1700.90;
+var money = 'R$ ' + parseFloat(price, 10).toFixed(2).replace(/./g, function(c, i, a) {
+    return i && c !== "." && ((a.length - i) % 3 === 0) ? '.' + c : (c === '.' ? ',' : c);
+});
+console.log(money); // "R$ 1.700,90"
 {% endhighlight %}

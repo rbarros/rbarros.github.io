@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3</title>
-  <meta name="description" content="Resolvendo problema do kernel 4.2.0 e Broadcom Corporation BCM4313.">
+  <title>MicroView um modulo para o Arduino com tela</title>
+  <meta name="description" content="O MicroView é o primeiro módulo compatível com Arduino usando uma tela OLED integrada. Com o OLED on-board de 64 x 48 pixels, você pode usar o MicroView para exibir dados de sensores, e-mails, status de pinos e muito mais">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -15,12 +15,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3">
-  <meta name="twitter:description" content="Resolvendo problema do kernel 4.2.0 e Broadcom Corporation BCM4313.">
+  <meta name="twitter:title" content="MicroView um modulo para o Arduino com tela">
+  <meta name="twitter:description" content="O MicroView é o primeiro módulo compatível com Arduino usando uma tela OLED integrada. Com o OLED on-board de 64 x 48 pixels, você pode usar o MicroView para exibir dados de sensores, e-mails, status de pinos e muito mais">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3">
-  <meta property="og:description" content="Resolvendo problema do kernel 4.2.0 e Broadcom Corporation BCM4313.">
+  <meta property="og:title" content="MicroView um modulo para o Arduino com tela">
+  <meta property="og:description" content="O MicroView é o primeiro módulo compatível com Arduino usando uma tela OLED integrada. Com o OLED on-board de 64 x 48 pixels, você pode usar o MicroView para exibir dados de sensores, e-mails, status de pinos e muito mais">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://ramon-barros.com//2016/mensagem-brcmsmac-xubuntu/">
+  <link rel="canonical" href="http://ramon-barros.com//2016/microview-um-modulo-para-o-arduino-com-tela/">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
   <script type="text/javascript">
     window.smartlook||(function(d) {
@@ -152,54 +152,28 @@
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="31 Mar 2016" class="post-meta__date date">31 Mar 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#xubuntu">xubuntu</a> <a href="/tags/#ubuntu">ubuntu</a> <a href="/tags/#brcmsmac">brcmsmac</a> <a href="/tags/#brcms">brcms</a> <a href="/tags/#broadcom">broadcom</a> </span>
+      <time datetime="2 Dec 2016" class="post-meta__date date">2 Dec 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#microview">microview</a> <a href="/tags/#arduino">arduino</a> <a href="/tags/#sparkfun">sparkfun</a> </span>
     </div>
-    <h1 class="post-title">Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3</h1>
+    <h1 class="post-title">MicroView um modulo para o Arduino com tela</h1>
   </header>
 
   <section class="post">
-    <p>Tenho um notebook HP G42 e após a atualização do Xubuntu 14.04 para o 16.04 começou aparecer a mensagem abaixo e apresentar problemas na conexão wifi:</p>
+    <p>O MicroView é o primeiro módulo compatível com Arduino usando uma tela OLED integrada. Com o OLED on-board de 64 x 48 pixels,
+você pode usar o MicroView para exibir dados de sensores, e-mails, status de pinos e muito mais</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">brcmsmac bcma0:1: brcms_ops_bss_info_changed: qos enabled: <span class="nb">false</span> <span class="o">(</span>implement<span class="o">)</span>
-brcmsmac bcma0:1: brcms_ops_config: change power-save mode: <span class="nb">false</span> <span class="o">(</span>implement<span class="o">)</span></code></pre></div>
+<p><img src="/images/microview/microview1.jpeg" alt="microview1" title="Caixa da SparkFun" /></p>
 
-<p>Digitei o comando <code>lspci</code> no terminal para verificar o modelo da placa wifi.</p>
+<p><img src="/images/microview/microview2.jpeg" alt="microview2" title="Conteúdo da Caixa" /></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">Network controller: Broadcom Corporation BCM4313 802.11bgn Wireless Network Adapter <span class="o">(</span>rev 01<span class="o">)</span></code></pre></div>
+<p><img src="/images/microview/microview3.jpeg" alt="microview3" title="Utilizando o potenciômetro" /></p>
 
-<p>Pesquisei no forum do <a href="http://ubuntuforums.org/showthread.php?t=2148444&amp;page=2">ubuntu</a> e informaram que resolveria instalando o bcmwl-kernel-source, seguindo as dicas tentei instalar pelo synaptic, no entanto não funcionou mostrando outro problema:</p>
+<p><img src="/images/microview/microview4.jpeg" alt="microview4" title="Botão OFF" /></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">A descompactar bcmwl-kernel-source <span class="o">(</span>6.30.223.141+bdcom-0ubuntu2<span class="o">)</span>
-...
-ERROR <span class="o">(</span>dkms apport<span class="o">)</span>: kernel package linux-headers-4.2.0-25-generic is not supported
-Error! Bad <span class="k">return</span> status <span class="k">for</span> module build on kernel: 4.2.0-25-generic <span class="o">(</span>x86_64<span class="o">)</span>
-Consult /var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/make.log <span class="k">for</span> more information.
-modprobe: FATAL: Module wl not found in directory /lib/modules/4.2.0-25-generic
-...</code></pre></div>
+<p><img src="/images/microview/microview5.jpeg" alt="microview5" title="Botão ON" /></p>
 
-<p>Tentei baixar o bcmwl-kernel-source e instalar pelo <code>dpkg</code> apresentando o mesmo problema:</p>
+<iframe width="560" height="420" src="http://www.youtube.com/embed/ooT7GLKjCV4?color=white&amp;theme=light"></iframe>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">DKMS make.log <span class="k">for</span> bcmwl-6.30.223.141+bdcom <span class="k">for</span> kernel 4.2.0-25-generic <span class="o">(</span>x86_64<span class="o">)</span>
-Sex Jun <span class="m">24</span> 20:41:43 BRT 2016
-make: Entering directory <span class="s1">&#39;/usr/src/linux-headers-4.2.0-25-generic&#39;</span>
-CFG80211 API is prefered <span class="k">for</span> this kernel version
-...</code></pre></div>
-
-<p>Resolvi atualizar o kernel de 4.2.0 para 4.6.0 baixando as imagens em <a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.6-yakkety/">kernel</a></p>
-
-<ul>
-  <li>linux-headers-4.6.0-040600_4.6.0-040600.201606100558_all.deb</li>
-  <li>linux-headers-4.6.0-040600-generic_4.6.0-040600.201606100558_amd64.deb</li>
-  <li>linux-image-4.6.0-040600-generic_4.6.0-040600.201606100558_amd64.deb</li>
-</ul>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo dpkg -i linux-*.deb</code></pre></div>
-
-<p>E depois baixei um versão mais recente do <a href="https://launchpad.net/ubuntu/xenial/amd64/bcmwl-kernel-source/6.30.223.248+bdcom-0ubuntu8">bcmwl</a> e instalei:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo dpkg -i bcmwl-kernel-source_6.30.223.248+bdcom-0ubuntu8_amd64.deb</code></pre></div>
-
-<p>Foi instalado corretamente o kernel e o driver bcmwl e a wifi voltou a funcionar.</p>
+<p>Assim que possível vou criar alguns tutoriais para o MicroView.</p>
 
   </section>
 </article>

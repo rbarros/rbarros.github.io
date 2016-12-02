@@ -15,11 +15,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ramon Barros">
+  <meta name="twitter:title" content="Formatar preço com JavaScript de forma simples">
   <meta name="twitter:description" content="Full Stack Developer">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Ramon Barros">
+  <meta property="og:title" content="Formatar preço com JavaScript de forma simples">
   <meta property="og:description" content="Full Stack Developer">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
@@ -160,12 +160,12 @@
   <section class="post">
     <p>Uma forma simples de formatar preços em javascript.</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">prive</span> <span class="o">=</span> <span class="mi">170090</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">money</span> <span class="o">=</span> <span class="s1">&#39;R$&#39;</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">price</span><span class="p">.</span><span class="nx">toString</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[\D]+/g</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
-          <span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
-          <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([0-9]{2})$/g</span><span class="p">,</span> <span class="s1">&#39;,$1&#39;</span><span class="p">)</span>
-          <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/([0-9]{3}),([0-9]{2}$)/g</span><span class="p">,</span> <span class="s1">&#39;.$1,$2&#39;</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">money</span><span class="p">);</span> <span class="c1">// &#39;R$ 1.700,90&#39;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">price</span> <span class="o">=</span> <span class="mf">1700.90</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">money</span> <span class="o">=</span> <span class="s1">&#39;R$ &#39;</span> <span class="o">+</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">price</span><span class="p">,</span> <span class="mi">10</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/./g</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">c</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">i</span> <span class="o">&amp;&amp;</span> <span class="nx">c</span> <span class="o">!==</span> <span class="s2">&quot;.&quot;</span> <span class="o">&amp;&amp;</span> <span class="p">((</span><span class="nx">a</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="nx">i</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="nx">c</span> <span class="o">:</span> <span class="p">(</span><span class="nx">c</span> <span class="o">===</span> <span class="s1">&#39;.&#39;</span> <span class="o">?</span> <span class="s1">&#39;,&#39;</span> <span class="o">:</span> <span class="nx">c</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">money</span><span class="p">);</span> <span class="c1">// &quot;R$ 1.700,90&quot;</span></code></pre></div>
+
 
   </section>
 </article>

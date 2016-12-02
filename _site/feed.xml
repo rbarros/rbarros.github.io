@@ -5,8 +5,8 @@
     <description>Full Stack Developer</description>
     <link>http://ramon-barros.com//</link>
     <atom:link href="http://ramon-barros.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 02 Dec 2016 18:09:20 -0200</pubDate>
-    <lastBuildDate>Fri, 02 Dec 2016 18:09:20 -0200</lastBuildDate>
+    <pubDate>Fri, 02 Dec 2016 18:11:51 -0200</pubDate>
+    <lastBuildDate>Fri, 02 Dec 2016 18:11:51 -0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -23,8 +23,6 @@ você pode usar o MicroView para exibir dados de sensores, e-mails, status de pi
 &lt;p&gt;&lt;img src=&quot;/images/microview/microview4.jpeg&quot; alt=&quot;microview4&quot; title=&quot;Botão OFF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/microview/microview5.jpeg&quot; alt=&quot;microview5&quot; title=&quot;Botão ON&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;video&quot;&gt;&lt;figure&gt;&lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;//www.youtube.com/embed/ooT7GLKjCV4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/figure&gt;&lt;/div&gt;
 
 &lt;p&gt;Assim que possível vou criar alguns tutoriais para o MicroView.&lt;/p&gt;
 </description>

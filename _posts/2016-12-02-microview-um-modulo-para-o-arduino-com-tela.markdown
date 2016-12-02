@@ -20,6 +20,4 @@ você pode usar o MicroView para exibir dados de sensores, e-mails, status de pi
 
 ![microview5](/images/microview/microview5.jpeg "Botão ON")
 
-{% youtube ooT7GLKjCV4 %}
-
 Assim que possível vou criar alguns tutoriais para o MicroView.

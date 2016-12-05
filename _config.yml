@@ -1,4 +1,5 @@
 # Site settings
+# source ~/.rvm/scripts/rvm
 title: Ramon Barros
 description: 'Full Stack Developer'
 url: 'http://ramon-barros.com'
@@ -16,7 +17,8 @@ author:
 destination: _site
 paginate: 10
 #paginate_path: "/page:num/"
-permalink: /:year/:title/
+#permalink: /:year/:title/
+permalink: /:categories/:year/:month/:day/:title.html
 markdown: kramdown
 highlighter: pygments
 

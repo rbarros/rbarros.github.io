@@ -5,8 +5,8 @@
     <description>Full Stack Developer</description>
     <link>http://ramon-barros.com//</link>
     <atom:link href="http://ramon-barros.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 02 Dec 2016 18:11:51 -0200</pubDate>
-    <lastBuildDate>Fri, 02 Dec 2016 18:11:51 -0200</lastBuildDate>
+    <pubDate>Mon, 05 Dec 2016 11:01:31 -0200</pubDate>
+    <lastBuildDate>Mon, 05 Dec 2016 11:01:31 -0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -27,8 +27,8 @@ você pode usar o MicroView para exibir dados de sensores, e-mails, status de pi
 &lt;p&gt;Assim que possível vou criar alguns tutoriais para o MicroView.&lt;/p&gt;
 </description>
         <pubDate>Fri, 02 Dec 2016 15:44:00 -0200</pubDate>
-        <link>http://ramon-barros.com//2016/microview-um-modulo-para-o-arduino-com-tela/</link>
-        <guid isPermaLink="true">http://ramon-barros.com//2016/microview-um-modulo-para-o-arduino-com-tela/</guid>
+        <link>http://ramon-barros.com//arduino/2016/12/02/microview-um-modulo-para-o-arduino-com-tela.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//arduino/2016/12/02/microview-um-modulo-para-o-arduino-com-tela.html</guid>
         
         <category>microview</category>
         
@@ -73,8 +73,8 @@ Warning: watch /path/foo/bar ENOSPC&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Fri, 21 Oct 2016 16:48:00 -0200</pubDate>
-        <link>http://ramon-barros.com//2016/correcao-looping-watch-gruntfile/</link>
-        <guid isPermaLink="true">http://ramon-barros.com//2016/correcao-looping-watch-gruntfile/</guid>
+        <link>http://ramon-barros.com//grunt/2016/10/21/correcao-looping-watch-gruntfile.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//grunt/2016/10/21/correcao-looping-watch-gruntfile.html</guid>
         
         <category>grunt</category>
         
@@ -186,8 +186,8 @@ sistemas operacionais detectados.&lt;/p&gt;
 &lt;p&gt;Fique atento para mais tutoriais, como o LVM e configurações básicas para trabalhar com um servidor web.&lt;/p&gt;
 </description>
         <pubDate>Thu, 31 Mar 2016 07:51:00 -0300</pubDate>
-        <link>http://ramon-barros.com//2016/ubuntu-server-16.04/</link>
-        <guid isPermaLink="true">http://ramon-barros.com//2016/ubuntu-server-16.04/</guid>
+        <link>http://ramon-barros.com//php/2016/03/31/ubuntu-server-16.04.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//php/2016/03/31/ubuntu-server-16.04.html</guid>
         
         <category>ubuntu</category>
         
@@ -246,8 +246,8 @@ CFG80211 API is prefered &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; this k
 &lt;p&gt;Foi instalado corretamente o kernel e o driver bcmwl e a wifi voltou a funcionar.&lt;/p&gt;
 </description>
         <pubDate>Thu, 31 Mar 2016 07:51:00 -0300</pubDate>
-        <link>http://ramon-barros.com//2016/mensagem-brcmsmac-xubuntu/</link>
-        <guid isPermaLink="true">http://ramon-barros.com//2016/mensagem-brcmsmac-xubuntu/</guid>
+        <link>http://ramon-barros.com//php/2016/03/31/mensagem-brcmsmac-xubuntu.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//php/2016/03/31/mensagem-brcmsmac-xubuntu.html</guid>
         
         <category>xubuntu</category>
         
@@ -265,7 +265,7 @@ CFG80211 API is prefered &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; this k
       </item>
     
       <item>
-        <title>Configurando o dump() do twig no slim framework 2.6.1</title>
+        <title>Configurando o dump() do twig no Slim Framework 2.6.1</title>
         <description>&lt;p&gt;Procurei na internet como configurar a função &lt;code&gt;dump()&lt;/code&gt; na view do slim utilizando o twig e a &lt;a href=&quot;http://twig.sensiolabs.org/doc/functions/dump.html&quot;&gt;documentação&lt;/a&gt;
 informa para adicionar a extensão debug e setar true para o ambiente de desenvolvimento.&lt;/p&gt;
 
@@ -317,11 +317,62 @@ desta forma.&lt;/p&gt;
 
 &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Pronto! Agora é possível utilizar o dump na view do twig.&lt;/p&gt;
+&lt;p&gt;Fazendo isso irá habilitar a extensão dump nas views do twig ficando muito mais fácil debugar.
+Pronto! Agora é possível utilizar o dump na view do twig com no exemplo abaixo:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/parametros&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;$parametros&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;nome&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Código dos Tipos...&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;parametro&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;cod&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;valor&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;6165&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;descricao&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Informe os códigos dos tipos...&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;nome&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Data Inicial&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;parametro&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;data_inicial&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;valor&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;01/04/2015&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;descricao&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Informe a data inicial...&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;4&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;nome&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Dias para exportação...&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;parametro&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;dias_exportacao&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;valor&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;365&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;descricao&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Informe o número de dias para exportação...&amp;#39;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;$app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;parametros/index.twig&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;s1&quot;&gt;&amp;#39;parametros&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$parametros&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;...
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;page-wrapper&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;row&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-lg-12&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+                { {dump(parametros) } }
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/twig/dump.png&quot; alt=&quot;dump&quot; title=&quot;Exemplo de retorno do dump&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 31 Mar 2016 07:51:00 -0300</pubDate>
-        <link>http://ramon-barros.com//2016/configurando-dump-do-twig-com-slimframework/</link>
-        <guid isPermaLink="true">http://ramon-barros.com//2016/configurando-dump-do-twig-com-slimframework/</guid>
+        <link>http://ramon-barros.com//php/2016/03/31/configurando-dump-do-twig-com-slimframework.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//php/2016/03/31/configurando-dump-do-twig-com-slimframework.html</guid>
         
         <category>php</category>
         
@@ -352,8 +403,8 @@ desta forma.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 12 Feb 2016 09:20:00 -0200</pubDate>
-        <link>http://ramon-barros.com//2016/problema-acentuacao-php-oracle/</link>
-        <guid isPermaLink="true">http://ramon-barros.com//2016/problema-acentuacao-php-oracle/</guid>
+        <link>http://ramon-barros.com//php/2016/02/12/problema-acentuacao-php-oracle.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//php/2016/02/12/problema-acentuacao-php-oracle.html</guid>
         
         <category>php</category>
         
@@ -380,8 +431,8 @@ desta forma.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 31 Jan 2016 20:12:00 -0200</pubDate>
-        <link>http://ramon-barros.com//2016/formatar-preco-em-javascript/</link>
-        <guid isPermaLink="true">http://ramon-barros.com//2016/formatar-preco-em-javascript/</guid>
+        <link>http://ramon-barros.com//javascript/2016/01/31/formatar-preco-em-javascript.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//javascript/2016/01/31/formatar-preco-em-javascript.html</guid>
         
         <category>javascript</category>
         
@@ -429,8 +480,8 @@ desta forma.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 31 Jan 2016 19:57:00 -0200</pubDate>
-        <link>http://ramon-barros.com//2016/vagrant-start-windows/</link>
-        <guid isPermaLink="true">http://ramon-barros.com//2016/vagrant-start-windows/</guid>
+        <link>http://ramon-barros.com//windows/2016/01/31/vagrant-start-windows.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//windows/2016/01/31/vagrant-start-windows.html</guid>
         
         <category>vagrant</category>
         
@@ -658,8 +709,8 @@ desta forma.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 17 Dec 2015 09:00:00 -0200</pubDate>
-        <link>http://ramon-barros.com//2015/mongodb-aula-06-exercicio/</link>
-        <guid isPermaLink="true">http://ramon-barros.com//2015/mongodb-aula-06-exercicio/</guid>
+        <link>http://ramon-barros.com//mongodb/2015/12/17/mongodb-aula-06-exercicio.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//mongodb/2015/12/17/mongodb-aula-06-exercicio.html</guid>
         
         <category>bemean</category>
         
@@ -1087,8 +1138,8 @@ desta forma.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 23 Nov 2015 09:00:00 -0200</pubDate>
-        <link>http://ramon-barros.com//2015/mongodb-aula-05-exercicio/</link>
-        <guid isPermaLink="true">http://ramon-barros.com//2015/mongodb-aula-05-exercicio/</guid>
+        <link>http://ramon-barros.com//mongodb/2015/11/23/mongodb-aula-05-exercicio.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//mongodb/2015/11/23/mongodb-aula-05-exercicio.html</guid>
         
         <category>bemean</category>
         

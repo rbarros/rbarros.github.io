@@ -38,3 +38,5 @@ Access via: [http://localhost:4000/jekyll-uno](http://localhost:4000/jekyll-uno)
 ### Copyright and license
 
 It is under [the MIT license](/LICENSE).
+
+source ~/.rvm/scripts/rvm

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Classe MySQL</title>
+  <meta name="description" content="Full Stack Developer">
+  <meta name="author" content="Ramon Barros">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Classe MySQL">
+  <meta name="twitter:description" content="Full Stack Developer">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Classe MySQL">
+  <meta property="og:description" content="Full Stack Developer">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://ramon-barros.com//mysql/2013/03/23/classe-mysql.html">
+  <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
+  <script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},s=d.getElementsByTagName('script')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.getsmartlook.com/recorder.js';s.parentNode.insertBefore(c,s);
+    })(document);
+    smartlook('init', '2df9094f8d91a76b8e963e635d68fd10abace184');
+  </script>
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+  
+<header class="panel-cover" style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="/" title="link to home of Ramon Barros">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">Ramon Barros</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Full Stack Developer</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to Ramon Barros blog" class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+          
+            
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/ramonbarros_" title="@ramonbarros_ on Twitter" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/ramonbarros" title="ramonbarros on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/rbarros" title="rbarros on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:contato@ramon-barros.com" title="Email contato@ramon-barros.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            
+
+            <!-- RSS -->
+            <li class="navigation__item">
+              <a href="/feed.xml" title="Subscribe" target="_blank">
+                <i class="icon icon-rss"></i>
+                <span class="label">RSS</span>
+              </a>
+            </li>
+          
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="23 Mar 2013" class="post-meta__date date">23 Mar 2013</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#mysql">mysql</a> <a href="/tags/#codeigniter">codeigniter</a> </span>
+    </div>
+    <h1 class="post-title">Classe MySQL</h1>
+  </header>
+
+  <section class="post">
+    <p>Criei esta <a href="https://gist.github.com/rbarros/3078427/download">classe</a> para facilitar o meu trabalho com a manipulação das informações do bando de dados mysql como no framework CodeIgniter. Segue abaixo como utiliza-la:</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+  <span class="sd">/**</span>
+<span class="sd">   * Carregar a classe</span>
+<span class="sd">   */</span>
+  <span class="k">require</span> <span class="s2">&quot;MySQL.php&quot;</span><span class="p">;</span>
+
+  <span class="sd">/**</span>
+<span class="sd">   * Instânciar a classe MySQL para o objeto $db</span>
+<span class="sd">   */</span>
+  <span class="nv">$db</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MySQL</span><span class="p">(</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span><span class="s1">&#39;usuario&#39;</span><span class="p">,</span><span class="s1">&#39;senha&#39;</span><span class="p">,</span><span class="s1">&#39;banco_de_dados&#39;</span><span class="p">);</span>
+
+  <span class="sd">/**</span>
+<span class="sd">   * Você pode executar as consultas diretamente desta forma</span>
+<span class="sd">   * passando para a função $db-&gt;query();</span>
+<span class="sd">   */</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM tabela&#39;</span><span class="p">);</span>
+
+  <span class="sd">/**</span>
+<span class="sd">   * Ou também montar a consulta desta forma</span>
+<span class="sd">   */</span>
+   <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+      <span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;tabela&#39;</span><span class="p">)</span>
+      <span class="o">-&gt;</span><span class="na">query</span><span class="p">();</span>
+      <span class="c1">// Retorna : &quot;SELECT * FROM tabela&quot;</span>
+
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;tabela&#39;</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">query</span><span class="p">();</span>
+     <span class="c1">// Retorna : &quot;SELECT * FROM tabela WHERE id=&#39;100&#39;&quot;</span>
+
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;tabela&#39;</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&lt;&#39;</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">query</span><span class="p">();</span>
+     <span class="c1">// Retorna : &quot;SELECT * FROM tabela WHERE id&lt;&#39;100&#39;&quot;</span>
+
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;titulo&#39;</span><span class="p">,</span><span class="s1">&#39;descricao&#39;</span><span class="p">))</span>
+     <span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;tabela&#39;</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id=&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">query</span><span class="p">();</span>
+    <span class="c1">// Retorna : &quot;SELECT id,titulo,descricao FROM tabela WHERE id=&#39;1&#39;&quot;</span>
+
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="s1">&#39;titulo&#39;</span><span class="p">,</span><span class="s1">&#39;descricao&#39;</span><span class="p">))</span>
+     <span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;tabela&#39;</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;data&gt;=&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;2013-01-01&#39;</span><span class="p">))</span>
+     <span class="o">-&gt;</span><span class="na">query</span><span class="p">();</span>
+     <span class="c1">// Retorna : &quot;SELECT id,titulo,descricao FROM tabela WHERE id=&#39;1&#39; AND data&gt;=&#39;2013-01-01&#39;&quot;</span>
+
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;t1.id&#39;</span><span class="p">,</span><span class="s1">&#39;t2.titulo&#39;</span><span class="p">))</span>
+     <span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;tabela1 t1&#39;</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">join</span><span class="p">(</span><span class="s1">&#39;tabela2 t2&#39;</span><span class="p">,</span><span class="s1">&#39;t2.id=t1.id&#39;</span><span class="p">);</span>
+     <span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;t1.id=&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">query</span><span class="p">();</span>
+    <span class="c1">// Retorna : &quot;SELECT t1.id,t2.titulo FROM tabela1 t1 JOIN tabela2 t2 (t2.id=t1.id) WHERE t1.id=1&quot;</span>
+
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;t1.id&#39;</span><span class="p">,</span><span class="s1">&#39;t2.titulo&#39;</span><span class="p">))</span>
+     <span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;tabela1 t1&#39;</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">left_join</span><span class="p">(</span><span class="s1">&#39;tabela2 t2&#39;</span><span class="p">,</span><span class="s1">&#39;t2.id=t1.id&#39;</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;t1.id&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">query</span><span class="p">();</span>
+   <span class="c1">// Retorna : &quot;SELECT t1.id,t2.titulo FROM tabela1 t2 LEFT JOIN tabela2 t2 (t2.id=t1.id) WHERE t1.id=&#39;1&#39;&quot;</span>
+
+   <span class="c1">// A função query() executa o script, então você pode montar a consulta e executar quando necessário.</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">()</span>
+     <span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;tabela&#39;</span><span class="p">)</span>
+     <span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+     <span class="nv">$ordem</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;ordem&#39;</span><span class="p">];</span> <span class="c1">// nome</span>
+     <span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$ordem</span><span class="p">)</span> <span class="k">and</span> <span class="nb">strlen</span><span class="p">(</span><span class="nv">$ordem</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+       <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">order_by</span><span class="p">(</span><span class="nv">$ordem</span><span class="p">,</span><span class="s1">&#39;DESC&#39;</span><span class="p">);</span>
+     <span class="p">}</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">();</span>
+  <span class="c1">// Retorna : &quot;SELECT * FROM tabela WHERE id=&#39;5&#39; ORDER BY nome DESC&quot;</span>
+
+  <span class="c1">// Outras funções que você pode utilizar</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where_in</span><span class="p">(</span><span class="s1">&#39;tipo&#39;</span><span class="p">,</span><span class="k">array</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">));</span> <span class="c1">// &quot;AND tipo IN (11,12,13)&quot;</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where_not_in</span><span class="p">(</span><span class="s1">&#39;tipo&#39;</span><span class="p">,</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">));</span> <span class="c1">// &quot;AND tipo NOT IN (&#39;a&#39;,&#39;b&#39;,&#39;c&#39;)&quot;</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where_or_in</span><span class="p">(</span><span class="s1">&#39;tipo&#39;</span><span class="p">,</span><span class="k">array</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">));</span> <span class="c1">// &quot;OR tipo IN (11,12,13)&quot;</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where_or_not_in</span><span class="p">(</span><span class="s1">&#39;tipo&#39;</span><span class="p">,</span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span> <span class="c1">// &quot;OR tipo NOT IN (1,2,3)&quot;</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s2">&quot;FIND_IN_SET(&quot;</span><span class="o">.</span><span class="nv">$db</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="s1">&#39;site&#39;</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;,para)&quot;</span><span class="p">);</span> <span class="c1">// AND FIND_IN_SET(&#39;site&#39;,para)</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s2">&quot;date_format(valido_ate, &#39;%Y-%m-%d %h:%i:%s&#39;) &gt;=&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;date_format(NOW(), &#39;%Y-%m-%d %h:%i:%s&#39;)&quot;</span><span class="p">));</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s2">&quot;para LIKE&quot;</span><span class="p">,</span><span class="s2">&quot;&#39;%teste%&#39;&quot;</span><span class="p">);</span> <span class="c1">// AND para LIKE &#39;%teste%&#39;</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s2">&quot;para REGEXP(&#39;site&#39;)&quot;</span><span class="p">);</span> <span class="c1">// AND para REGEXP(&#39;site&#39;)</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s2">&quot;DATE_ADD(P.inserido_em, INTERVAL 7 DAY) &gt;= &quot;</span><span class="p">,</span><span class="s1">&#39;NOW()&#39;</span><span class="p">);</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s2">&quot;UPPER(name)=&#39;&quot;</span><span class="o">.</span><span class="nb">strtoupper</span><span class="p">(</span><span class="s1">&#39;nome&#39;</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;&#39;&quot;</span><span class="p">);</span>
+
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="s1">&#39;tipo&#39;</span><span class="p">)</span> <span class="c1">// retorna: &#39;tipo&#39;</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="k">null</span><span class="p">)</span> <span class="c1">// retorna: NULL</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="k">FALSE</span><span class="p">)</span> <span class="c1">// retorna: 0</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="k">TRUE</span><span class="p">)</span> <span class="c1">// retorna: 1</span>
+
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;a&lt;&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+  <span class="nv">$db</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="s1">&#39;usuarios&#39;</span><span class="p">,</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;nome&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;Ramon&#39;</span><span class="p">),</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;1&#39;</span><span class="p">),</span><span class="s1">&#39;0,30&#39;</span><span class="p">);</span>
+  <span class="c1">// Retorna : UPDATE usuarios SET `nome` = &#39;Ramon&#39; WHERE a&lt;&#39;1&#39; AND id=&#39;1&#39; LIMIT 0,30</span>
+
+  <span class="nv">$table</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">;</span>
+  <span class="nv">$set</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="o">=&gt;</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;title&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;Title&#39;</span><span class="p">,</span><span class="s1">&#39;description&#39;</span><span class="o">=&gt;</span><span class="s1">&#39;Descrição&#39;</span><span class="p">);</span>
+  <span class="nv">$affected_rows</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="nv">$table</span><span class="p">,</span><span class="nv">$set</span><span class="p">);</span>
+  <span class="c1">// Retorna: INSERT INTO test ( `id`,`title`,`description` ) VALUES ( &#39;1&#39;,&#39;Title&#39;,&#39;Descrição&#39; )</span></code></pre></div>
+
+
+  </section>
+</article>
+
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//ramonbarros.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2016 Ramon Barros. All rights reserved.</span>
+</footer> 
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32626396-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    </div>
+
+    <!-- <script id="dsq-count-scr" src="//ramonbarros.disqus.com/count.js" async></script> -->
+  </body>
+</html>

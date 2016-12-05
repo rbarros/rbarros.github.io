@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Instalação do Ubuntu Server 16.04</title>
+  <meta name="description" content="Tutorial de instalação do Ubuntu Server 16.04">
+  <meta name="author" content="Ramon Barros">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Instalação do Ubuntu Server 16.04">
+  <meta name="twitter:description" content="Tutorial de instalação do Ubuntu Server 16.04">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Instalação do Ubuntu Server 16.04">
+  <meta property="og:description" content="Tutorial de instalação do Ubuntu Server 16.04">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://ramon-barros.com//php/2016/03/31/ubuntu-server-16.04.html">
+  <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
+  <script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},s=d.getElementsByTagName('script')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.getsmartlook.com/recorder.js';s.parentNode.insertBefore(c,s);
+    })(document);
+    smartlook('init', '2df9094f8d91a76b8e963e635d68fd10abace184');
+  </script>
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+  
+<header class="panel-cover" style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="/" title="link to home of Ramon Barros">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">Ramon Barros</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Full Stack Developer</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to Ramon Barros blog" class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+          
+            
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/ramonbarros_" title="@ramonbarros_ on Twitter" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/ramonbarros" title="ramonbarros on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/rbarros" title="rbarros on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:contato@ramon-barros.com" title="Email contato@ramon-barros.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            
+
+            <!-- RSS -->
+            <li class="navigation__item">
+              <a href="/feed.xml" title="Subscribe" target="_blank">
+                <i class="icon icon-rss"></i>
+                <span class="label">RSS</span>
+              </a>
+            </li>
+          
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="31 Mar 2016" class="post-meta__date date">31 Mar 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#ubuntu">ubuntu</a> <a href="/tags/#server">server</a> <a href="/tags/#webserver">webserver</a> </span>
+    </div>
+    <h1 class="post-title">Instalação do Ubuntu Server 16.04</h1>
+  </header>
+
+  <section class="post">
+    <p>A instalação do Ubuntu Server não tem mistério é bem intuitiva, pois há um ambiente gráfico, onde pode-se utilizar
+teclado para selecionar as opções.</p>
+
+<p>Inicio do boot pelo CD ou Pendrive (no meu caso .iso através do qemu)</p>
+
+<p><img src="/images/ubuntu-server/u1.png" alt="u1" title="Boot pelo CD" /></p>
+
+<p><img src="/images/ubuntu-server/u2.png" alt="u2" title="Instalar o Ubuntu Server" /></p>
+
+<p>Os primeiros passos são para selecionar o idioma e layout do teclado.</p>
+
+<p><img src="/images/ubuntu-server/u3.png" alt="u3" title="Informações sobre pacote de idiomas" /></p>
+
+<p><img src="/images/ubuntu-server/u4.png" alt="u4" title="Seleção do Idioma para o teclado" /></p>
+
+<p><img src="/images/ubuntu-server/u5.png" alt="u5" title="Seleção do layout do teclado" /></p>
+
+<p>Após a seleção do layout do teclado o instalador irá buscar unidades de cd-rom</p>
+
+<p><img src="/images/ubuntu-server/u6.png" alt="u6" title="Deteção de ubidades de cd-rom" /></p>
+
+<p><img src="/images/ubuntu-server/u7.png" alt="u7" title="Carregando componentes adicionais" /></p>
+
+<p><img src="/images/ubuntu-server/u8.png" alt="u8" title="Configurar a rede" /></p>
+
+<p><img src="/images/ubuntu-server/u9.png" alt="u9" title="Configurar usuários e senhas - Nome completo" /></p>
+
+<p><img src="/images/ubuntu-server/u10.png" alt="u10" title="Configurar usuários e senhas - Usuário" /></p>
+
+<p><img src="/images/ubuntu-server/u11.png" alt="u11" title="Configurar usuários e senhas - Senha" /></p>
+
+<p><img src="/images/ubuntu-server/u12.png" alt="u12" title="Alerta de senha fraca" /></p>
+
+<p><img src="/images/ubuntu-server/u13.png" alt="u13" title="Encriptar pasta pessoal" /></p>
+
+<p><img src="/images/ubuntu-server/u15.png" alt="u15" title="Detectando discos e todo o restante do hardware" /></p>
+
+<p>No particionamento do disco foi selecionado o LVM pois possibilita redimencionar as parções conforme a necessidade.</p>
+
+<p><img src="/images/ubuntu-server/u17.png" alt="u17" title="Particionar discos" /></p>
+
+<p><img src="/images/ubuntu-server/u18.png" alt="u18" title="Gravar mudanças nos discos e configurar LVM" /></p>
+
+<p><img src="/images/ubuntu-server/u19.png" alt="u19" title="Tamanho da partição a ser utilizada no partifionamento" /></p>
+
+<p><img src="/images/ubuntu-server/u20.png" alt="u20" title="Iniciando o particionador" /></p>
+
+<p><img src="/images/ubuntu-server/u21.png" alt="u21" title="Escrever as mudanças nos discos" /></p>
+
+<p><img src="/images/ubuntu-server/u22.png" alt="u22" title="Formatação de partições" /></p>
+
+<p>Depois da formatação das partições necessárias para o sistema o instalador irá iniciar a instalação do sistema.</p>
+
+<p><img src="/images/ubuntu-server/u23.png" alt="u23" title="Instalando o sistema" /></p>
+
+<p><img src="/images/ubuntu-server/u24.png" alt="u24" title="Configurando o apt" /></p>
+
+<p><img src="/images/ubuntu-server/u25.png" alt="u25" title="Selecionar e instalar softwar" /></p>
+
+<p><img src="/images/ubuntu-server/u26.png" alt="u26" title="Configuração de atualização automáica" /></p>
+
+<p>Nesta tela é possível selecionar os softwares que serão instalados neste servidor, no meu caso selecionei o LAMP que ira instalar automaticamente o Apache2, PHP 7 e MySQL 5.7 (servidor web), Samba file server para compartilhamento de arquivos, e OpenSSH para conexão remota por ssh.</p>
+
+<p><img src="/images/ubuntu-server/u27.png" alt="u27" title="Seleção de software" /></p>
+
+<p>Definição da senha do banco de dados MySQL (caso selecionado o LAMP)</p>
+
+<p><img src="/images/ubuntu-server/u28.png" alt="u28" title="Configurando mysql-server-5.7" /></p>
+
+<p><img src="/images/ubuntu-server/u29.png" alt="u29" title="repetir senha do mysql" /></p>
+
+<p><img src="/images/ubuntu-server/u30.png" alt="u30" title="Instalaçãdo do mysql" /></p>
+
+<p><img src="/images/ubuntu-server/u31.png" alt="u31" title="Instalando o pacote grub2" /></p>
+
+<p>Será solicitado se você deseja instalar o grub no registro mestre de inicialização, se houver outro sistema operacional (dual boot) o grub irá acrescentar (caso não ocorra falhas) na lista de sistema operacionais.</p>
+
+<p><img src="/images/ubuntu-server/u32.png" alt="u32" title="Instalar o grub no registro mestre" /></p>
+
+<p><img src="/images/ubuntu-server/u33.png" alt="u33" title="Instalação do grub no disco" /></p>
+
+<p><img src="/images/ubuntu-server/u34.png" alt="u34" title="Finalizando a instalação" /></p>
+
+<p>Após a instalação o sistema ira solicitar que remova qualquer midia cd-rom ou usb e reiniciará o servidor, aparecerá o Grub contendo os
+sistemas operacionais detectados.</p>
+
+<p><img src="/images/ubuntu-server/u35.png" alt="u35" title="Grub" /></p>
+
+<p><img src="/images/ubuntu-server/u36.png" alt="u36" title="Inicializaçãdo do servidor" /></p>
+
+<p>Pronto o Ubuntu Server foi instalado e você estará pronto para começar a configurar e trabalhar nele.</p>
+
+<p><img src="/images/ubuntu-server/u37.png" alt="u37" title="Informações do servidor" /></p>
+
+<p>Fique atento para mais tutoriais, como o LVM e configurações básicas para trabalhar com um servidor web.</p>
+
+  </section>
+</article>
+
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//ramonbarros.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2016 Ramon Barros. All rights reserved.</span>
+</footer> 
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32626396-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+    </div>
+
+    <!-- <script id="dsq-count-scr" src="//ramonbarros.disqus.com/count.js" async></script> -->
+  </body>
+</html>

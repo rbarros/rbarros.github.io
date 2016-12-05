@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Configurando o dump() do twig no slim framework 2.6.1"
-description: "Como configurar o dump do twig no slim framework"
+title:  "Configurando o dump() do twig no Slim Framework 2.6.1"
+description: "Como configurar o dump do twig no Slim Framework v2.6.1"
 date:   2016-03-31 10:51:00
 categories: php
 tags: [php,slim,twig,dump,debug]
@@ -66,4 +66,63 @@ $app = new \Slim\Slim(array(
 
 {% endhighlight %}
 
-Pronto! Agora é possível utilizar o dump na view do twig.
+Fazendo isso irá habilitar a extensão dump nas views do twig ficando muito mais fácil debugar.
+Pronto! Agora é possível utilizar o dump na view do twig com no exemplo abaixo:
+
+{% highlight php %}
+<?php
+
+$app->get('/parametros', function () use ($app) {
+
+    $parametros = array(
+        array(
+            'id' => '1',
+            'nome' => 'Código dos Tipos...',
+            'parametro' => 'cod',
+            'valor' => '6165',
+            'descricao' => 'Informe os códigos dos tipos...'
+        ),
+        array(
+            'id' => '2',
+            'nome' => 'Data Inicial',
+            'parametro' => 'data_inicial',
+            'valor' => '01/04/2015',
+            'descricao' => 'Informe a data inicial...'
+        ),
+        array(
+            'id' => '4',
+            'nome' => 'Dias para exportação...',
+            'parametro' => 'dias_exportacao',
+            'valor' => '365',
+            'descricao' => 'Informe o número de dias para exportação...'
+        )
+    );
+
+    $app->render(
+        'parametros/index.twig',
+        array(
+            'parametros' => $parametros
+        )
+    );
+});
+
+{% endhighlight %}
+
+
+{% highlight html %}
+
+...
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                { {dump(parametros) } }
+            </div>
+        </div>
+    </div>
+
+...
+
+{% endhighlight %}
+
+![dump](/images/twig/dump.png "Exemplo de retorno do dump")

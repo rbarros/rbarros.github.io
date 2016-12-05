@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>About</title>
-  <meta name="description" content="Full Stack Developer">
+  <title>Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3</title>
+  <meta name="description" content="Resolvendo problema do kernel 4.2.0 e Broadcom Corporation BCM4313.">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -15,12 +15,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="About">
-  <meta name="twitter:description" content="Full Stack Developer">
+  <meta name="twitter:title" content="Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3">
+  <meta name="twitter:description" content="Resolvendo problema do kernel 4.2.0 e Broadcom Corporation BCM4313.">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="About">
-  <meta property="og:description" content="Full Stack Developer">
+  <meta property="og:title" content="Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3">
+  <meta property="og:description" content="Resolvendo problema do kernel 4.2.0 e Broadcom Corporation BCM4313.">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://ramon-barros.com//about/">
+  <link rel="canonical" href="http://ramon-barros.com//php/2016/03/31/mensagem-brcmsmac-xubuntu.html">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
   <script type="text/javascript">
     window.smartlook||(function(d) {
@@ -150,29 +150,84 @@
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
         <article class="post-container post-container--single">
-
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <div class="post-meta">
+      <time datetime="31 Mar 2016" class="post-meta__date date">31 Mar 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#xubuntu">xubuntu</a> <a href="/tags/#ubuntu">ubuntu</a> <a href="/tags/#brcmsmac">brcmsmac</a> <a href="/tags/#brcms">brcms</a> <a href="/tags/#broadcom">broadcom</a> </span>
+    </div>
+    <h1 class="post-title">Mensagem brcmsmac na inicialização do Xubuntu 16.04/Ubuntu 14.04.3</h1>
   </header>
 
   <section class="post">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+    <p>Tenho um notebook HP G42 e após a atualização do Xubuntu 14.04 para o 16.04 começou aparecer a mensagem abaixo e apresentar problemas na conexão wifi:</p>
 
-<p>You can find the source code for the Jekyll new theme at:
-<a href="https://github.com/jglovier"><span class="icon icon--github"><svg viewbox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
-</span><span class="username">jglovier</span></a>
- /
-<a href="https://github.com/jglovier/jekyll-new">jekyll-new</a></p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">brcmsmac bcma0:1: brcms_ops_bss_info_changed: qos enabled: <span class="nb">false</span> <span class="o">(</span>implement<span class="o">)</span>
+brcmsmac bcma0:1: brcms_ops_config: change power-save mode: <span class="nb">false</span> <span class="o">(</span>implement<span class="o">)</span></code></pre></div>
 
-<p>You can find the source code for Jekyll at
-<a href="https://github.com/jekyll"><span class="icon icon--github"><svg viewbox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
-</span><span class="username">jekyll</span></a>
- /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+<p>Digitei o comando <code>lspci</code> no terminal para verificar o modelo da placa wifi.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">Network controller: Broadcom Corporation BCM4313 802.11bgn Wireless Network Adapter <span class="o">(</span>rev 01<span class="o">)</span></code></pre></div>
+
+<p>Pesquisei no forum do <a href="http://ubuntuforums.org/showthread.php?t=2148444&amp;page=2">ubuntu</a> e informaram que resolveria instalando o bcmwl-kernel-source, seguindo as dicas tentei instalar pelo synaptic, no entanto não funcionou mostrando outro problema:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">A descompactar bcmwl-kernel-source <span class="o">(</span>6.30.223.141+bdcom-0ubuntu2<span class="o">)</span>
+...
+ERROR <span class="o">(</span>dkms apport<span class="o">)</span>: kernel package linux-headers-4.2.0-25-generic is not supported
+Error! Bad <span class="k">return</span> status <span class="k">for</span> module build on kernel: 4.2.0-25-generic <span class="o">(</span>x86_64<span class="o">)</span>
+Consult /var/lib/dkms/bcmwl/6.30.223.141+bdcom/build/make.log <span class="k">for</span> more information.
+modprobe: FATAL: Module wl not found in directory /lib/modules/4.2.0-25-generic
+...</code></pre></div>
+
+<p>Tentei baixar o bcmwl-kernel-source e instalar pelo <code>dpkg</code> apresentando o mesmo problema:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">DKMS make.log <span class="k">for</span> bcmwl-6.30.223.141+bdcom <span class="k">for</span> kernel 4.2.0-25-generic <span class="o">(</span>x86_64<span class="o">)</span>
+Sex Jun <span class="m">24</span> 20:41:43 BRT 2016
+make: Entering directory <span class="s1">&#39;/usr/src/linux-headers-4.2.0-25-generic&#39;</span>
+CFG80211 API is prefered <span class="k">for</span> this kernel version
+...</code></pre></div>
+
+<p>Resolvi atualizar o kernel de 4.2.0 para 4.6.0 baixando as imagens em <a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.6-yakkety/">kernel</a></p>
+
+<ul>
+  <li>linux-headers-4.6.0-040600_4.6.0-040600.201606100558_all.deb</li>
+  <li>linux-headers-4.6.0-040600-generic_4.6.0-040600.201606100558_amd64.deb</li>
+  <li>linux-image-4.6.0-040600-generic_4.6.0-040600.201606100558_amd64.deb</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo dpkg -i linux-*.deb</code></pre></div>
+
+<p>E depois baixei um versão mais recente do <a href="https://launchpad.net/ubuntu/xenial/amd64/bcmwl-kernel-source/6.30.223.248+bdcom-0ubuntu8">bcmwl</a> e instalei:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo dpkg -i bcmwl-kernel-source_6.30.223.248+bdcom-0ubuntu8_amd64.deb</code></pre></div>
+
+<p>Foi instalado corretamente o kernel e o driver bcmwl e a wifi voltou a funcionar.</p>
 
   </section>
-
 </article>
+
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//ramonbarros.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+
+
+
       </div>
 
       <footer class="footer">

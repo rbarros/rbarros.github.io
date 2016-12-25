@@ -5,8 +5,8 @@
     <description>Full Stack Developer</description>
     <link>http://ramon-barros.com//</link>
     <atom:link href="http://ramon-barros.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 05 Dec 2016 11:01:31 -0200</pubDate>
-    <lastBuildDate>Mon, 05 Dec 2016 11:01:31 -0200</lastBuildDate>
+    <pubDate>Sun, 25 Dec 2016 18:23:00 -0200</pubDate>
+    <lastBuildDate>Sun, 25 Dec 2016 18:23:00 -0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -89,8 +89,7 @@ Warning: watch /path/foo/bar ENOSPC&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
       <item>
         <title>Instalação do Ubuntu Server 16.04</title>
-        <description>&lt;p&gt;A instalação do Ubuntu Server não tem mistério é bem intuitiva, pois há um ambiente gráfico, onde pode-se utilizar
-teclado para selecionar as opções.&lt;/p&gt;
+        <description>&lt;p&gt;A instalação do Ubuntu Server não tem mistério é bem intuitiva, pois há um ambiente gráfico, onde pode-se utilizar teclado para selecionar as opções.&lt;/p&gt;
 
 &lt;p&gt;Inicio do boot pelo CD ou Pendrive (no meu caso .iso através do qemu)&lt;/p&gt;
 
@@ -185,9 +184,9 @@ sistemas operacionais detectados.&lt;/p&gt;
 
 &lt;p&gt;Fique atento para mais tutoriais, como o LVM e configurações básicas para trabalhar com um servidor web.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 31 Mar 2016 07:51:00 -0300</pubDate>
-        <link>http://ramon-barros.com//php/2016/03/31/ubuntu-server-16.04.html</link>
-        <guid isPermaLink="true">http://ramon-barros.com//php/2016/03/31/ubuntu-server-16.04.html</guid>
+        <pubDate>Wed, 07 Sep 2016 22:33:00 -0300</pubDate>
+        <link>http://ramon-barros.com//php/2016/09/07/ubuntu-server-16.04.html</link>
+        <guid isPermaLink="true">http://ramon-barros.com//php/2016/09/07/ubuntu-server-16.04.html</guid>
         
         <category>ubuntu</category>
         

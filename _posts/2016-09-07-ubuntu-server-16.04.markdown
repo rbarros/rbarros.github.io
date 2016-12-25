@@ -2,13 +2,12 @@
 layout: post
 title:  "Instalação do Ubuntu Server 16.04"
 description: "Tutorial de instalação do Ubuntu Server 16.04"
-date:   2016-03-31 10:51:00
+date:   2016-09-07 22:33
 categories: php
 tags: [ubuntu,server,webserver]
 ---
 
-A instalação do Ubuntu Server não tem mistério é bem intuitiva, pois há um ambiente gráfico, onde pode-se utilizar
-teclado para selecionar as opções.
+A instalação do Ubuntu Server não tem mistério é bem intuitiva, pois há um ambiente gráfico, onde pode-se utilizar teclado para selecionar as opções.
 
 Inicio do boot pelo CD ou Pendrive (no meu caso .iso através do qemu)
 

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>404</title>
-  <meta name="description" content="Full Stack Developer">
+  <title>Iniciando no PHP</title>
+  <meta name="description" content="Para os que estão começando a desenvolver com a linguagem PHP, vou compartilhar algumas dicas que irão ajudar.">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -15,12 +15,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="404">
-  <meta name="twitter:description" content="Full Stack Developer">
+  <meta name="twitter:title" content="Iniciando no PHP">
+  <meta name="twitter:description" content="Para os que estão começando a desenvolver com a linguagem PHP, vou compartilhar algumas dicas que irão ajudar.">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="404">
-  <meta property="og:description" content="Full Stack Developer">
+  <meta property="og:title" content="Iniciando no PHP">
+  <meta property="og:description" content="Para os que estão começando a desenvolver com a linguagem PHP, vou compartilhar algumas dicas que irão ajudar.">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://ramon-barros.com//404.html">
+  <link rel="canonical" href="http://ramon-barros.com//php/2017/02/28/iniciando-no-php.html">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
   <script type="text/javascript">
     window.smartlook||(function(d) {
@@ -150,16 +150,75 @@
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
         <article class="post-container post-container--single">
-
   <header class="post-header">
-    <h1 class="post-title">404</h1>
+    <div class="post-meta">
+      <time datetime="28 Feb 2017" class="post-meta__date date">28 Feb 2017</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#php">php</a> </span>
+    </div>
+    <h1 class="post-title">Iniciando no PHP</h1>
   </header>
 
   <section class="post">
-    <meta http-equiv="refresh" content="5; url=/">
-  </section>
+    <p>Vou postar algumas dicas para você que esta iniciando no PHP e não sabe exetamente por onde começar.</p>
 
+<p>Primeiramente você deve ler o post PHP do Jeito Certo criado por [Josh Lockhart]: https://twitter.com/codeguy que contém uma referência rápida e fácil de ler, introduzindo você às melhores práticas.</p>
+
+<p>“Bom eu li PHP do Jeito Certo e vi os videos e cursos, já vou criar meu website…”</p>
+
+<p>Ótimo que tenha visto tudo no entanto como será sua estrutura de diretórios ? Irá utilizar um framework ? Como vou carregar os arquivos ?</p>
+
+<p>Já trabalhei com o CodeIgniter 2 e 3, Laravel 3, 4 e 5, CakePHP e com a experiência e busca na comunidade de desenvolvimento percebi que quando não queremos utilizar um framework que já possui uma estrutura pronta nos deparamos com a dificuldade de organizar os arquivos. Então vou mostrar abaixo a estrutura que costumo utilizar para iniciar um projeto, você pode criar a estrutura que achar conveniente para o seu projeto, esta é uma dica e acredito que trabalhando em equipe
+todos entenderam.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;projeto&gt;/
+ <span class="p">|</span>__ dump/ - Sql <span class="k">do</span> banco
+ <span class="p">|</span>__ modules/ - Diretório de modulos
+ <span class="p">|</span>__ public/ - Assets <span class="k">do</span> sistema
+ <span class="p">|</span>  <span class="p">|</span>__ fonts - Fonts
+ <span class="p">|</span>  <span class="p">|</span>__ <span class="o">(</span>img<span class="p">|</span>image<span class="o">)</span> - Imagens <span class="k">do</span> sistema
+ <span class="p">|</span>  <span class="p">|</span>__ libs -- Bibliotecas e Plugins utilizados pelo sistema
+ <span class="p">|</span>  <span class="p">|</span>__ <span class="o">(</span>scripts<span class="p">|</span>js<span class="o">)</span> - Scripts utilizados pelo sistema
+ <span class="p">|</span>  <span class="p">|</span>__ <span class="o">(</span>styles<span class="p">|</span>css<span class="o">)</span> - Stilos <span class="k">do</span> template e sistema
+ <span class="p">|</span>  <span class="p">|</span>__ .htaccess
+ <span class="p">|</span>  <span class="p">|</span>__ index.php - Arquivo principal da aplicação
+ <span class="p">|</span>
+ <span class="p">|</span>__ src/ - Diretório <span class="nb">source </span>contendo o Core <span class="k">do</span> sistema
+ <span class="p">|</span>__ storage - Diretório de cache, log e sessão da aplicação
+ <span class="p">|</span>  <span class="p">|</span>__ cache - Cache
+ <span class="p">|</span>  <span class="p">|</span>__ logs - Logs <span class="k">do</span> sistema
+ <span class="p">|</span>  <span class="p">|</span>__ session - Sessão utilizada pela aplicação
+ <span class="p">|</span>
+ <span class="p">|</span>__ vendor/ - Dependencias <span class="o">(</span>composer<span class="o">)</span> <span class="k">do</span> sistema
+ <span class="p">|</span>__ README.md - Informações <span class="k">do</span> projeto
+ <span class="p">|</span>__ composer.json - Arquivo de configuração <span class="k">do</span> composer</code></pre></div>
+
+<p>Manual do PHP
+http://php.net/manual/pt_BR/index.php</p>
+
+
+  </section>
 </article>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//ramonbarros.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
       </div>
 
       <footer class="footer">

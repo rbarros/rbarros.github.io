@@ -72,7 +72,7 @@ Nas configurações do sistema por exemplo. Alguns sistemas armazenam as configu
 de dados.
 
 {% highlight bash %}
-# Estrutura da table
+# Estrutura da tabela settings
 +-------------+-------------------------------------------+------+-----+---------+----------------+
 | Field       | Type                                      | Null | Key | Default | Extra          |
 +-------------+-------------------------------------------+------+-----+---------+----------------+
@@ -86,7 +86,7 @@ de dados.
 {% andhighlight %}
 
 {% highlight bash %}
-# Registros da tabela
+# Registros da tabela settings
 +----+--------------+----------------------------------+--------------------+-------+--------+
 | id | param        | description                      | value              | type  | status |
 +----+--------------+----------------------------------+--------------------+-------+--------+
@@ -108,11 +108,22 @@ namespace Lib;
 use Memcached;
 use Exception;
 
+/**
+ * Class para o sistema de cache
+ */
 class Cache
 {
+    /**
+     * Armazena a instância da classe Memcached
+     * @var Memcached
+     */
     private static $instance;
 
-    // conectando no memcached
+    /**
+     * Criando a instância da classe Memcached
+     * e retornando a instância da classe Cache
+     * @return Cache
+     */
     public static function getInstance()
     {
         if (!isset(self::$instance)) {
@@ -127,6 +138,12 @@ class Cache
         return new $class();
     }
 
+    /**
+     * Recupera o valor do cache referente a chave informada
+     * @param  string   $key       Chave que identifica o cache
+     * @param  function $callback  Função anônima para callback
+     * @return mixed               Retorna o valor armazenado em cache ou do retorno do callback
+     */
     public function get($key = null, $callback = null)
     {
         if (!($rows = self::$instance->get($key))) {
@@ -138,12 +155,22 @@ class Cache
         return $rows;
     }
 
+    /**
+     * Armazena o valor no cache na chave informada
+     * @param string $key   Chave que identifica o valor
+     * @param mixed $value  Valor que será armazenado
+     */
     public function set($key = null, $value = null)
     {
         self::$instance->set($key, $value);
         return $this;
     }
 
+    /**
+     * Exclui o cache referente a chave
+     * @param  string $key Chave que identifica o cache
+     * @return Cache
+     */
     public function delete($key)
     {
         self::$instance->delete($key);
@@ -155,10 +182,34 @@ class Cache
 Com esta classe Cache criada consigo trabalhar desta forma:
 {% highlight %}
 <?php
+use PDO;
 use Lib\Cache;
 
+$dsn = 'mysql:host=localhost'.
+       ';dbname=dbtest'.
+       ';port='.
+       ';charset=utf8'.
+       ';connect_timeout=15';
+$db = new PDO($dsn, 'root', 'root');
+
+$param = 'smtp_host';
 $cache = Cache::getInstance();
-$settings = $cache->get('settings.'.session_id(), function() use($db) {
-        return $db->all();
+
+echo 'Cache: settings.'.$param;
+
+$smtp_host = $cache->get('settings.'.$param, function() use($db, $param) {
+        $query = $db->prepare('SELECT value FROM settings WHERE param = :param;');
+        $query->bindValue(':param', $param);
+
+        $value = null;
+        if ($query->execute()) {
+            $value = $query->fetch(PDO::FETCH_ASSOC);
+        }
+        return !empty($value['value']) ? $value['value'] : null;
 });
+
+var_dump($smtp_host);die;
+
+/var/www/html/memcached.php:92:string 'smtp.teste.com.br' (length=17)
+
 {% endhighlight %}

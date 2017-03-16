@@ -7,20 +7,15 @@ categories: php
 tags: [php]
 ---
 
-Vou postar algumas dicas para você que esta iniciando no PHP e não sabe exetamente por onde começar.
+Vou postar algumas dicas para você que esta iniciando no PHP e não sabe exatamente por onde começar.
 
-Primeiramente você deve ler o post PHP do Jeito Certo criado por [Josh Lockhart]: https://twitter.com/codeguy que contém uma referência rápida e fácil de ler, introduzindo você às melhores práticas.
+Primeiramente você deve ler o post [PHP do Jeito Certo](http://br.phptherightway.com/){:target="_blank"} criado por [Josh Lockhart](https://twitter.com/codeguy){:target="_blank"} que contém uma referência rápida e fácil de ler, introduzindo você às melhores práticas e ver o [Curso de PHP](http://www.cursoemvideo.com/lesson/curso-php-historia-php/){:target="_blank"} para entender a história e funcionamento da linguagem.
 
-[PHP do Jeito Certo]: http://br.phptherightway.com/
+"Bom eu li PHP do Jeito Certo e vi os videos e cursos, já vou criar meu website... mas por onde começar ?"
 
-[Curso de PHP - Importante assistir para entender a linguagem]: http://www.cursoemvideo.com/lesson/curso-php-historia-php/
+Ótimo que tenha visto tudo, no entanto, como será sua estrutura de diretórios ? Irá utilizar um framework ? Como vou carregar os arquivos ?
 
-"Bom eu li PHP do Jeito Certo e vi os videos e cursos, já vou criar meu website..."
-
-Ótimo que tenha visto tudo no entanto como será sua estrutura de diretórios ? Irá utilizar um framework ? Como vou carregar os arquivos ?
-
-Já trabalhei com o CodeIgniter 2 e 3, Laravel 3, 4 e 5, CakePHP e com a experiência e busca na comunidade de desenvolvimento percebi que quando não queremos utilizar um framework que já possui uma estrutura pronta nos deparamos com a dificuldade de organizar os arquivos. Então vou mostrar abaixo a estrutura que costumo utilizar para iniciar um projeto, você pode criar a estrutura que achar conveniente para o seu projeto, esta é uma dica e acredito que trabalhando em equipe
-todos entenderam.
+Já trabalhei com o CodeIgniter 2 e 3, Laravel 3, 4 e 5, CakePHP e com a experiência e busca na comunidade de desenvolvimento percebi que quando não queremos utilizar um framework que já possui uma estrutura pronta nos deparamos com a dificuldade de organizar os arquivos. Então vou mostrar abaixo a estrutura que costumo utilizar para iniciar um projeto, você pode criar a estrutura que achar conveniente para o seu projeto.
 
 {% highlight bash %}
 <projeto>/
@@ -46,6 +41,5 @@ todos entenderam.
  |__ composer.json - Arquivo de configuração do composer
 {% endhighlight %}
 
-Manual do PHP
-http://php.net/manual/pt_BR/index.php
+[Manual do PHP](http://php.net/manual/pt_BR/index.php){:target="_blank"}
 

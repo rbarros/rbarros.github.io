@@ -1,7 +1,7 @@
 # Site settings
 # source ~/.rvm/scripts/rvm
 title: Ramon Barros
-description: 'Full Stack Developer'
+description: 'Developer'
 url: 'http://ramon-barros.com'
 baseurl: '/'
 google_analytics: 'UA-32626396-1'

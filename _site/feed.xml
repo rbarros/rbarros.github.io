@@ -2,25 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ramon Barros</title>
-    <description>Full Stack Developer</description>
+    <description>Developer</description>
     <link>http://ramon-barros.com//</link>
     <atom:link href="http://ramon-barros.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Mar 2017 00:08:30 -0300</pubDate>
-    <lastBuildDate>Wed, 01 Mar 2017 00:08:30 -0300</lastBuildDate>
+    <pubDate>Wed, 01 Mar 2017 14:50:04 -0300</pubDate>
+    <lastBuildDate>Wed, 01 Mar 2017 14:50:04 -0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Iniciando no PHP</title>
-        <description>&lt;p&gt;Vou postar algumas dicas para você que esta iniciando no PHP e não sabe exetamente por onde começar.&lt;/p&gt;
+        <description>&lt;p&gt;Vou postar algumas dicas para você que esta iniciando no PHP e não sabe exatamente por onde começar.&lt;/p&gt;
 
-&lt;p&gt;Primeiramente você deve ler o post PHP do Jeito Certo criado por [Josh Lockhart]: https://twitter.com/codeguy que contém uma referência rápida e fácil de ler, introduzindo você às melhores práticas.&lt;/p&gt;
+&lt;p&gt;Primeiramente você deve ler o post &lt;a href=&quot;http://br.phptherightway.com/&quot; target=&quot;_blank&quot;&gt;PHP do Jeito Certo&lt;/a&gt; criado por &lt;a href=&quot;https://twitter.com/codeguy&quot; target=&quot;_blank&quot;&gt;Josh Lockhart&lt;/a&gt; que contém uma referência rápida e fácil de ler, introduzindo você às melhores práticas e ver o &lt;a href=&quot;http://www.cursoemvideo.com/lesson/curso-php-historia-php/&quot; target=&quot;_blank&quot;&gt;Curso de PHP&lt;/a&gt; para entender a história e funcionamento da linguagem.&lt;/p&gt;
 
-&lt;p&gt;“Bom eu li PHP do Jeito Certo e vi os videos e cursos, já vou criar meu website…”&lt;/p&gt;
+&lt;p&gt;“Bom eu li PHP do Jeito Certo e vi os videos e cursos, já vou criar meu website… mas por onde começar ?”&lt;/p&gt;
 
-&lt;p&gt;Ótimo que tenha visto tudo no entanto como será sua estrutura de diretórios ? Irá utilizar um framework ? Como vou carregar os arquivos ?&lt;/p&gt;
+&lt;p&gt;Ótimo que tenha visto tudo, no entanto, como será sua estrutura de diretórios ? Irá utilizar um framework ? Como vou carregar os arquivos ?&lt;/p&gt;
 
-&lt;p&gt;Já trabalhei com o CodeIgniter 2 e 3, Laravel 3, 4 e 5, CakePHP e com a experiência e busca na comunidade de desenvolvimento percebi que quando não queremos utilizar um framework que já possui uma estrutura pronta nos deparamos com a dificuldade de organizar os arquivos. Então vou mostrar abaixo a estrutura que costumo utilizar para iniciar um projeto, você pode criar a estrutura que achar conveniente para o seu projeto, esta é uma dica e acredito que trabalhando em equipe
-todos entenderam.&lt;/p&gt;
+&lt;p&gt;Já trabalhei com o CodeIgniter 2 e 3, Laravel 3, 4 e 5, CakePHP e com a experiência e busca na comunidade de desenvolvimento percebi que quando não queremos utilizar um framework que já possui uma estrutura pronta nos deparamos com a dificuldade de organizar os arquivos. Então vou mostrar abaixo a estrutura que costumo utilizar para iniciar um projeto, você pode criar a estrutura que achar conveniente para o seu projeto.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&amp;lt;projeto&amp;gt;/
  &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;__ dump/ - Sql &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; banco
@@ -44,8 +43,7 @@ todos entenderam.&lt;/p&gt;
  &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;__ README.md - Informações &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; projeto
  &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;__ composer.json - Arquivo de configuração &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; composer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Manual do PHP
-http://php.net/manual/pt_BR/index.php&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://php.net/manual/pt_BR/index.php&quot; target=&quot;_blank&quot;&gt;Manual do PHP&lt;/a&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 28 Feb 2017 22:25:00 -0300</pubDate>

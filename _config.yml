@@ -5,7 +5,7 @@ description: 'Developer'
 url: 'http://ramon-barros.com'
 baseurl: '/'
 google_analytics: 'UA-32626396-1'
-#google_site_verification: 'guyNAJizf4Z_4vd0tVhQt6uEwQcBcUVp3J7ATwGeMoY'
+google_site_verification: 'guyNAJizf4Z_4vd0tVhQt6uEwQcBcUVp3J7ATwGeMoY'
 
 author:
   name: 'Ramon Barros'

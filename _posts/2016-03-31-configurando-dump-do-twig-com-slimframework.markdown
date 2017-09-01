@@ -5,7 +5,7 @@ description: "Como configurar o dump do twig no Slim Framework v2.6.1"
 date:   2016-03-31 10:51:00
 categories: php
 tags: [php,slim,twig,dump,debug]
-image: /images/twig/dump.png
+#image: /images/twig/dump.png
 ---
 
 Procurei na internet como configurar a função `dump()` na view do slim utilizando o twig e a [documentação](http://twig.sensiolabs.org/doc/functions/dump.html)

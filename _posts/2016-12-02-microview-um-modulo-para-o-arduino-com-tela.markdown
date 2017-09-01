@@ -5,7 +5,7 @@ description: "O MicroView é o primeiro módulo compatível com Arduino usando u
 date:   2016-12-02 17:44:00
 categories: arduino
 tags: [microview,arduino,sparkfun]
-image: /images/microview/microview2.jpeg
+#image: /images/microview/microview2.jpeg
 ---
 
 O MicroView é o primeiro módulo compatível com Arduino usando uma tela OLED integrada. Com o OLED on-board de 64 x 48 pixels,

@@ -7,7 +7,7 @@ tags: [linux,comandos, shell]
 ---
 Alguns comandos do linux que costumo utilizar.
 
-{% highlight bash %}
+```bash
 # Apache2
 #Editar arquivo php.ini Ubuntu 12.04
 $ sudo gedit /etc/php5/apache2/php.ini
@@ -152,5 +152,4 @@ $ cat /etc/samba/smb.conf
 
 # User
 $ sudo chown user:group -hR path
-
-{% endhighlight %}
+```

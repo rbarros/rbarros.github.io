@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Iniciando no PHP</title>
-  <meta name="description" content="Para os que estão começando a desenvolver com a linguagem PHP, vou compartilhar algumas dicas que irão ajudar.">
+  <title>Ramon Barros</title>
+  <meta name="description" content="Developer">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -15,13 +15,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Iniciando no PHP">
-  <meta name="twitter:description" content="Para os que estão começando a desenvolver com a linguagem PHP, vou compartilhar algumas dicas que irão ajudar.">
+  <meta name="twitter:title" content="Ramon Barros">
+  <meta name="twitter:description" content="Developer">
 
-  <meta property="og:url" content="http://localhost:4000//php/2017/02/28/iniciando-no-php.html" />
+  <meta property="og:url" content="http://localhost:4000//page3/" />
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Iniciando no PHP">
-  <meta property="og:description" content="Para os que estão começando a desenvolver com a linguagem PHP, vou compartilhar algumas dicas que irão ajudar.">
+  <meta property="og:title" content="Ramon Barros">
+  <meta property="og:description" content="Developer">
   
   
   <meta name="google-site-verification" content="guyNAJizf4Z_4vd0tVhQt6uEwQcBcUVp3J7ATwGeMoY" />
@@ -48,7 +48,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="http://localhost:4000/css/main.css">
-  <link rel="canonical" href="http://localhost:4000//php/2017/02/28/iniciando-no-php.html">
+  <link rel="canonical" href="http://localhost:4000//page3/">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
   <script type="text/javascript">
     window.smartlook||(function(d) {
@@ -154,90 +154,64 @@
 
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
-        <article class="post-container post-container--single">
-  <header class="post-header">
-    <div class="post-meta">
-      <time datetime="28 Feb 2017" class="post-meta__date date">
-        28 Feb 2017
-      </time> &#8226;
-      <span class="post-meta__tags">on
-        
-            <a href="/tags/#php">
-                php
-            </a>
-        
-      </span>
-    </div>
-    <h1 class="post-title">Iniciando no PHP</h1>
-  </header>
+        <div class="main-post-list">
 
-  <section class="post">
-    <p>Vou postar algumas dicas para você que esta iniciando no PHP e não sabe exatamente por onde começar.</p>
+  <ol class="post-list">
+    
+      <li>
+        <h2 class="post-list__post-title post-title">
+          <a href="/blog/2011/08/19/bem-vindo-ao-meu-blog.html" title="Bem Vindo!">
+            Bem Vindo!
+          </a>
+        </h2>
+        <p class="excerpt">
+          Sou Ramon Barros, faço Analise e Desenvolvimento de Sistemas na Ftec, atualmente trabalho na empresa <a href="http://sagasistemas.com.br">Saga Sistemas</a>, como desenvolvedor. Apaixonado por tecnologia e desenhos Manga, adoro Linux e amo o que faço, sempre procurando novas ideias e desafios.
+Tenho conhecimentos em Lógica de programação, Linguagem C/C++, Delphi 7 ( Pascal ) , PHP, TDD, AWS, Node.js, Javascript, HTML e CSS.
 
-<p>Primeiramente você deve ler o post <a href="http://br.phptherightway.com/" target="_blank">PHP do Jeito Certo</a> criado por <a href="https://twitter.com/codeguy" target="_blank">Josh Lockhart</a> que contém uma referência rápida e fácil de ler, introduzindo você às melhores práticas e ver o <a href="http://www.cursoemvideo.com/lesson/curso-php-historia-php/" target="_blank">Curso de PHP</a> para entender a história e funcionamento da linguagem.</p>
+&hellip;
+        </p>
+        <div class="post-list__meta">
+          <time datetime="19 Aug 2011" class="post-list__meta--date date">
+            19 Aug 2011
+          </time> &#8226;
+          <span class="post-meta__tags">on
+            
+              <a href="/tags/#jekyll">
+                jekyll
+              </a>
+            
+              <a href="/tags/#blog">
+                blog
+              </a>
+            
+              <a href="/tags/#github">
+                github
+              </a>
+            
+          </span>
+        </div>
+        <hr class="post-list__divider">
+      </li>
+    
+  </ol>
 
-<p>“Bom eu li PHP do Jeito Certo e vi os videos e cursos, já vou criar meu website… mas por onde começar ?”</p>
+  <hr class="post-list__divider ">
 
-<p>Ótimo que tenha visto tudo, no entanto, como será sua estrutura de diretórios ? Irá utilizar um framework ? Como vou carregar os arquivos ?</p>
+  
+      <nav class="pagination" role="navigation">
+  
+    
+      <a rel="prev" class="posts newer btn small" href="/page2/">← Newer Posts</a>
+    
+  
 
-<p>Já trabalhei com o CodeIgniter 2 e 3, Laravel 3, 4 e 5, CakePHP e com a experiência e busca na comunidade de desenvolvimento percebi que quando não queremos utilizar um framework que já possui uma estrutura pronta nos deparamos com a dificuldade de organizar os arquivos. Então vou mostrar abaixo a estrutura que costumo utilizar para iniciar um projeto, você pode criar a estrutura que achar conveniente para o seu projeto.</p>
+  <span class="pagination__page-number">Page 3 of 3</span>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;projeto&gt;/
- |__ dump/ - Sql <span class="k">do </span>banco
- |__ modules/ - Diretório de modulos
- |__ public/ - Assets <span class="k">do </span>sistema <span class="o">(</span>public_html ou htdocs nas hospedagens<span class="o">)</span>
- |  |__ fonts/ - Fonts
- |  |__ <span class="o">(</span>img|image<span class="o">)</span>/ - Imagens <span class="k">do </span>sistema
- |  |__ libs/ - Bibliotecas e Plugins utilizados pelo sistema
- |  |__ <span class="o">(</span>scripts|js<span class="o">)</span>/ - Scripts utilizados pelo sistema
- |  |__ <span class="o">(</span>styles|css<span class="o">)</span>/ - Estilos <span class="k">do </span>template e sistema
- |  |__ .htaccess
- |  |__ index.php - Arquivo principal da aplicação
- |
- |__ src/ - Diretório <span class="nb">source </span>contendo o Core <span class="k">do </span>sistema
- |__ storage - Diretório de cache, log e sessão da aplicação
- |  |__ cache - Cache
- |  |__ logs - Logs <span class="k">do </span>sistema
- |  |__ session - Sessão utilizada pela aplicação
- |
- |__ vendor/ - Dependencias <span class="o">(</span>composer<span class="o">)</span> <span class="k">do </span>sistema
- |__ README.md - Informações <span class="k">do </span>projeto
- |__ composer.json - Arquivo de configuração <span class="k">do </span>composer</code></pre></figure>
+  
+</nav>
+  
 
-<p>Nesta estrutura você pode notar que existe um diretório <code class="highlighter-rouge">public/</code>, na qual corresponde aos diretórios <code class="highlighter-rouge">public_html</code> ou <code class="highlighter-rouge">htdocs</code> em hospedagens compartilhadas.</p>
-
-<p>Posso jogar tudo no <code class="highlighter-rouge">public_html</code> ou <code class="highlighter-rouge">htdocs</code> ?</p>
-
-<p>Não aconselho você fazer isso, pois quando acessamos o domínio caimos diretamente neste diretório, se houver alguma falha no servidor, dependendo do problema é possível efetuar o download dos arquivos presentes nestes diretórios, ficando seu site ainda mais vulnerável.
-Em alguns casos o servidor não inicia o modulo do php no apache e acaba exibindo literalmente o conteúdo dos arquivos com extensão <code class="highlighter-rouge">.php</code>. Desta forma se você deixar somente o arquivo <code class="highlighter-rouge">index.php</code> que corresponde ao arquivo principal para carregar o site, você evita que usuários consigam visualizar arquivos de configuração, senhas de banco de dados entre outros dados importantes, pois nestes diretórios irá conter somente arquivos assets.</p>
-
-<p><a href="http://php.net/manual/pt_BR/index.php" target="_blank">Manual do PHP</a></p>
-
-
-  </section>
-</article>
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = '//ramonbarros.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>
-    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-
+</div>
       </div>
 
       <footer class="footer">

@@ -21,12 +21,12 @@ Já trabalhei com o CodeIgniter 2 e 3, Laravel 3, 4 e 5, CakePHP e com a experi�
 <projeto>/
  |__ dump/ - Sql do banco
  |__ modules/ - Diretório de modulos
- |__ public/ - Assets do sistema
- |  |__ fonts - Fonts
- |  |__ (img|image) - Imagens do sistema
- |  |__ libs -- Bibliotecas e Plugins utilizados pelo sistema
- |  |__ (scripts|js) - Scripts utilizados pelo sistema
- |  |__ (styles|css) - Stilos do template e sistema
+ |__ public/ - Assets do sistema (public_html ou htdocs nas hospedagens)
+ |  |__ fonts/ - Fonts
+ |  |__ (img|image)/ - Imagens do sistema
+ |  |__ libs/ - Bibliotecas e Plugins utilizados pelo sistema
+ |  |__ (scripts|js)/ - Scripts utilizados pelo sistema
+ |  |__ (styles|css)/ - Estilos do template e sistema
  |  |__ .htaccess
  |  |__ index.php - Arquivo principal da aplicação
  |
@@ -40,6 +40,15 @@ Já trabalhei com o CodeIgniter 2 e 3, Laravel 3, 4 e 5, CakePHP e com a experi�
  |__ README.md - Informações do projeto
  |__ composer.json - Arquivo de configuração do composer
 {% endhighlight %}
+
+Nesta estrutura você pode notar que existe um diretório ```public/```, na qual corresponde aos diretórios ```public_html``` ou ```htdocs``` em hospedagens compartilhadas.
+
+Posso jogar tudo no ```public_html``` ou ```htdocs``` ?
+
+Não aconselho você fazer isso, pois quando acessamos o domínio caimos diretamente neste diretório, se houver alguma falha no servidor, dependendo do problema é possível efetuar o download dos arquivos presentes nestes diretórios, ficando seu site ainda mais vulnerável.
+Em alguns casos o servidor não inicia o modulo do php no apache e acaba exibindo literalmente o conteúdo dos arquivos com extensão ```.php```. Desta forma se você deixar somente o arquivo ```index.php``` que corresponde ao arquivo principal para carregar o site, você evita que usuários consigam visualizar arquivos de configuração, senhas de banco de dados entre outros dados importantes, pois nestes diretórios irá conter somente arquivos assets.
+
+
 
 [Manual do PHP](http://php.net/manual/pt_BR/index.php){:target="_blank"}
 

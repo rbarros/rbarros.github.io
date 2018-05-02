@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Iniciando no PHP</title>
+  <title>Iniciando no PHP - Parte 2</title>
   <meta name="description" content="Para os que estão começando a desenvolver com a linguagem PHP, vou compartilhar algumas dicas que irão ajudar.">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
@@ -15,12 +15,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Iniciando no PHP">
+  <meta name="twitter:title" content="Iniciando no PHP - Parte 2">
   <meta name="twitter:description" content="Para os que estão começando a desenvolver com a linguagem PHP, vou compartilhar algumas dicas que irão ajudar.">
 
-  <meta property="og:url" content="http://localhost:4000//php/2017/02/28/iniciando-no-php.html" />
+  <meta property="og:url" content="http://localhost:4000//php/2018/05/01/iniciando-no-php-parte-2.html" />
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Iniciando no PHP">
+  <meta property="og:title" content="Iniciando no PHP - Parte 2">
   <meta property="og:description" content="Para os que estão começando a desenvolver com a linguagem PHP, vou compartilhar algumas dicas que irão ajudar.">
   
   
@@ -48,7 +48,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="http://localhost:4000/css/main.css">
-  <link rel="canonical" href="http://localhost:4000//php/2017/02/28/iniciando-no-php.html">
+  <link rel="canonical" href="http://localhost:4000//php/2018/05/01/iniciando-no-php-parte-2.html">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
   <script type="text/javascript">
     window.smartlook||(function(d) {
@@ -157,8 +157,8 @@
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="28 Feb 2017" class="post-meta__date date">
-        28 Feb 2017
+      <time datetime="1 May 2018" class="post-meta__date date">
+        1 May 2018
       </time> &#8226;
       <span class="post-meta__tags">on
         
@@ -168,50 +168,72 @@
         
       </span>
     </div>
-    <h1 class="post-title">Iniciando no PHP</h1>
+    <h1 class="post-title">Iniciando no PHP - Parte 2</h1>
   </header>
 
   <section class="post">
-    <p>Vou postar algumas dicas para você que esta iniciando no PHP e não sabe exatamente por onde começar.</p>
-
-<p>Primeiramente você deve ler o post <a href="http://br.phptherightway.com/" target="_blank">PHP do Jeito Certo</a> criado por <a href="https://twitter.com/codeguy" target="_blank">Josh Lockhart</a> que contém uma referência rápida e fácil de ler, introduzindo você às melhores práticas e ver o <a href="http://www.cursoemvideo.com/lesson/curso-php-historia-php/" target="_blank">Curso de PHP</a> para entender a história e funcionamento da linguagem.</p>
-
-<p>“Bom eu li PHP do Jeito Certo e vi os videos e cursos, já vou criar meu website… mas por onde começar ?”</p>
-
-<p>Ótimo que tenha visto tudo, no entanto, como será sua estrutura de diretórios ? Irá utilizar um framework ? Como vou carregar os arquivos ?</p>
-
-<p>Já trabalhei com o CodeIgniter 2 e 3, Laravel 3, 4 e 5, CakePHP e com a experiência e busca na comunidade de desenvolvimento percebi que quando não queremos utilizar um framework que já possui uma estrutura pronta nos deparamos com a dificuldade de organizar os arquivos. Então vou mostrar abaixo a estrutura que costumo utilizar para iniciar um projeto, você pode criar a estrutura que achar conveniente para o seu projeto.</p>
+    <p>Neste post vamos continuar a falar sobre a estrutura dos diretórios, porem vamos pegar a estrutura do CodeIgniter 3, caso não tenha visto de uma olhada no post <a href="http://www.ramon-barros.com/php/2017/02/28/iniciando-no-php.html">Iniciando no PHP</a>.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">&lt;projeto&gt;/
- |__ dump/ - Sql <span class="k">do </span>banco
- |__ modules/ - Diretório de modulos
- |__ public/ - Assets <span class="k">do </span>sistema <span class="o">(</span>public_html ou htdocs nas hospedagens<span class="o">)</span>
- |  |__ fonts/ - Fonts
- |  |__ <span class="o">(</span>img|image<span class="o">)</span>/ - Imagens <span class="k">do </span>sistema
- |  |__ libs/ - Bibliotecas e Plugins utilizados pelo sistema
- |  |__ <span class="o">(</span>scripts|js<span class="o">)</span>/ - Scripts utilizados pelo sistema
- |  |__ <span class="o">(</span>styles|css<span class="o">)</span>/ - Estilos <span class="k">do </span>template e sistema
- |  |__ .htaccess
- |  |__ index.php - Arquivo principal da aplicação
- |
- |__ src/ - Diretório <span class="nb">source </span>contendo o Core <span class="k">do </span>sistema
- |__ storage - Diretório de cache, log e sessão da aplicação
- |  |__ cache - Cache
- |  |__ logs - Logs <span class="k">do </span>sistema
- |  |__ session - Sessão utilizada pela aplicação
- |
- |__ vendor/ - Dependencias <span class="o">(</span>composer<span class="o">)</span> <span class="k">do </span>sistema
- |__ README.md - Informações <span class="k">do </span>projeto
- |__ composer.json - Arquivo de configuração <span class="k">do </span>composer</code></pre></figure>
+|__ application/ - Diretório com os arquivos <span class="k">do </span>projeto
+|__ system/ - Core <span class="k">do </span>CodeIgniter NÃO ALTERAR NADA AQUI
+|__ composer.json - Arquivo com as dependências <span class="k">do </span>composer
+|__ contributing.md - Arquivo com informações para contribuir com o projeto <span class="o">(</span>pode apagar<span class="o">)</span>
+|__ index.php - Arquivo principal para carregamento <span class="k">do </span>site
+|__ license.txt - Arquivo de licença <span class="k">do </span>CodeIgniter
+|__ readme.rst - Arquivo com informações <span class="k">do </span>CodeIgniter <span class="o">(</span>pode apagar<span class="o">)</span></code></pre></figure>
 
-<p>Nesta estrutura você pode notar que existe um diretório <code class="highlighter-rouge">public/</code>, na qual corresponde aos diretórios <code class="highlighter-rouge">public_html</code> ou <code class="highlighter-rouge">htdocs</code> em hospedagens compartilhadas.</p>
+<p>Antes de falor sobre a estrutura, você deve ter notado que escrevi “NÃO ALTERAR NADA AQUI”. É isso mesmo você não deve alterar nada no core de um framework, ou em um diretório vendor, para isso existem outros recursos que podem ser utilizados para extender e mudar a forma com que o core do sistema funciona.
+Isso faz com seja mais fácil a atualização do core do sistema caso surja uma correção de segurança por exemplo.</p>
 
-<p>Posso jogar tudo no <code class="highlighter-rouge">public_html</code> ou <code class="highlighter-rouge">htdocs</code> ?</p>
+<p>Para esta estrutura de diretório você poderia mover o arquivo <code class="highlighter-rouge">index.php</code> para dentro do diretório <code class="highlighter-rouge">public_html/</code> ou <code class="highlighter-rouge">htdocs</code> na sua hospedagem (compartilhada ou não).</p>
 
-<p>Não aconselho você fazer isso, pois quando acessamos o domínio caimos diretamente neste diretório, se houver alguma falha no servidor, dependendo do problema é possível efetuar o download dos arquivos presentes nestes diretórios, ficando seu site ainda mais vulnerável.
-Em alguns casos o servidor não inicia o modulo do php no apache e acaba exibindo literalmente o conteúdo dos arquivos com extensão <code class="highlighter-rouge">.php</code>. Desta forma se você deixar somente o arquivo <code class="highlighter-rouge">index.php</code> que corresponde ao arquivo principal para carregar o site, você evita que usuários consigam visualizar arquivos de configuração, senhas de banco de dados entre outros dados importantes, pois nestes diretórios irá conter somente arquivos assets.</p>
+<p>Mas não é só jogar estes arquivos para minha hospedagem e pronto ?</p>
 
-<p><a href="http://php.net/manual/pt_BR/index.php" target="_blank">Manual do PHP</a></p>
+<p>Não aconselho isso conforme o post anterior, para evitar os mesmos problemas, por uma falha no servidor. O CodeIgniter permite você configurar ele desta forma.</p>
+
+<p>Movendo o arquivo <code class="highlighter-rouge">index.php</code> para o diretório <code class="highlighter-rouge">public_html/</code> por exemplo, você deve alterar dentro do arquivo <code class="highlighter-rouge">index.php</code> este trecho:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="o">...</span>
+
+<span class="cm">/*
+ *---------------------------------------------------------------
+ * SYSTEM DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" directory.
+ * Set the path if it is not in the same directory as this file.
+ */</span>
+    <span class="nv">$system_path</span> <span class="o">=</span> <span class="s1">'../system'</span><span class="p">;</span>
+
+<span class="cm">/*
+ *---------------------------------------------------------------
+ * APPLICATION DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * directory than the default one you can set its name here. The directory
+ * can also be renamed or relocated anywhere on your server. If you do,
+ * use an absolute (full) server path.
+ * For more info please see the user guide:
+ *
+ * https://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ */</span>
+    <span class="nv">$application_folder</span> <span class="o">=</span> <span class="s1">'../application'</span><span class="p">;</span>
+
+<span class="o">...</span></code></pre></figure>
+
+<p>Basta só colocar dois pontos e uma barra no começo do <code class="highlighter-rouge">system</code> e <code class="highlighter-rouge">application</code> e desta forma você já cosegue acessar o website.</p>
+
+<p><img src="/images/codeigniter/welcome-to-codeigniter.png" alt="welcome-to-codeigniter" title="Exemplo de acesso ao website com o diretório public_html" /></p>
+
+<p>No próximo post vou escrever sobre o Laravel 5.6.</p>
+
+<p><a href="https://www.codeigniter.com/user_guide/" target="_blank">Manual do CodeIgniter</a></p>
 
 
   </section>

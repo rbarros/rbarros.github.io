@@ -5,9 +5,118 @@
     <description>Developer</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 01 May 2018 22:56:51 -0300</pubDate>
-    <lastBuildDate>Tue, 01 May 2018 22:56:51 -0300</lastBuildDate>
+    <pubDate>Wed, 01 Aug 2018 15:46:30 -0300</pubDate>
+    <lastBuildDate>Wed, 01 Aug 2018 15:46:30 -0300</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Programando em JS com Node.js no Arduino</title>
+        <description>&lt;p&gt;Bom este tutorial eu criei para facilitar para o desenvolvedor que gostaria de
+programar em javascript para o Arduino e criar uma página web de forma mais
+fácil. Dedico este post ao meu amigo Felipe, que estava buscando uma forma de
+fazer isso também em seus projetos, sem ter que adicionar tags html no código em
+c++.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/j5/johnny-five.png&quot; alt=&quot;johnny-five&quot; title=&quot;Johnny-Five&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Rick Waldron é o criador do projeto &lt;a href=&quot;http://johnny-five.io&quot; target=&quot;_blank&quot;&gt;Johnny-Five&lt;/a&gt; que utiliza JavaScript para
+o desenvolvimento de robótica. Existem varios exemplos no website do projeto com
+a possibilidade de utilizar sensores, motores, gpios, etc. Suporta uma variedade
+de &lt;a href=&quot;http://johnny-five.io/platform-support&quot; target=&quot;_blank&quot;&gt;hardwares&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/j5/platform-support.png&quot; alt=&quot;platform-support&quot; title=&quot;Platform Support&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O que precisa para começar ?&lt;/p&gt;
+
+&lt;p&gt;Bom em primeiro lugar você vai precisar do &lt;a href=&quot;https://nodejs.org&quot; target=&quot;_blank&quot;&gt;Node.js&lt;/a&gt; instalado e da 
+&lt;a href=&quot;https://www.arduino.cc/en/Main/Software&quot; target=&quot;_blank&quot;&gt;IDE&lt;/a&gt; do Arduino. No meu caso estou utilizando uma distribuição Linux, 
+a Xubuntu, uma derivada do Ubuntu.&lt;/p&gt;
+
+&lt;p&gt;No Ubuntu/Xubuntu basta baixar o Arduino IDE conforme a arquitetura do seu
+processador 32 ou 64 bits.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/download-arduino-ide.jpg&quot; alt=&quot;download-arduino-ide&quot; title=&quot;Download Arduino IDE&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No caso do Linux o arquivo é como este arduino-1.8.5-linux64.tar.xz, basta você
+descompactar no diretório que quiser e depois abrir com o terminal o arquivo 
+install.sh uma janela como esta irá aparecer e iniciar a instalação.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/install.sh.png&quot; alt=&quot;install-sh&quot; title=&quot;Instalação do Arduino IDE&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Após a instalação é criado o icone da IDE na sua Área de Trabalho e menu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/arduino-instalado.png&quot; alt=&quot;arduino-instalado&quot; title=&quot;Arduino IDE instalado&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Abra o Arduino IDE, copie e cole o código do link abaixo:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://raw.githubusercontent.com/firmata/arduino/master/examples/StandardFirmataPlus/StandardFirmataPlus.ino&quot; target=&quot;_blank&quot;&gt;StandardFirmataPlus.ino&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Clique em verificar e depois em carregar, caso ocorra algum erro como este no terminal:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;avrdude: ser_open&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;: can&lt;span class=&quot;s1&quot;&gt;'t open device &quot;/dev/ttyACM0&quot;: Permission denied
+ioctl(&quot;TIOCMGET&quot;): Inappropriate ioctl for device&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Você deve dar permissão no dispositivo, digitando os dois comandos abaixo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;usermod &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-G&lt;/span&gt; dialout &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chmod a+rw /dev/ttyACM0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Tente novamente carregar o código no Arduino, se funcionar você vai ver no console
+da IDE algum como isto:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/arduino-carregado.png&quot; alt=&quot;arduino-carregado&quot; title=&quot;Arduino IDE Compilado e Carregado&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Agora seu Arduino esta pronto para ser chamado pelo Johnny-Five.
+Crie um diretório em algum lugar de sua preferencia e cole este código em um
+arquivo, por exemplo board.js:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// board.js&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;five&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;johnny-five&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;board&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;five&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Board&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// The board's pins will not be accessible until&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// the board has reported that it is ready&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;board&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ready&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Ready!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;led&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;five&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Led&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;led&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Em um terminal execute este comando para instalar o johnny-five:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Instala&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;çã&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;da&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;biblioteca&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;johnny&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;five&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;para&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;johnny&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;five&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;No mesmo terminal digite este comando para executar o código em board.js&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;board&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/j5/board.js.png&quot; alt=&quot;board-js&quot; title=&quot;Execução do código no Arduino&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Se tudo der certo você verá que a luz padrão do Arduino começará a piscar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/j5/video-arduino.gif&quot; alt=&quot;video-arduino&quot; title=&quot;Video do Arduino&quot; style=&quot;width:400px;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 31 Jul 2018 21:00:00 -0300</pubDate>
+        <link>http://localhost:4000//arduino/2018/07/31/arduino-node-js.html</link>
+        <guid isPermaLink="true">http://localhost:4000//arduino/2018/07/31/arduino-node-js.html</guid>
+        
+        <category>arduino</category>
+        
+        <category>nodejs</category>
+        
+        <category>node</category>
+        
+        <category>js</category>
+        
+        <category>javascript</category>
+        
+        
+        <category>arduino</category>
+        
+      </item>
     
       <item>
         <title>Iniciando no PHP - Parte 2</title>
@@ -573,55 +682,6 @@ Pronto! Agora é possível utilizar o dump na view do twig com no exemplo abaixo
         
         
         <category>javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>Iniciar Vagrant no Windows com bat</title>
-        <description>&lt;p&gt;Iniciar a VM do vagrant através de um arquivo &lt;code class=&quot;highlighter-rouge&quot;&gt;.bat&lt;/code&gt;.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bat&quot; data-lang=&quot;bat&quot;&gt;@echo off
-
-CD /d \path\dir\vagrant
-
-FOR /f &quot;tokens=2 delims= &quot; %%a in ('vagrant status ^| find /i &quot;default&quot;') do (
-    SET STATE=%%a
-)
-
-IF %STATE% equ &quot;running&quot; (
-    @echo Vagrant VM is running...
-) ELSE (
-    IF %STATE% equ &quot;saved&quot; (
-        @echo Starting Vagrant VM from powered down state...
-        vagrant up
-    ) ELSE (
-        IF %STATE% equ &quot;poweroff&quot; (
-            @echo Starting Vagrant VM from powered down state...
-            vagrant up
-        ) else (
-            @echo Resuming Vagrant VM from saved state...
-            vagrant resume
-        )
-    )
-)
-
-IF errorlevel 1 (
-  @echo FAILURE! Vagrant VM unresponsive...
-)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-</description>
-        <pubDate>Sun, 31 Jan 2016 19:57:00 -0200</pubDate>
-        <link>http://localhost:4000//windows/2016/01/31/vagrant-start-windows.html</link>
-        <guid isPermaLink="true">http://localhost:4000//windows/2016/01/31/vagrant-start-windows.html</guid>
-        
-        <category>vagrant</category>
-        
-        <category>windows</category>
-        
-        <category>bat</category>
-        
-        
-        <category>windows</category>
         
       </item>
     

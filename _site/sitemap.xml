@@ -3,6 +3,21 @@
   
     
     <url>
+      <loc>http://localhost:4000/arduino/2018/07/31/arduino-node-js.html</loc>
+      
+        <lastmod>2018-07-31T21:00:00-03:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>http://localhost:4000/php/2018/05/01/iniciando-no-php-parte-2.html</loc>
       
         <lastmod>2018-05-01T19:02:00-03:00</lastmod>
@@ -321,7 +336,7 @@
     <url>
       <loc>http://localhost:4000/404</loc>
       
-        <lastmod>2018-05-01T22:56:51-03:00</lastmod>
+        <lastmod>2018-08-01T15:46:30-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -336,7 +351,7 @@
     <url>
       <loc>http://localhost:4000/about/</loc>
       
-        <lastmod>2018-05-01T22:56:51-03:00</lastmod>
+        <lastmod>2018-08-01T15:46:30-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -351,7 +366,7 @@
     <url>
       <loc>http://localhost:4000/feed.xml</loc>
       
-        <lastmod>2018-05-01T22:56:51-03:00</lastmod>
+        <lastmod>2018-08-01T15:46:30-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -366,7 +381,7 @@
     <url>
       <loc>http://localhost:4000/</loc>
       
-        <lastmod>2018-05-01T22:56:51-03:00</lastmod>
+        <lastmod>2018-08-01T15:46:30-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -381,7 +396,7 @@
     <url>
       <loc>http://localhost:4000/js/main.js</loc>
       
-        <lastmod>2018-05-01T22:56:51-03:00</lastmod>
+        <lastmod>2018-08-01T15:46:30-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -396,7 +411,7 @@
     <url>
       <loc>http://localhost:4000/css/main.css</loc>
       
-        <lastmod>2018-05-01T22:56:51-03:00</lastmod>
+        <lastmod>2018-08-01T15:46:30-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -413,7 +428,7 @@
     <url>
       <loc>http://localhost:4000/tags/</loc>
       
-        <lastmod>2018-05-01T22:56:51-03:00</lastmod>
+        <lastmod>2018-08-01T15:46:30-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -428,7 +443,7 @@
     <url>
       <loc>http://localhost:4000/page2/</loc>
       
-        <lastmod>2018-05-01T22:56:51-03:00</lastmod>
+        <lastmod>2018-08-01T15:46:30-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -443,7 +458,7 @@
     <url>
       <loc>http://localhost:4000/page3/</loc>
       
-        <lastmod>2018-05-01T22:56:51-03:00</lastmod>
+        <lastmod>2018-08-01T15:46:30-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

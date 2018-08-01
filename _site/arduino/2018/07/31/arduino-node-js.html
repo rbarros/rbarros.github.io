@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Iniciar Vagrant no Windows com bat</title>
+  <title>Programando em JS com Node.js no Arduino</title>
   <meta name="description" content="Developer">
   <meta name="author" content="Ramon Barros">
   <meta name="HandheldFriendly" content="True">
@@ -15,13 +15,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Iniciar Vagrant no Windows com bat">
+  <meta name="twitter:title" content="Programando em JS com Node.js no Arduino">
   <meta name="twitter:description" content="Developer">
 
-  <meta property="og:url" content="http://localhost:4000//windows/2016/01/31/vagrant-start-windows.html" />
+  <meta property="og:url" content="http://localhost:4000//arduino/2018/07/31/arduino-node-js.html" />
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Iniciar Vagrant no Windows com bat">
+  <meta property="og:title" content="Programando em JS com Node.js no Arduino">
   <meta property="og:description" content="Developer">
+  
+  <meta property="og:image" content="http://localhost:4000//images/arduino/j5/johnny-five.png" />
   
   
   <meta name="google-site-verification" content="guyNAJizf4Z_4vd0tVhQt6uEwQcBcUVp3J7ATwGeMoY" />
@@ -48,7 +50,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="http://localhost:4000/css/main.css">
-  <link rel="canonical" href="http://localhost:4000//windows/2016/01/31/vagrant-start-windows.html">
+  <link rel="canonical" href="http://localhost:4000//arduino/2018/07/31/arduino-node-js.html">
   <link rel="alternate" type="application/rss+xml" title="Ramon Barros" href="/feed.xml">
   <script type="text/javascript">
     window.smartlook||(function(d) {
@@ -157,59 +159,123 @@
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="31 Jan 2016" class="post-meta__date date">
-        31 Jan 2016
+      <time datetime="31 Jul 2018" class="post-meta__date date">
+        31 Jul 2018
       </time> &#8226;
       <span class="post-meta__tags">on
         
-            <a href="/tags/#vagrant">
-                vagrant
+            <a href="/tags/#arduino">
+                arduino
             </a>
         
-            <a href="/tags/#windows">
-                windows
+            <a href="/tags/#nodejs">
+                nodejs
             </a>
         
-            <a href="/tags/#bat">
-                bat
+            <a href="/tags/#node">
+                node
+            </a>
+        
+            <a href="/tags/#js">
+                js
+            </a>
+        
+            <a href="/tags/#javascript">
+                javascript
             </a>
         
       </span>
     </div>
-    <h1 class="post-title">Iniciar Vagrant no Windows com bat</h1>
+    <h1 class="post-title">Programando em JS com Node.js no Arduino</h1>
   </header>
 
   <section class="post">
-    <p>Iniciar a VM do vagrant através de um arquivo <code class="highlighter-rouge">.bat</code>.</p>
+    <p>Bom este tutorial eu criei para facilitar para o desenvolvedor que gostaria de
+programar em javascript para o Arduino e criar uma página web de forma mais
+fácil. Dedico este post ao meu amigo Felipe, que estava buscando uma forma de
+fazer isso também em seus projetos, sem ter que adicionar tags html no código em
+c++.</p>
 
-<figure class="highlight"><pre><code class="language-bat" data-lang="bat">@echo off
+<p><img src="/images/arduino/j5/johnny-five.png" alt="johnny-five" title="Johnny-Five" /></p>
 
-CD /d \path\dir\vagrant
+<p>Rick Waldron é o criador do projeto <a href="http://johnny-five.io" target="_blank">Johnny-Five</a> que utiliza JavaScript para
+o desenvolvimento de robótica. Existem varios exemplos no website do projeto com
+a possibilidade de utilizar sensores, motores, gpios, etc. Suporta uma variedade
+de <a href="http://johnny-five.io/platform-support" target="_blank">hardwares</a>:</p>
 
-FOR /f "tokens=2 delims= " %%a in ('vagrant status ^| find /i "default"') do (
-    SET STATE=%%a
-)
+<p><img src="/images/arduino/j5/platform-support.png" alt="platform-support" title="Platform Support" /></p>
 
-IF %STATE% equ "running" (
-    @echo Vagrant VM is running...
-) ELSE (
-    IF %STATE% equ "saved" (
-        @echo Starting Vagrant VM from powered down state...
-        vagrant up
-    ) ELSE (
-        IF %STATE% equ "poweroff" (
-            @echo Starting Vagrant VM from powered down state...
-            vagrant up
-        ) else (
-            @echo Resuming Vagrant VM from saved state...
-            vagrant resume
-        )
-    )
-)
+<p>O que precisa para começar ?</p>
 
-IF errorlevel 1 (
-  @echo FAILURE! Vagrant VM unresponsive...
-)</code></pre></figure>
+<p>Bom em primeiro lugar você vai precisar do <a href="https://nodejs.org" target="_blank">Node.js</a> instalado e da 
+<a href="https://www.arduino.cc/en/Main/Software" target="_blank">IDE</a> do Arduino. No meu caso estou utilizando uma distribuição Linux, 
+a Xubuntu, uma derivada do Ubuntu.</p>
+
+<p>No Ubuntu/Xubuntu basta baixar o Arduino IDE conforme a arquitetura do seu
+processador 32 ou 64 bits.</p>
+
+<p><img src="/images/arduino/download-arduino-ide.jpg" alt="download-arduino-ide" title="Download Arduino IDE" /></p>
+
+<p>No caso do Linux o arquivo é como este arduino-1.8.5-linux64.tar.xz, basta você
+descompactar no diretório que quiser e depois abrir com o terminal o arquivo 
+install.sh uma janela como esta irá aparecer e iniciar a instalação.</p>
+
+<p><img src="/images/arduino/install.sh.png" alt="install-sh" title="Instalação do Arduino IDE" /></p>
+
+<p>Após a instalação é criado o icone da IDE na sua Área de Trabalho e menu.</p>
+
+<p><img src="/images/arduino/arduino-instalado.png" alt="arduino-instalado" title="Arduino IDE instalado" /></p>
+
+<p>Abra o Arduino IDE, copie e cole o código do link abaixo:</p>
+
+<p><a href="https://raw.githubusercontent.com/firmata/arduino/master/examples/StandardFirmataPlus/StandardFirmataPlus.ino" target="_blank">StandardFirmataPlus.ino</a></p>
+
+<p>Clique em verificar e depois em carregar, caso ocorra algum erro como este no terminal:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">avrdude: ser_open<span class="o">()</span>: can<span class="s1">'t open device "/dev/ttyACM0": Permission denied
+ioctl("TIOCMGET"): Inappropriate ioctl for device</span></code></pre></figure>
+
+<p>Você deve dar permissão no dispositivo, digitando os dois comandos abaixo:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>usermod <span class="nt">-a</span> <span class="nt">-G</span> dialout <span class="nv">$USER</span>
+<span class="nb">sudo </span>chmod a+rw /dev/ttyACM0</code></pre></figure>
+
+<p>Tente novamente carregar o código no Arduino, se funcionar você vai ver no console
+da IDE algum como isto:</p>
+
+<p><img src="/images/arduino/arduino-carregado.png" alt="arduino-carregado" title="Arduino IDE Compilado e Carregado" /></p>
+
+<p>Agora seu Arduino esta pronto para ser chamado pelo Johnny-Five.
+Crie um diretório em algum lugar de sua preferencia e cole este código em um
+arquivo, por exemplo board.js:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// board.js</span>
+<span class="kd">var</span> <span class="nx">five</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"johnny-five"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">board</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">five</span><span class="p">.</span><span class="nx">Board</span><span class="p">();</span>
+
+<span class="c1">// The board's pins will not be accessible until</span>
+<span class="c1">// the board has reported that it is ready</span>
+<span class="nx">board</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"ready"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Ready!"</span><span class="p">);</span>
+
+  <span class="kd">var</span> <span class="nx">led</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">five</span><span class="p">.</span><span class="nx">Led</span><span class="p">(</span><span class="mi">13</span><span class="p">);</span>
+  <span class="nx">led</span><span class="p">.</span><span class="nx">blink</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Em um terminal execute este comando para instalar o johnny-five:</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="err">#</span> <span class="nx">Instala</span><span class="err">çã</span><span class="nx">o</span> <span class="nx">da</span> <span class="nx">biblioteca</span> <span class="nx">johnny</span><span class="o">-</span><span class="nx">five</span> <span class="nx">para</span> <span class="nx">o</span> <span class="nx">Node</span><span class="p">.</span><span class="nx">js</span>
+<span class="nx">npm</span> <span class="nx">install</span> <span class="nx">johnny</span><span class="o">-</span><span class="nx">five</span></code></pre></figure>
+
+<p>No mesmo terminal digite este comando para executar o código em board.js</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">node</span> <span class="nx">board</span><span class="p">.</span><span class="nx">js</span></code></pre></figure>
+
+<p><img src="/images/arduino/j5/board.js.png" alt="board-js" title="Execução do código no Arduino" /></p>
+
+<p>Se tudo der certo você verá que a luz padrão do Arduino começará a piscar.</p>
+
+<p><img src="/images/arduino/j5/video-arduino.gif" alt="video-arduino" title="Video do Arduino" style="width:400px;" /></p>
 
 
   </section>

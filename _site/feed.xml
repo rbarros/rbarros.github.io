@@ -5,8 +5,8 @@
     <description>Developer</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Aug 2018 15:46:30 -0300</pubDate>
-    <lastBuildDate>Wed, 01 Aug 2018 15:46:30 -0300</lastBuildDate>
+    <pubDate>Sat, 04 Aug 2018 19:43:37 -0300</pubDate>
+    <lastBuildDate>Sat, 04 Aug 2018 19:43:37 -0300</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
@@ -17,6 +17,7 @@ fácil. Dedico este post ao meu amigo Felipe, que estava buscando uma forma de
 fazer isso também em seus projetos, sem ter que adicionar tags html no código em
 c++.&lt;/p&gt;
 
+&lt;h1 id=&quot;johnny-five&quot;&gt;Johnny Five&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;/images/arduino/j5/johnny-five.png&quot; alt=&quot;johnny-five&quot; title=&quot;Johnny-Five&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Rick Waldron é o criador do projeto &lt;a href=&quot;http://johnny-five.io&quot; target=&quot;_blank&quot;&gt;Johnny-Five&lt;/a&gt; que utiliza JavaScript para
@@ -26,7 +27,7 @@ de &lt;a href=&quot;http://johnny-five.io/platform-support&quot; target=&quot;_b
 
 &lt;p&gt;&lt;img src=&quot;/images/arduino/j5/platform-support.png&quot; alt=&quot;platform-support&quot; title=&quot;Platform Support&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;O que precisa para começar ?&lt;/p&gt;
+&lt;h1 id=&quot;o-que-precisa-para-começar-&quot;&gt;O que precisa para começar ?&lt;/h1&gt;
 
 &lt;p&gt;Bom em primeiro lugar você vai precisar do &lt;a href=&quot;https://nodejs.org&quot; target=&quot;_blank&quot;&gt;Node.js&lt;/a&gt; instalado e da 
 &lt;a href=&quot;https://www.arduino.cc/en/Main/Software&quot; target=&quot;_blank&quot;&gt;IDE&lt;/a&gt; do Arduino. No meu caso estou utilizando uma distribuição Linux, 
@@ -35,6 +36,7 @@ a Xubuntu, uma derivada do Ubuntu.&lt;/p&gt;
 &lt;p&gt;No Ubuntu/Xubuntu basta baixar o Arduino IDE conforme a arquitetura do seu
 processador 32 ou 64 bits.&lt;/p&gt;
 
+&lt;h1 id=&quot;instalação-do-arduino-ide&quot;&gt;Instalação do Arduino IDE&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;/images/arduino/download-arduino-ide.jpg&quot; alt=&quot;download-arduino-ide&quot; title=&quot;Download Arduino IDE&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No caso do Linux o arquivo é como este arduino-1.8.5-linux64.tar.xz, basta você
@@ -64,6 +66,7 @@ ioctl(&quot;TIOCMGET&quot;): Inappropriate ioctl for device&lt;/span&gt;&lt;/cod
 &lt;p&gt;Tente novamente carregar o código no Arduino, se funcionar você vai ver no console
 da IDE algum como isto:&lt;/p&gt;
 
+&lt;h1 id=&quot;firmata---comunicação-com-o-arduino-usando-o-js&quot;&gt;Firmata - Comunicação com o Arduino usando o JS&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;/images/arduino/arduino-carregado.png&quot; alt=&quot;arduino-carregado&quot; title=&quot;Arduino IDE Compilado e Carregado&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Agora seu Arduino esta pronto para ser chamado pelo Johnny-Five.
@@ -97,6 +100,51 @@ arquivo, por exemplo board.js:&lt;/p&gt;
 &lt;p&gt;Se tudo der certo você verá que a luz padrão do Arduino começará a piscar.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/arduino/j5/video-arduino.gif&quot; alt=&quot;video-arduino&quot; title=&quot;Video do Arduino&quot; style=&quot;width:400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Agora podemos alterar o código javascript para utilizar o express para criar 
+rotas para acessarmos os recursos do Arduino.&lt;/p&gt;
+
+&lt;p&gt;Para ficar mais fácil você pode baixar ou clonar este repositório &lt;a href=&quot;https://github.com/rbarros/Arduino-J5.git&quot;&gt;Arduino-J5&lt;/a&gt; e
+dentro deste diretório executar o comando:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Instala&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;çã&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;das&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bibliotecas&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;para&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;projeto&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/j5/npm-install.png&quot; alt=&quot;npm-install&quot; title=&quot;npm install&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Se você analizar o código &lt;code class=&quot;highlighter-rouge&quot;&gt;server.js&lt;/code&gt; verá que tem algumas rotas:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;/ - Rota principal que exibe uma mensagem&lt;/li&gt;
+  &lt;li&gt;/public - Rota public necessária para carregar arquivos no dashboard.html&lt;/li&gt;
+  &lt;li&gt;/dashboard - Rota que exibe o arquivo dashboard.html&lt;/li&gt;
+  &lt;li&gt;/:pin/state - Rota para exibir o estado do pino&lt;/li&gt;
+  &lt;li&gt;/led/off - Rota para apagar a luz do pino 13&lt;/li&gt;
+  &lt;li&gt;/led/on - Rota para acender a luz do pino 13&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;No arquivo &lt;code class=&quot;highlighter-rouge&quot;&gt;dashboard.html&lt;/code&gt; utilizei o bootstrap para
+criar uma página bem simples onde tem um botão para ligar e desligar a luz do pino 13 (luz padrão do Arduino ou a que estiver conectada).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/j5/localhost.png&quot; alt=&quot;localhost&quot; title=&quot;localhost&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O script &lt;code class=&quot;highlighter-rouge&quot;&gt;public/arduino.js&lt;/code&gt; foi criado para poder
+chamar a rota &lt;code class=&quot;highlighter-rouge&quot;&gt;/led/on&lt;/code&gt; e ‘/led/off` quando clicado
+no botão On ou Off e tem a função também de alterar o
+texto e cor do botão.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/j5/arduino-j5-dashboard.jpeg&quot; alt=&quot;arduino-j5-dashboard&quot; title=&quot;Arduino J5 Dashboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Segue o funcionamento da página de exemplo ao clicar no botão On ou Off.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/arduino/j5/video-dashboard.gif&quot; alt=&quot;video-dashboard&quot; title=&quot;Video Arduino J5 Dashboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A vantagem de utilizar o Johnny-Five é que você pode programar utilizando o JavaScript, criar rotas e varios outros recursos aproveitando o máximo que o Node.js pode oferecer.&lt;/p&gt;
+
+&lt;p&gt;No entanto o Arduino depende de um computador para manter a conexão aberta pelo terminal &lt;code class=&quot;highlighter-rouge&quot;&gt;node server.js&lt;/code&gt; uma alternativa seria utilizar
+uma shield Wifi para o Arduino Uno, neste caso não precisaria ficar
+conectado ao PC, mas ainda iriamos precisar de um computador ou dispositivo para enviar os dados do js para o Arduino.&lt;/p&gt;
+
+&lt;p&gt;Para utilização do Johnny-Five sem um computador enviando dados seria necessário utilizar outro tipo de embarcado um &lt;a href=&quot;https://tessel.io/&quot;&gt;Tessel&lt;/a&gt; ou Raspberry Pi, na qual é possível conectar por ssh e executar os códigos js dentro deles.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 31 Jul 2018 21:00:00 -0300</pubDate>
